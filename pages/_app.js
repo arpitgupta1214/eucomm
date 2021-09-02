@@ -1,10 +1,12 @@
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
+  return Component.layout ? (
     <Component.layout {...pageProps}>
       <Component {...pageProps} />
     </Component.layout>
+  ) : (
+    <Component {...pageProps} />
   );
 }
 
