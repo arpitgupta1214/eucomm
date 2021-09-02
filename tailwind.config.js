@@ -21,6 +21,8 @@ module.exports = {
       },
       fontFamily: {
         base: theme.fontFamilyBase,
+        bold: theme.fontFamilyBold,
+        medium: theme.fontFamilyMedium,
       },
     },
   },

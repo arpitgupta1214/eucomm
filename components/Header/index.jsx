@@ -21,9 +21,9 @@ const Header = () => {
   const currentPage = new RegExp(`^${router.asPath.split("/")[1]}$`, "i");
 
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between">
       {/* logo */}
-      <div className="text-skin-highlight font-bold text-lg uppercase">
+      <div className="text-skin-highlight font-bold text-lg uppercase mt-6">
         <Link href="/">{config.companyName}</Link>
       </div>
       {/* pages */}
@@ -33,7 +33,7 @@ const Header = () => {
           return (
             <div
               key={`page-${idx}`}
-              className={`mx-4 py-4 cursor-pointer ${
+              className={`mx-4 mt-6 pb-4 cursor-pointer ${
                 isCurrent ? s.currentPage : ""
               }`}
             >
@@ -43,7 +43,7 @@ const Header = () => {
         })}
       </div>
       {/* profile */}
-      <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-gray-200">
+      <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-gray-200 mt-4">
         <Image
           src="/2.png"
           alt="profile"

@@ -7,5 +7,7 @@
   "badgeTextColor": "#5232d2",
   "badgeColor": "#5232d2",
   "badgeColor2": "#1ebd7a",
-  "fontFamilyBase": "Helvetica Neue"
+  "fontFamilyBase": "'Helvetica Neue LT W1G 55 Roman'",
+  "fontFamilyBold": "'Helvetica Neue LT W1G 75 Bold'",
+  "fontFamilyMedium": "'Helvetica Neue LT W1G 65 Medium'"
 }
