@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 const Home = () => {
-  return "Home";
+  return "Sample Content";
 };
 
 Home.layout = Layout;
