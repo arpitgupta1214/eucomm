@@ -9,7 +9,10 @@ module.exports = {
         skin: {
           base: theme.textColorBase,
           light: theme.textColorLight,
+          "extra-light": theme.textColorExtraLight,
           highlight: theme.colorHighlight,
+          badge1: theme.badgeColor1,
+          badge2: theme.badgeColor2,
         },
       },
       backgroundColor: {
@@ -17,6 +20,14 @@ module.exports = {
           base: theme.bgColorBase,
           light: theme.bgColorLight,
           highlight: theme.colorHighlight,
+          badge1: theme.badgeColor1,
+          badge2: theme.badgeColor2,
+        },
+      },
+      borderColor: {
+        skin: {
+          base: theme.borderColorBase,
+          highlight: theme.borderColorHighlight,
         },
       },
       fontFamily: {

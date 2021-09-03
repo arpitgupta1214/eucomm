@@ -2,12 +2,15 @@
   "colorHighlight": "#106cd8",
   "textColorBase": "#142938",
   "textColorLight": "#597386",
+  "textColorExtraLight": "#92a5b4",
   "bgColorBase": "#ffffff",
   "bgColorLight": "#f6f7fa",
   "badgeTextColor": "#5232d2",
-  "badgeColor": "#5232d2",
+  "badgeColor1": "#5232d2",
   "badgeColor2": "#1ebd7a",
   "fontFamilyBase": "'Helvetica Neue LT W1G 55 Roman'",
   "fontFamilyBold": "'Helvetica Neue LT W1G 75 Bold'",
-  "fontFamilyMedium": "'Helvetica Neue LT W1G 65 Medium'"
+  "fontFamilyMedium": "'Helvetica Neue LT W1G 65 Medium'",
+  "borderColorBase": "#eaebee",
+  "borderColorHighlight": "#106cd8"
 }

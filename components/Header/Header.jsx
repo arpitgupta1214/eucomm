@@ -33,15 +33,20 @@ const Header = () => {
           {config.pages.map((page, idx) => {
             const isCurrent = currentPage.test(page);
             return (
-              <div
+              <Link
                 key={`head-page-${idx}`}
-                className={`mx-4 mt-6 pb-4 cursor-pointer flex items-center ${
-                  isCurrent ? s.currentPage : ""
-                }`}
+                href={`/${page.toLowerCase()}`}
+                passHref={true}
               >
-                {page}
-                {isCurrent && <FaAngleDown className="ml-1" />}
-              </div>
+                <div
+                  className={`mx-4 mt-6 pb-4 cursor-pointer flex items-center ${
+                    isCurrent ? s.currentPage : ""
+                  }`}
+                >
+                  {page}
+                  {isCurrent && <FaAngleDown className="ml-1" />}
+                </div>
+              </Link>
             );
           })}
         </div>

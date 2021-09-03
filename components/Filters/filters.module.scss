@@ -1,0 +1,24 @@
+.filters {
+  @apply flex flex-col mr-10 font-medium;
+  & > * {
+    @apply py-4 border-b border-skin-base;
+  }
+  .head {
+    @apply py-3;
+  }
+  .filter {
+    @apply text-skin-light;
+    .filterName {
+      @apply text-sm flex justify-between items-center my-2 uppercase;
+    }
+    .filterOptions {
+      @apply flex flex-col overflow-hidden;
+      .filterOption {
+        @apply flex justify-between items-center my-2 font-base align-middle;
+        &.selected {
+          @apply font-medium text-skin-base;
+        }
+      }
+    }
+  }
+}
