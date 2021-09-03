@@ -92,7 +92,7 @@ const Whitepapers = () => {
       {/* main */}
       <div className="mt-16 flex">
         {/* filter */}
-        <div className="w-1/4 ">
+        <div className="w-1/4 flex-shrink-0">
           <Filters
             filters={filters}
             toggleFilter={toggleFilter}
