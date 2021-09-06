@@ -1,7 +1,7 @@
 import s from "./filters.module.scss";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Checkbox } from "components/ui";
 const Filters = ({ filters, toggleFilter, toggleOption }) => {
   return (
     <div className={s.filters}>
@@ -30,8 +30,7 @@ const Filters = ({ filters, toggleFilter, toggleOption }) => {
                     }`}
                   >
                     <span>{option.name}</span>
-                    <input
-                      type="checkbox"
+                    <Checkbox
                       onChange={() => toggleOption(filter.name, option.name)}
                       checked={option.selected}
                     />
