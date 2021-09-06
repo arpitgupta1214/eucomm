@@ -4,74 +4,44 @@ import { FilterLayout } from "components/Layouts";
 import ResultCard from "components/ResultCards/ResultCard";
 import Sort from "components/Sort";
 import produce from "immer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { searchActions } from "store/searchSlice";
 
 const Whitepapers = () => {
-  const resultsData = [
-    {
-      head: "One Platform : A PRM Essential for an Effective Channel Model",
-      subhead: "Environment & Energy/Electrification",
-      date: "12 May, 2021",
-      img: "/result-1.png",
-      category: { name: "Members Bulletin", id: 1 },
-    },
-    {
-      head: "Blueprint to Creating Effective Sales Playbooks",
-      subhead: "Environment & Energy/Electrification",
-      date: "12 May, 2021",
-      img: "/result-2.png",
-      category: { name: "Studies", id: 2 },
-    },
-    {
-      head: "The Ultimate Blueprint to Channel Partner Engagement",
-      subhead: "Environment & Energy/Electrification",
-      date: "12 May, 2021",
-      img: "/result-3.png",
-      category: { name: "Studies", id: 2 },
-    },
-  ];
+  const dispatch = useDispatch();
+  const sortBy = useSelector((state) => state.search.sortBy);
+  const activeFilters = useSelector((state) => state.search.activeFilters);
+  const results = useSelector((state) => state.search.results);
+
+  useEffect(() => {
+    const getResults = async () => {
+      const resultsData = await import(
+        "data/resources/whitepages/results.json"
+      ).then((data) => data.default);
+      dispatch(searchActions.setResults({ results: resultsData }));
+    };
+    getResults();
+    console.log("updated");
+  }, [sortBy, activeFilters, dispatch]);
 
   return (
     <>
-      {resultsData.map((result, idx) => (
+      {results.map((result, idx) => (
         <ResultCard key={`result-${idx}`} result={result} />
       ))}
     </>
   );
 };
 
-export const getStaticProps = () => {
-  const filtersData = [
-    {
-      name: "Category",
-      options: [
-        { name: "All" },
-        { name: "Studies" },
-        { name: "Market Analysis" },
-        { name: "Press Presence" },
-        { name: "Members Bulletin" },
-      ],
-    },
-    {
-      name: "Type",
-      options: [
-        { name: "All" },
-        { name: "PDF" },
-        { name: "DOC" },
-        { name: "XSL" },
-      ],
-    },
-    {
-      name: "Date",
-      options: [
-        { name: "This Week" },
-        { name: "This Month" },
-        { name: "This Year" },
-        { name: "Custom" },
-      ],
-    },
-  ];
-  const sortOptions = ["Popuplar", "Recent", "Time"];
+export const getStaticProps = async () => {
+  const filtersData = await import(
+    "data/resources/whitepages/filters.json"
+  ).then((data) => data.default);
+
+  const sortOptions = await import(
+    "data/resources/whitepages/sortOptions.json"
+  ).then((data) => data.default);
   return {
     props: {
       heading: "Whitepapers",

@@ -2,9 +2,12 @@ import { useState } from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { searchActions } from "store/searchSlice";
 
 const Sort = ({ sortOptions }) => {
   const sortBy = useSelector((state) => state.search.sortBy);
+  const dispatch = useDispatch();
   const setSortBy = ({ sortBy }) => {
     dispatch(searchActions.setSortBy({ sortBy }));
   };
@@ -14,7 +17,7 @@ const Sort = ({ sortOptions }) => {
     setShowOptions((showOptions) => !showOptions);
   };
   const selectSortOption = (sortOption) => {
-    setSortBy(sortOption);
+    setSortBy({ sortBy: sortOption });
     toggleShowOptions();
   };
   return (

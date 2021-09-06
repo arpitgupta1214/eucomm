@@ -1,12 +1,17 @@
 import Filters from "components/Filters";
 import InlineFilters from "components/InlineFilters";
 import Sort from "components/Sort";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import Header from "../Header";
 
 const FilterLayout = ({ children, ...props }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(searchActions.setSortBy({ sortBy: props.sortOptions[0] }));
+  }, [dispatch, props.sortOptions]);
+
   return (
     <>
       <Header />

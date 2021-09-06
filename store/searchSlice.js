@@ -45,8 +45,12 @@ const searchSlice = createSlice({
       }
     },
     setSortBy(state, action) {
-      const { sortBy } = action;
+      const { sortBy } = action.payload;
       state.sortBy = sortBy;
+    },
+    setResults(state, action) {
+      const { results } = action.payload;
+      state.results = results || [];
     },
   },
 });

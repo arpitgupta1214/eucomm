@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 const InlineFilters = () => {
   const activeFilters = useSelector((state) => state.search.activeFilters);
-  const resultsCount = useSelector((state) => state.search.results.count);
+  const resultsCount = useSelector((state) => state.search.results.length);
   const dispatch = useDispatch();
   const toggleOption = ({ optionName, filterName }) => {
     dispatch(searchActions.toggleOption({ optionName, filterName }));
