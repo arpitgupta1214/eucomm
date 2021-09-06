@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
 
-const Sort = ({ sortOptions, sortBy, setSortBy }) => {
+const Sort = ({ sortOptions }) => {
+  const sortBy = useSelector((state) => state.search.sortBy);
+  const setSortBy = ({ sortBy }) => {
+    dispatch(searchActions.setSortBy({ sortBy }));
+  };
+
   const [showOptions, setShowOptions] = useState(false);
   const toggleShowOptions = () => {
     setShowOptions((showOptions) => !showOptions);
   };
-
   const selectSortOption = (sortOption) => {
     setSortBy(sortOption);
     toggleShowOptions();
@@ -28,9 +33,9 @@ const Sort = ({ sortOptions, sortBy, setSortBy }) => {
         {showOptions && (
           <motion.div
             initial={{ height: 0 }}
-            animate={{ height: "auto", "border-width": "1px" }}
-            exit={{ height: 0, "border-width": "0" }}
-            className="absolute w-full top-full left-0 z-50 bg-skin-base border-skin-base overflow-hidden"
+            animate={{ height: "auto" }}
+            exit={{ height: 0, opacity: 0 }}
+            className="absolute w-full top-full left-0 z-50 bg-skin-base border border-skin-base overflow-hidden"
           >
             {sortOptions
               .filter((sortOption) => sortBy !== sortOption)

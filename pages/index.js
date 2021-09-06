@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts";
 const Home = () => {
   return "Sample Content";
 };
