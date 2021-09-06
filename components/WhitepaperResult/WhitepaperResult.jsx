@@ -1,9 +1,9 @@
 import Badge from "components/Badge/Badge";
 import Image from "next/image";
 import { BiDownload } from "react-icons/bi";
-import s from "./resultCard.module.scss";
+import s from "./whitepaperResult.module.scss";
 
-const ResultCard = ({ result }) => {
+const WhitepaperResult = ({ result }) => {
   return (
     <div
       className={`${s.card} px-6 py-9 mb-10 bg-skin-light flex items-center`}
@@ -24,4 +24,4 @@ const ResultCard = ({ result }) => {
   );
 };
 
-export default ResultCard;
+export default WhitepaperResult;

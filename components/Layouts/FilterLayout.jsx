@@ -18,7 +18,7 @@ const FilterLayout = ({ children, ...props }) => {
       {/* head */}
       <div className="font-bold text-5xl mt-16">{props.heading}</div>
       {/* subhead  */}
-      <div className="text-skin-light mt-3 max-w-sm">{props.subHeading}</div>
+      <div className="text-skin-light mt-3 max-w-md">{props.subHeading}</div>
       {/* main */}
       <div className="mt-16 flex">
         {/* filter */}

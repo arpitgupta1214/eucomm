@@ -1,10 +1,10 @@
 import { FilterLayout } from "components/Layouts";
-import WhitepaperResult from "components/WhitepaperResult";
+import WebinarResult from "components/WebinarResult";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 
-const Whitepapers = () => {
+const Webinars = () => {
   const dispatch = useDispatch();
   const sortBy = useSelector((state) => state.search.sortBy);
   const activeFilters = useSelector((state) => state.search.activeFilters);
@@ -13,41 +13,40 @@ const Whitepapers = () => {
   useEffect(() => {
     const getResults = async () => {
       const resultsData = await import(
-        "data/resources/whitepages/results.json"
+        "data/resources/webinars/results.json"
       ).then((data) => data.default);
       dispatch(searchActions.setResults({ results: resultsData }));
     };
     getResults();
-    console.log("updated");
   }, [sortBy, activeFilters, dispatch]);
 
   return (
     <>
       {results.map((result, idx) => (
-        <WhitepaperResult key={`result-${idx}`} result={result} />
+        <WebinarResult key={`result-${idx}`} result={result} />
       ))}
     </>
   );
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import(
-    "data/resources/whitepages/filters.json"
-  ).then((data) => data.default);
+  const filtersData = await import("data/resources/webinars/filters.json").then(
+    (data) => data.default
+  );
 
   const sortOptions = await import(
-    "data/resources/whitepages/sortOptions.json"
+    "data/resources/webinars/sortOptions.json"
   ).then((data) => data.default);
   return {
     props: {
-      heading: "Whitepapers",
+      heading: "Webinars",
       subHeading:
-        "Find out more about sales and channel enablement best practices and industry trends here",
+        "Thought leadership webinars on PRM, channel marketing, partner enablement, marketing automation, sales enablement and more!",
       filtersData,
       sortOptions,
     },
   };
 };
 
-Whitepapers.layout = FilterLayout;
-export default Whitepapers;
+Webinars.layout = FilterLayout;
+export default Webinars;

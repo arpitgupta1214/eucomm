@@ -1,0 +1,42 @@
+[
+  {
+    "head": "Are You Leveraging Salesforce...",
+    "subhead": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for...",
+    "date": "12 May, 2021",
+    "time": "12:00 - 21:00",
+    "img": "/images/webinars/result-1.png",
+    "category": { "name": "Studies", "id": 2 }
+  },
+  {
+    "head": "Mastering the Lead follow-up",
+    "subhead": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for...",
+    "date": "12 May, 2021",
+    "time": "12:00 - 21:00",
+    "img": "/images/webinars/result-2.png",
+    "category": { "name": "Studies", "id": 2 }
+  },
+  {
+    "head": "Autotask Opportunity Sync",
+    "subhead": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for...",
+    "date": "12 May, 2021",
+    "time": "12:00 - 21:00",
+    "img": "/images/webinars/result-3.png",
+    "category": { "name": "Studies", "id": 2 }
+  },
+  {
+    "head": "Getting the most from your...",
+    "subhead": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for...",
+    "date": "12 May, 2021",
+    "time": "12:00 - 21:00",
+    "img": "/images/webinars/result-4.png",
+    "category": { "name": "Studies", "id": 2 }
+  },
+  {
+    "head": "Autotask Opportunity Sync",
+    "subhead": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for...",
+    "date": "12 May, 2021",
+    "time": "12:00 - 21:00",
+    "img": "/images/webinars/result-3.png",
+    "category": { "name": "Studies", "id": 2 }
+  }
+]
