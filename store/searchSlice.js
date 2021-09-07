@@ -5,6 +5,7 @@ const initialState = {
   openFilterPanels: [],
   sortBy: null,
   results: [],
+  tab: null,
 };
 
 const searchSlice = createSlice({
@@ -51,6 +52,10 @@ const searchSlice = createSlice({
     setResults(state, action) {
       const { results } = action.payload;
       state.results = results || [];
+    },
+    setTab(state, action) {
+      const { tab } = action.payload;
+      state.tab = tab;
     },
   },
 });

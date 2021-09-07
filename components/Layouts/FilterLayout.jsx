@@ -1,6 +1,7 @@
 import Filters from "components/Filters";
 import InlineFilters from "components/InlineFilters";
 import Sort from "components/Sort";
+import Tabs from "components/Tabs";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
@@ -8,9 +9,14 @@ import Header from "../Header";
 
 const FilterLayout = ({ children, ...props }) => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(searchActions.setSortBy({ sortBy: props.sortOptions[0] }));
   }, [dispatch, props.sortOptions]);
+
+  useEffect(() => {
+    if (props.tabs) dispatch(searchActions.setTab({ tab: props.tabs[0] }));
+  }, [dispatch, props.tabs]);
 
   return (
     <>
@@ -27,6 +33,12 @@ const FilterLayout = ({ children, ...props }) => {
         </div>
         {/* cards */}
         <div className="flex-grow flex flex-col">
+          {props.tabs && (
+            <div className="w-full">
+              <Tabs tabs={props.tabs} />
+            </div>
+          )}
+
           <div className="flex items-baseline mb-4">
             <div className="flex-grow">
               <InlineFilters />
