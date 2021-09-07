@@ -14,7 +14,7 @@ const Tabs = ({ tabs }) => {
         return (
           <button
             key={`tab-${tab}`}
-            className={`mr-8 py-3 ${
+            className={`mr-8 py-3 text-lg ${
               isActive
                 ? "font-bold border-b-2 border-black"
                 : "text-skin-highlight"
