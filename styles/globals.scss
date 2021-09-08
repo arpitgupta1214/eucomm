@@ -11,6 +11,6 @@
 html {
 }
 body {
-  @apply font-base text-skin-base px-4 sm:mx-auto;
+  @apply font-base text-skin-base px-4 sm:mx-auto cursor-default;
   max-width: 1200px;
 }

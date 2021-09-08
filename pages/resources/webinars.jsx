@@ -1,5 +1,5 @@
 import { FilterLayout } from "components/Layouts";
-import WebinarResult from "components/WebinarResult";
+import WebinarResult from "components/Results/WebinarResult";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";

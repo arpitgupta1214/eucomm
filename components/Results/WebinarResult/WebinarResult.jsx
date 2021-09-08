@@ -2,25 +2,23 @@ import Badge from "components/Badge/Badge";
 import Image from "next/image";
 import { BiCalendar } from "react-icons/bi";
 import { BsClockFill } from "react-icons/bs";
-import s from "./webinarResult.module.scss";
+import s from "../result.module.scss";
 
 const WebinarResult = ({ result }) => {
   return (
-    <div className={`${s.card} mb-10 bg-skin-light flex items-center`}>
+    <div className={s.card}>
       {/* img  */}
       <div
         className="h-full w-1/3 flex-shrink-0 bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: `url(${result.img})` }}
       />
       {/* content */}
-      <div className="flex-grow flex flex-col px-5 my-9 border-r border-skin-base">
+      <div className={s.content}>
         <Badge type={result.category.id} name={result.category.name} />
-        <h1 className="font-bold w-full text-2xl mb-1 whitespace-nowrap overflow-hidden overflow-ellipsis">
-          {result.head}
-        </h1>
-        <h2 className="text-skin-light mb-2">{result.subhead}</h2>
-        <h3 className="text-xs text-skin-extra-light mb-4">{result.date}</h3>
-        <button className={s.register}>
+        <h1>{result.head}</h1>
+        <h2>{result.subhead}</h2>
+        <h3>{result.date}</h3>
+        <button className={s.cta}>
           <span>Register Now</span>
         </button>
       </div>

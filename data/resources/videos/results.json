@@ -1,0 +1,44 @@
+[
+  {
+    "head": "One Platform: A PRM Essential for an Effective Comminutcation",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-1.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  },
+  {
+    "head": "One Platform: A PRM Essential for an Effective...",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-2.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  },
+  {
+    "head": "One Platform: A PRM Essential for an Effective...",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-3.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  },
+  {
+    "head": "One Platform: A PRM Essential for an Effective...",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-1.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  },
+  {
+    "head": "One Platform: A PRM Essential for an Effective...",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-2.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  },
+  {
+    "head": "One Platform: A PRM Essential for an Effective...",
+    "date": "12 May, 2021",
+    "img": "/images/videos/result-3.jpg",
+    "thumbImg": "/images/videos/thumbImg/thumb1.png",
+    "category": { "name": "Members Bulletin", "id": 1 }
+  }
+]

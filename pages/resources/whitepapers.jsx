@@ -1,5 +1,5 @@
 import { FilterLayout } from "components/Layouts";
-import WhitepaperResult from "components/WhitepaperResult";
+import WhitepaperResult from "components/Results/WhitepaperResult";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
