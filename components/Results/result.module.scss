@@ -9,7 +9,7 @@
     }
   }
   .content {
-    @apply flex-grow flex flex-col px-5 my-9 border-r border-skin-base;
+    @apply flex-grow flex flex-col;
   }
   h1 {
     @apply font-bold text-2xl mb-1;

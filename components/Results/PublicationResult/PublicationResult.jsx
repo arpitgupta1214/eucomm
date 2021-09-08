@@ -13,7 +13,7 @@ const PublicationResult = ({ result }) => {
         style={{ backgroundImage: `url(${result.img})`, width: "27%" }}
       />
       {/* content */}
-      <div className={s.content}>
+      <div className={`${s.content} px-5 my-9`}>
         <Badge type={result.category.id} name={result.category.name} />
         <h1>{result.head}</h1>
         <h2>{result.subhead}</h2>

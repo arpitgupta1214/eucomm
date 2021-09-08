@@ -13,7 +13,7 @@ const WebinarResult = ({ result }) => {
         style={{ backgroundImage: `url(${result.img})` }}
       />
       {/* content */}
-      <div className={s.content}>
+      <div className={`${s.content} px-5 my-9 border-r border-skin-base`}>
         <Badge type={result.category.id} name={result.category.name} />
         <h1>{result.head}</h1>
         <h2>{result.subhead}</h2>
