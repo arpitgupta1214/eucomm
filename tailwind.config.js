@@ -10,6 +10,7 @@ module.exports = {
           base: theme.textColorBase,
           light: theme.textColorLight,
           "extra-light": theme.textColorExtraLight,
+          gray: theme.textColorGray,
           highlight: theme.colorHighlight,
           badge1: theme.badgeColor1,
           badge2: theme.badgeColor2,
