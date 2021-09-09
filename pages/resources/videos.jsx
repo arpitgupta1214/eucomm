@@ -12,7 +12,6 @@ const Videos = () => {
   const results = useSelector((state) => state.search.results);
 
   useEffect(() => {
-    console.log("updates");
     const getResults = async () => {
       const resultsData = await import(
         "data/resources/videos/results.json"

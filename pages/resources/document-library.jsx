@@ -19,7 +19,6 @@ const DocumentLibrary = () => {
       dispatch(searchActions.setResults({ results: resultsData }));
     };
     getResults();
-    console.log("updated");
   }, [sortBy, activeFilters, dispatch]);
 
   return (
