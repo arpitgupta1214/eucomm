@@ -1,0 +1,35 @@
+{
+  "heading": "Videos",
+  "subHeading": "Watch our videos to learn more about EU COMM as a platform, as a company and as a thought process",
+  "filtersData": [
+    {
+      "name": "Category",
+      "options": [
+        { "name": "All" },
+        { "name": "Studies" },
+        { "name": "Market Analysis" },
+        { "name": "Press Presence" },
+        { "name": "Members Bulletin" }
+      ]
+    },
+    {
+      "name": "Type",
+      "options": [
+        { "name": "All" },
+        { "name": "PDF" },
+        { "name": "DOC" },
+        { "name": "XSL" }
+      ]
+    },
+    {
+      "name": "Date",
+      "options": [
+        { "name": "This Week" },
+        { "name": "This Month" },
+        { "name": "This Year" },
+        { "name": "Custom" }
+      ]
+    }
+  ],
+  "sortOptions": ["Popuplar", "Recent", "Time"]
+}

@@ -1,0 +1,36 @@
+{
+  "heading": "Webinars",
+  "subHeading": "Thought leadership webinars on PRM, channel marketing, partner enablement, marketing automation, sales enablement and more!",
+  "filtersData": [
+    {
+      "name": "Category",
+      "options": [
+        { "name": "All" },
+        { "name": "Studies" },
+        { "name": "Market Analysis" },
+        { "name": "Press Presence" },
+        { "name": "Members Bulletin" }
+      ]
+    },
+    {
+      "name": "Type",
+      "options": [
+        { "name": "All" },
+        { "name": "PDF" },
+        { "name": "DOC" },
+        { "name": "XSL" }
+      ]
+    },
+    {
+      "name": "Date",
+      "options": [
+        { "name": "This Week" },
+        { "name": "This Month" },
+        { "name": "This Year" },
+        { "name": "Custom" }
+      ]
+    }
+  ],
+  "sortOptions": ["Popuplar", "Recent", "Time"],
+  "tabs": ["Upcoming", "Past"]
+}

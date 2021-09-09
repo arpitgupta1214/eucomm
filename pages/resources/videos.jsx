@@ -32,21 +32,13 @@ const Videos = () => {
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import("data/resources/videos/filters.json").then(
+  const staticData = await import("data/resources/videos/data.json").then(
     (data) => data.default
   );
 
-  const sortOptions = await import(
-    "data/resources/videos/sortOptions.json"
-  ).then((data) => data.default);
-
   return {
     props: {
-      heading: "Videos",
-      subHeading:
-        "Watch our videos to learn more about EU COMM as a platform, as a company and as a thought process",
-      filtersData,
-      sortOptions,
+      ...staticData,
     },
   };
 };

@@ -31,20 +31,12 @@ const Publications = () => {
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import(
-    "data/resources/publications/filters.json"
-  ).then((data) => data.default);
-
-  const sortOptions = await import(
-    "data/resources/publications/sortOptions.json"
-  ).then((data) => data.default);
+  const staticData = await import("data/resources/publications/data.json").then(
+    (data) => data.default
+  );
   return {
     props: {
-      heading: "Publications",
-      subHeading:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-      filtersData,
-      sortOptions,
+      ...staticData,
     },
   };
 };

@@ -32,20 +32,13 @@ const DocumentLibrary = () => {
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import(
-    "data/resources/whitepages/filters.json"
+  const staticData = await import(
+    "data/resources/document-library/data.json"
   ).then((data) => data.default);
 
-  const sortOptions = await import(
-    "data/resources/whitepages/sortOptions.json"
-  ).then((data) => data.default);
   return {
     props: {
-      heading: "Document library",
-      subHeading:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-      filtersData,
-      sortOptions,
+      ...staticData,
     },
   };
 };

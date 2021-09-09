@@ -1,0 +1,35 @@
+{
+  "heading": "Publications",
+  "subHeading": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+  "filtersData": [
+    {
+      "name": "Category",
+      "options": [
+        { "name": "All" },
+        { "name": "Studies" },
+        { "name": "Market Analysis" },
+        { "name": "Press Presence" },
+        { "name": "Members Bulletin" }
+      ]
+    },
+    {
+      "name": "Type",
+      "options": [
+        { "name": "All" },
+        { "name": "PDF" },
+        { "name": "DOC" },
+        { "name": "XSL" }
+      ]
+    },
+    {
+      "name": "Date",
+      "options": [
+        { "name": "This Week" },
+        { "name": "This Month" },
+        { "name": "This Year" },
+        { "name": "Custom" }
+      ]
+    }
+  ],
+  "sortOptions": ["Popuplar", "Recent", "Time"]
+}

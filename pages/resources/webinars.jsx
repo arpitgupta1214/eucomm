@@ -32,25 +32,13 @@ const Webinars = () => {
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import("data/resources/webinars/filters.json").then(
+  const staticData = await import("data/resources/webinars/data.json").then(
     (data) => data.default
   );
 
-  const sortOptions = await import(
-    "data/resources/webinars/sortOptions.json"
-  ).then((data) => data.default);
-
-  const tabs = await import("data/resources/webinars/tabs.json").then(
-    (data) => data.default
-  );
   return {
     props: {
-      heading: "Webinars",
-      subHeading:
-        "Thought leadership webinars on PRM, channel marketing, partner enablement, marketing automation, sales enablement and more!",
-      filtersData,
-      sortOptions,
-      tabs,
+      ...staticData,
     },
   };
 };

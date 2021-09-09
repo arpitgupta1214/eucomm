@@ -13,7 +13,7 @@ const Whitepapers = () => {
   useEffect(() => {
     const getResults = async () => {
       const resultsData = await import(
-        "data/resources/whitepages/results.json"
+        "data/resources/whitepapers/results.json"
       ).then((data) => data.default);
       dispatch(searchActions.setResults({ results: resultsData }));
     };
@@ -31,20 +31,13 @@ const Whitepapers = () => {
 };
 
 export const getStaticProps = async () => {
-  const filtersData = await import(
-    "data/resources/whitepages/filters.json"
-  ).then((data) => data.default);
+  const staticData = await import("data/resources/whitepapers/data.json").then(
+    (data) => data.default
+  );
 
-  const sortOptions = await import(
-    "data/resources/whitepages/sortOptions.json"
-  ).then((data) => data.default);
   return {
     props: {
-      heading: "Whitepapers",
-      subHeading:
-        "Find out more about sales and channel enablement best practices and industry trends here",
-      filtersData,
-      sortOptions,
+      ...staticData,
     },
   };
 };
