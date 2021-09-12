@@ -8,7 +8,8 @@ const FilterLayout = ({ children, ...props }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(searchActions.setSortBy({ sortBy: props.sortOptions[0] }));
+    if (props.sortOptions)
+      dispatch(searchActions.setSortBy({ sortBy: props.sortOptions[0] }));
   }, [dispatch, props.sortOptions]);
 
   useEffect(() => {

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "YouTube",
+    "img": "/images/channels/result-1.png",
+    "accounts": [
+      {
+        "img": "/images/connectedAccounts/account-1.png",
+        "name": "Shayda Campbell"
+      },
+      { "img": "/images/connectedAccounts/account-2.png", "name": "InDesign" }
+    ]
+  },
+  {
+    "name": "Facebook",
+    "img": "/images/channels/result-2.png"
+  },
+  {
+    "name": "Instagram",
+    "img": "/images/channels/result-3.png"
+  },
+  {
+    "name": "Twitter",
+    "img": "/images/channels/result-4.png"
+  },
+  {
+    "name": "Open Edx",
+    "img": "/images/channels/result-5.png"
+  },
+  {
+    "name": "Zoom",
+    "img": "/images/channels/result-6.png"
+  },
+  {
+    "name": "SurveyMonkey",
+    "img": "/images/channels/result-7.png"
+  },
+  {
+    "name": "Dashboard",
+    "img": "/images/channels/result-8.png"
+  }
+]

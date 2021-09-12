@@ -72,7 +72,7 @@ const Header = () => {
                   last ? "text-skin-light" : "text-skin-highlight"
                 }`}
               >
-                {page}
+                {page.replace(/-/g, " ")}
               </span>
               {!last && <span className="text-skin-light mx-5">/</span>}
             </div>

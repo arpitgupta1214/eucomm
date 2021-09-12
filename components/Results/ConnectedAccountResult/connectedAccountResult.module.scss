@@ -1,0 +1,19 @@
+.menu {
+  @apply w-52 absolute top-full right-1/2 transform translate-x-1/2 translate-y-5 z-50 bg-skin-base flex flex-col text-sm font-medium;
+  box-shadow: 0px 15px 33px rgba(44, 43, 88, 0.13);
+  border: 0.5px solid #eaebee;
+  &::after {
+    @apply w-5 h-5 absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 bg-skin-base;
+    content: "";
+    box-shadow: 0px 15px 33px rgba(44, 43, 88, 0.13);
+    border-top: 0.5px solid #eaebee;
+    border-left: 0.5px solid #eaebee;
+    z-index: -10;
+  }
+  .btn {
+    @apply flex items-center px-3 pt-3 pb-2 hover:bg-skin-light;
+    .symbol {
+      @apply w-5 h-5 mr-2;
+    }
+  }
+}
