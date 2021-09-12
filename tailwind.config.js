@@ -1,7 +1,12 @@
 const theme = require("./themeConfig.json");
 
 module.exports = {
-  purge: [],
+  purge: [
+    "./components/**/*.scss",
+    "./components/**/*.jsx",
+    "./pages/**/*.jsx",
+    "./styles/**/*.scss",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

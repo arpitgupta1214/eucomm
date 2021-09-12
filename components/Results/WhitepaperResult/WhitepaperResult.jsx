@@ -1,5 +1,4 @@
 import Badge from "components/Badge/Badge";
-import Image from "next/image";
 import { BiDownload } from "react-icons/bi";
 import s from "../result.module.scss";
 

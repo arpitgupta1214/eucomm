@@ -1,7 +1,4 @@
 import Badge from "components/Badge/Badge";
-import Image from "next/image";
-import { BiCalendar } from "react-icons/bi";
-import { BsClockFill } from "react-icons/bs";
 import s from "../result.module.scss";
 
 const PressReleaseResult = ({ result }) => {
