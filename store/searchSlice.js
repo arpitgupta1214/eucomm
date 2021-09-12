@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   activeFilters: [],
   openFilterPanels: [],
+  searchString: null,
   sortBy: null,
   results: [],
   tab: null,
@@ -44,6 +45,10 @@ const searchSlice = createSlice({
       } else {
         state.openFilterPanels.push({ name: filterName });
       }
+    },
+    setSearchString(state, action) {
+      const { searchString } = action.payload;
+      state.searchString = searchString;
     },
     setSortBy(state, action) {
       const { sortBy } = action.payload;

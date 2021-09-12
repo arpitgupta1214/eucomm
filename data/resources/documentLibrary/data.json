@@ -31,5 +31,6 @@
       ]
     }
   ],
-  "sortOptions": ["Popuplar", "Recent", "Time"]
+  "sortOptions": ["Popuplar", "Recent", "Time"],
+  "allowSearch": true
 }

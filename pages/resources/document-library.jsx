@@ -8,6 +8,7 @@ const DocumentLibrary = () => {
   const dispatch = useDispatch();
   const sortBy = useSelector((state) => state.search.sortBy);
   const activeFilters = useSelector((state) => state.search.activeFilters);
+  const searchString = useSelector((state) => state.search.searchString);
   const results = useSelector((state) => state.search.results);
 
   useEffect(() => {
@@ -19,20 +20,16 @@ const DocumentLibrary = () => {
       dispatch(searchActions.setResults({ results: resultsData }));
     };
     getResults();
-  }, [sortBy, activeFilters, dispatch]);
+  }, [sortBy, activeFilters, searchString, dispatch]);
 
-  return (
-    <>
-      {results.map((result, idx) => (
-        <DocumentLibraryResult key={`result-${idx}`} result={result} />
-      ))}
-    </>
-  );
+  return results.map((result, idx) => (
+    <DocumentLibraryResult key={`result-${idx}`} result={result} />
+  ));
 };
 
 export const getStaticProps = async () => {
   const staticData = await import(
-    "data/resources/document-library/data.json"
+    "data/resources/documentLibrary/data.json"
   ).then((data) => data.default);
 
   return {

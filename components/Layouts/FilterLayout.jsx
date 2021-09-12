@@ -1,7 +1,4 @@
-import Filters from "components/Filters";
-import InlineFilters from "components/InlineFilters";
-import Sort from "components/Sort";
-import Tabs from "components/Tabs";
+import { Filters, InlineFilters, Sort, Tabs, Search } from "components/ui";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { searchActions } from "store/searchSlice";
@@ -41,10 +38,11 @@ const FilterLayout = ({ children, ...props }) => {
             </div>
           )}
 
-          <div className="flex items-baseline mb-4">
+          <div className="flex items-start mb-4">
             <div className="flex-grow">
               <InlineFilters />
             </div>
+            {props.allowSearch && <Search />}
             <Sort sortOptions={props.sortOptions} />
           </div>
           {children}
