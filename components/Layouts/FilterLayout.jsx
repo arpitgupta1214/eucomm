@@ -2,8 +2,8 @@ import Filters from "components/Filters";
 import InlineFilters from "components/InlineFilters";
 import Sort from "components/Sort";
 import Tabs from "components/Tabs";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import Header from "../Header";
 
@@ -28,9 +28,11 @@ const FilterLayout = ({ children, ...props }) => {
       {/* main */}
       <div className="mt-16 flex">
         {/* filter */}
-        <div className="w-1/4 flex-shrink-0">
-          {props.filtersData && <Filters filters={props.filtersData} />}
-        </div>
+        {props.filtersData && (
+          <div className="w-1/4 flex-shrink-0">
+            <Filters filters={props.filtersData} />
+          </div>
+        )}
         {/* cards */}
         <div className="flex-grow flex flex-col">
           {props.tabs && (

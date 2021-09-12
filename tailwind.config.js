@@ -23,6 +23,7 @@ module.exports = {
           highlight: theme.colorHighlight,
           badge1: theme.badgeColor1,
           badge2: theme.badgeColor2,
+          dark: theme.textColorBase,
         },
       },
       borderColor: {
