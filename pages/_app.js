@@ -1,17 +1,21 @@
 import "../styles/globals.scss";
+
 import store from "store";
 import { Provider as StoreProvider } from "react-redux";
+import UiProvider from "components/UiProvider";
 
 function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider store={store}>
-      {Component.layout ? (
-        <Component.layout {...pageProps}>
+      <UiProvider>
+        {Component.layout ? (
+          <Component.layout {...pageProps}>
+            <Component {...pageProps} />
+          </Component.layout>
+        ) : (
           <Component {...pageProps} />
-        </Component.layout>
-      ) : (
-        <Component {...pageProps} />
-      )}
+        )}
+      </UiProvider>
     </StoreProvider>
   );
 }

@@ -1,9 +1,30 @@
 .currentPage {
   @apply font-semibold text-skin-highlight relative;
 
-  &::after {
+  @scree md {
     @apply w-full bottom-0 left-0 absolute bg-skin-highlight;
     content: "";
     height: 2px;
+  }
+}
+
+.menuBtn {
+  @apply w-4 h-3 relative mb-2 md:hidden;
+  .line {
+    @apply w-full bg-skin-dark absolute left-0 rounded-full transform origin-center;
+    height: 2px;
+
+    &.top {
+      @apply top-0;
+      &.open {
+        @apply top-1/2 rotate-45;
+      }
+    }
+    &.bottom {
+      @apply bottom-0;
+      &.open {
+        @apply top-1/2 -rotate-45;
+      }
+    }
   }
 }

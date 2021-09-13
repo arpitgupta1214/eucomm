@@ -21,7 +21,7 @@ const Sort = ({ sortOptions }) => {
     toggleShowOptions();
   };
   return (
-    <div className="text-sm bg-skin-light py-1 px-3 ml-3 relative flex items-center">
+    <div className="text-sm bg-skin-light py-1 px-3 relative flex items-center justify-center">
       <span className="text-skin-light whitespace-nowrap">Sort by:</span>
       <span className="ml-1 text-skin-base capitalize">{sortBy}</span>
       <button
