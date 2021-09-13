@@ -9,8 +9,9 @@
 }
 
 html {
+  @apply w-screen overflow-x-hidden;
 }
 body {
-  @apply font-base text-skin-base px-4 sm:mx-auto cursor-default;
+  @apply w-screen font-base text-skin-base px-4 sm:mx-auto cursor-default overflow-x-hidden;
   max-width: 1200px;
 }

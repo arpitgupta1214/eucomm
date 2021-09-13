@@ -1,9 +1,16 @@
-import { Filters, InlineFilters, Sort, Tabs, Search } from "components/ui";
+import {
+  Filters,
+  InlineFilters,
+  Sort,
+  Tabs,
+  Search,
+  MobilePopup,
+} from "components/ui";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { searchActions } from "store/searchSlice";
-import Header from "../Header";
+import Header from "../../Header";
 
 const FilterLayout = ({ children, ...props }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -18,13 +25,21 @@ const FilterLayout = ({ children, ...props }) => {
     if (props.tabs) dispatch(searchActions.setTab({ tab: props.tabs[0] }));
   }, [dispatch, props.tabs]);
 
-  const [displayFilter, setDisplayFilter] = useState(false);
+  const [displayFilter, setDisplayFilter] = useState(true);
 
   useEffect(() => {
     if (!isMobile) {
       setDisplayFilter(true);
     }
   }, [isMobile]);
+
+  const closeFilter = () => {
+    setDisplayFilter(false);
+  };
+
+  const openFilters = () => {
+    setDisplayFilter(true);
+  };
   return (
     <>
       <Header />
@@ -37,19 +52,17 @@ const FilterLayout = ({ children, ...props }) => {
         {props.subHeading}
       </div>
       {/* main */}
-      <div className="mt-5 md:mt-16 flex">
+      <div className="w-full mt-5 md:mt-16 flex">
         {/* filter */}
         {props.filtersData && (
-          <div
-            className={`w-screen md:w-1/4 flex-shrink-0 fixed bottom-0 md:relative ${
-              displayFilter ? "h-auto" : "h-0"
-            } overflow-hidden`}
-          >
-            <Filters filters={props.filtersData} />
-          </div>
+          <MobilePopup onClose={closeFilter} display={displayFilter}>
+            <div className={`w-full md:w-1/4 md:mr-10 flex-shrink-0`}>
+              <Filters filters={props.filtersData} />
+            </div>
+          </MobilePopup>
         )}
         {/* cards */}
-        <div className="flex-grow flex flex-col">
+        <div className="w-full flex-grow flex flex-col">
           {props.tabs && (
             <div className="w-full">
               <Tabs tabs={props.tabs} />
@@ -57,8 +70,8 @@ const FilterLayout = ({ children, ...props }) => {
           )}
 
           <div className="flex flex-wrap md:flex-nowrap items-start mb-6 md:mb-4">
-            <div className="flex-grow">
-              <InlineFilters />
+            <div className="w-full flex-grow">
+              <InlineFilters openFilters={openFilters} />
             </div>
             {props.allowSearch && <Search />}
             <div className="w-full md:w-auto md:ml-3 mt-3 md:mt-0">

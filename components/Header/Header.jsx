@@ -19,6 +19,10 @@ const config = {
   ],
 };
 
+const user = {
+  name: "Amanda Smith",
+  img: "/2.png",
+};
 const MenuWrapper = ({ isMobile, openMenu, headerRef, children }) => {
   const headerHeight = headerRef.current?.offsetHeight;
   if (isMobile) {
@@ -102,7 +106,7 @@ const Header = () => {
           <div className="flex items-center bg-skin-light rounded-full self-start">
             <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-gray-200">
               <Image
-                src="/2.png"
+                src={user.img}
                 alt="profile"
                 height="50px"
                 width="50px"
@@ -110,9 +114,7 @@ const Header = () => {
               />
             </div>
             {isMobile && (
-              <span className="ml-2 mr-4 text-sm font-medium">
-                Amanda Smith
-              </span>
+              <span className="ml-2 mr-4 text-sm font-medium">{user.name}</span>
             )}
           </div>
         </MenuWrapper>

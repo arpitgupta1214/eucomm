@@ -1,5 +1,5 @@
 .filters {
-  @apply flex flex-col mr-10 font-medium;
+  @apply flex flex-col font-medium;
   & > * {
     @apply py-4 border-b border-skin-base;
   }
