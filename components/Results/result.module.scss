@@ -1,5 +1,5 @@
 .card {
-  @apply mb-4 md:mb-10 bg-skin-light flex;
+  @apply mb-4 md:mb-10 flex;
   transition: all 0.5s;
   &:hover {
     @apply bg-skin-base transform -translate-y-1;
@@ -34,5 +34,5 @@
 
 button.cta {
   transition: all 0.25s;
-  @apply flex items-center px-4 py-2 border-2 border-skin-highlight text-skin-highlight self-start font-medium text-sm rounded-sm;
+  @apply px-4 py-2 border-2 border-skin-highlight text-skin-highlight self-start font-medium text-sm rounded-sm;
 }

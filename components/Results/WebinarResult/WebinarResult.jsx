@@ -5,7 +5,9 @@ import s from "../result.module.scss";
 import wS from "./webinarResult.module.scss";
 const WebinarResult = ({ result }) => {
   return (
-    <div className={`${s.card} flex-wrap md:flex-nowrap items-center`}>
+    <div
+      className={`${s.card} bg-skin-light flex-wrap md:flex-nowrap items-center`}
+    >
       {/* img  */}
       <div
         className={`${wS.sideImg} md:h-full w-full md:w-1/3 flex-shrink-0 bg-no-repeat bg-cover bg-center`}

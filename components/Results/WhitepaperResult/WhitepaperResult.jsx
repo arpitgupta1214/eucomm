@@ -4,7 +4,7 @@ import s from "../result.module.scss";
 
 const WhitepaperResult = ({ result }) => {
   return (
-    <div className={`${s.card} items-start md:items-center`}>
+    <div className={`${s.card} bg-skin-light items-start md:items-center`}>
       <img
         src={result.img}
         alt=""
@@ -16,7 +16,7 @@ const WhitepaperResult = ({ result }) => {
         <h1 className="md:w-3/5">{result.head}</h1>
         <h2 className="hidden md:block">{result.subhead}</h2>
         <h3>{result.date}</h3>
-        <button className={s.cta}>
+        <button className={`${s.cta} flex items-center`}>
           <BiDownload className="text-lg mb-1 mr-2" />
           <span>Download</span>
         </button>

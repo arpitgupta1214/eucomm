@@ -1,0 +1,8 @@
+.sideImg {
+  @apply w-full;
+  padding-top: 56%;
+  @screen md {
+    width: 27%;
+    padding-top: 0;
+  }
+}
