@@ -21,7 +21,7 @@ const PressReleases = () => {
   }, [sortBy, activeFilters, dispatch]);
 
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
       {results.map((result, idx) => (
         <PressReleaseResult key={`result-${idx}`} result={result} />
       ))}
