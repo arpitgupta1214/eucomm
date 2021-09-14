@@ -15,14 +15,13 @@ const Channels = () => {
       const resultsData = await import(
         "data/resources/channels/results.json"
       ).then((data) => data.default);
-      console.log(resultsData);
       dispatch(searchActions.setResults({ results: resultsData }));
     };
     getResults();
   }, [sortBy, searchString, dispatch]);
 
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {results.map((result, idx) => (
         <ChannelResult key={`result-${idx}`} result={result} />
       ))}
