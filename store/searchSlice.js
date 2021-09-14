@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   activeFilters: [],
   openFilterPanels: [],
-  searchString: null,
+  searchString: "",
   sortBy: null,
   results: [],
   tab: null,

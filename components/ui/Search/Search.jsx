@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   return (
-    <div className="w-80 text-sm bg-skin-light py-1 px-3 flex items-center">
+    <div className="w-full text-sm bg-skin-light py-1 px-3 flex items-center">
       <span className="my-1 text-skin-light text-xl">
         <FiSearch />
       </span>

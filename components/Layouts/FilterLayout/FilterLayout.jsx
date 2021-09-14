@@ -73,7 +73,11 @@ const FilterLayout = ({ children, ...props }) => {
             <div className="w-full flex-grow">
               <InlineFilters openFilters={openFilters} />
             </div>
-            {props.allowSearch && <Search />}
+            {props.allowSearch && (
+              <div className="mt-2 md:mt-0 w-full md:w-80">
+                <Search />
+              </div>
+            )}
             <div className="w-full md:w-auto md:ml-3 mt-3 md:mt-0">
               <Sort sortOptions={props.sortOptions} />
             </div>
