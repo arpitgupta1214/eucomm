@@ -132,9 +132,9 @@ const Header = () => {
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
-                        initial={{ height: 0, "margin-top": 0 }}
-                        animate={{ height: "auto", "margin-top": "5px" }}
-                        exit={{ height: 0, "margin-top": 0 }}
+                        initial={{ height: 0, marginTop: 0 }}
+                        animate={{ height: "auto", marginTop: "5px" }}
+                        exit={{ height: 0, marginTop: 0 }}
                         className="md:absolute md:top-full pl-5 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden"
                       >
                         {page.subpages?.map((subpage, idx) => {
@@ -151,6 +151,9 @@ const Header = () => {
                                     ? "text-skin-highlight"
                                     : "text-skin-light"
                                 }`}
+                                onClick={() => {
+                                  isMobile && toggleMenu();
+                                }}
                               >
                                 {subpage.name}
                               </div>
