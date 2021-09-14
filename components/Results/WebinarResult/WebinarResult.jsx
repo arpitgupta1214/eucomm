@@ -2,17 +2,19 @@ import Badge from "components/Badge/Badge";
 import { BiCalendar } from "react-icons/bi";
 import { BsClockFill } from "react-icons/bs";
 import s from "../result.module.scss";
-
+import wS from "./webinarResult.module.scss";
 const WebinarResult = ({ result }) => {
   return (
-    <div className={s.card}>
+    <div className={`${s.card} flex-wrap md:flex-nowrap items-center`}>
       {/* img  */}
       <div
-        className="h-full w-1/3 flex-shrink-0 bg-no-repeat bg-cover bg-center"
+        className={`${wS.sideImg} md:h-full w-full md:w-1/3 flex-shrink-0 bg-no-repeat bg-cover bg-center`}
         style={{ backgroundImage: `url(${result.img})` }}
       />
       {/* content */}
-      <div className={`${s.content} px-5 my-9 border-r border-skin-base`}>
+      <div
+        className={`${s.content} w-1/2 md:w-auto px-5 my-5 md:my-9 border-r border-skin-base`}
+      >
         <Badge type={result.category.id} name={result.category.name} />
         <h1>{result.head}</h1>
         <h2>{result.subhead}</h2>

@@ -4,7 +4,7 @@ import s from "../result.module.scss";
 
 const WhitepaperResult = ({ result }) => {
   return (
-    <div className={`${s.card}`}>
+    <div className={`${s.card} items-start md:items-center`}>
       <img
         src={result.img}
         alt=""

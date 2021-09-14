@@ -1,5 +1,5 @@
 .card {
-  @apply mb-4 md:mb-10 bg-skin-light flex items-start md:items-center;
+  @apply mb-4 md:mb-10 bg-skin-light flex;
   transition: all 0.5s;
   &:hover {
     @apply bg-skin-base transform -translate-y-1;
@@ -12,7 +12,7 @@
     @apply flex-grow flex flex-col;
   }
   h1 {
-    @apply font-bold text-lg md:text-2xl mb-1;
+    @apply font-medium md:font-bold text-lg md:text-2xl mb-1;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -21,6 +21,11 @@
   }
   h2 {
     @apply text-skin-light mb-2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
   h3 {
     @apply text-xs text-skin-extra-light mb-4;
