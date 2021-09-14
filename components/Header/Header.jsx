@@ -2,20 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 import s from "./header.module.scss";
 import { useRouter } from "next/router";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
+import { AnimatePresence, motion } from "framer-motion";
 
 const config = {
   companyName: "EU Comm",
   pages: [
-    "Conversations",
-    "Agenda",
-    "Members",
-    "Documents",
-    "Resources",
-    "Calendar",
-    "Directory",
+    { name: "Conversations", slug: "conversations" },
+    { name: "Agenda", slug: "agenda" },
+    { name: "Members", slug: "members" },
+    { name: "Documents", slug: "documents" },
+    {
+      name: "Resources",
+      slug: "resources",
+      subpages: [
+        { name: "Whitepapers", slug: "whitepapers" },
+        { name: "Videos", slug: "videos" },
+        { name: "Webinars", slug: "webinars" },
+        { name: "Publications", slug: "publications" },
+        { name: "Press releases", slug: "press-releases" },
+        { name: "Podcasts", slug: "podcasts" },
+        { name: "Channels", slug: "channels" },
+        { name: "Document library", slug: "document-library" },
+      ],
+    },
+    { name: "Calendar", slug: "calendar" },
+    { name: "Directory", slug: "directory" },
   ],
 };
 
@@ -48,8 +62,10 @@ const Header = () => {
   const router = useRouter();
   const path = router.asPath.split("/").filter((page) => !!page);
   const currentPage = new RegExp(`^${path[0]}$`, "i");
+  const currentSubPage = new RegExp(`^${path[1]}$`, "i");
   const headerRef = useRef();
   const [openMenu, setOpenMenu] = useState(false);
+  const [openPageSubmenu, setOpenPageSubmenu] = useState([]);
 
   useEffect(() => {
     setOpenMenu(!isMobile);
@@ -57,6 +73,16 @@ const Header = () => {
 
   const toggleMenu = () => {
     setOpenMenu((openMenu) => !openMenu);
+  };
+
+  const togglePageSubmenu = (page) => {
+    setOpenPageSubmenu((openPageSubmenu) => {
+      if (openPageSubmenu === page) {
+        return null;
+      } else {
+        return page;
+      }
+    });
   };
   return (
     <header>
@@ -83,22 +109,58 @@ const Header = () => {
           {/* pages */}
           <div className="flex flex-col md:flex-row">
             {config.pages.map((page, idx) => {
-              const isCurrent = currentPage.test(page);
+              const isCurrent = currentPage.test(page.name);
+              const isOpen = openPageSubmenu === page.name;
               return (
-                <Link
+                <div
                   key={`head-page-${idx}`}
-                  href={`/${page.toLowerCase()}`}
-                  passHref={true}
+                  className="md:mx-4 flex flex-col pb-8 md:pb-4"
                 >
                   <div
-                    className={`md:mx-4 pb-8 md:pb-4 text-lg md:text-base cursor-pointer flex items-center ${
+                    className={`text-lg md:text-base flex items-center ${
                       isCurrent ? s.currentPage : ""
                     }`}
                   >
-                    {page}
-                    {isCurrent && <FaAngleDown className="ml-1" />}
+                    {page.name}
+                    <button
+                      className="ml-1 pb-1 cursor-pointer"
+                      onClick={() => togglePageSubmenu(page.name)}
+                    >
+                      {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+                    </button>
                   </div>
-                </Link>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, "margin-top": 0 }}
+                        animate={{ height: "auto", "margin-top": "5px" }}
+                        exit={{ height: 0, "margin-top": 0 }}
+                        className="md:absolute md:top-full pl-5 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden"
+                      >
+                        {page.subpages?.map((subpage, idx) => {
+                          const isCurrent = currentSubPage.test(subpage.name);
+                          return (
+                            <Link
+                              key={`subpage-${idx}`}
+                              href={`/${page.slug}/${subpage.slug}`}
+                              passHref
+                            >
+                              <div
+                                className={`text-sm font-medium my-3 md:my-2 cursor-pointer ${
+                                  isCurrent
+                                    ? "text-skin-highlight"
+                                    : "text-skin-light"
+                                }`}
+                              >
+                                {subpage.name}
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               );
             })}
           </div>
