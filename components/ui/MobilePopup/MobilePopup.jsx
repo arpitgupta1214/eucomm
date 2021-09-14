@@ -15,16 +15,16 @@ const MobilePopup = ({ children, display, onClose }) => {
         {display && (
           <motion.div
             initial={{
-              transform: "translateY(100%)",
-              "box-shadow": "0 0 0 5000px rgba(0,0,0,0)",
+              height: 0,
+              boxShadow: "0 0 0 5000px rgba(0,0,0,0)",
             }}
             animate={{
-              transform: "translateY(0)",
-              "box-shadow": "0 0 0 5000px rgba(0,0,0,0.8)",
+              height: "auto",
+              boxShadow: "0 0 0 5000px rgba(0,0,0,0.8)",
             }}
             exit={{
-              transform: "translateY(100%)",
-              "box-shadow": "0 0 0 5000px rgba(0,0,0,0)",
+              height: 0,
+              boxShadow: "0 0 0 5000px rgba(0,0,0,0)",
             }}
             className={`${s.popup} w-screen fixed left-0 bottom-0 z-50 bg-skin-base rounded-t-3xl pt-8 flex flex-col items-center p-4`}
           >
