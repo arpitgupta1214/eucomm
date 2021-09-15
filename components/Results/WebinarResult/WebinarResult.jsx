@@ -1,4 +1,4 @@
-import Badge from "components/Badge/Badge";
+import Badge from "components/ui/Badge/Badge";
 import { BiCalendar } from "react-icons/bi";
 import { BsClockFill } from "react-icons/bs";
 import s from "../result.module.scss";
@@ -15,7 +15,7 @@ const WebinarResult = ({ result }) => {
       />
       {/* content */}
       <div
-        className={`${s.content} w-1/2 md:w-auto px-5 my-5 md:my-9 border-r border-skin-base`}
+        className={`${s.content} w-1/2 md:w-auto px-5 my-5 md:my-6 border-r border-skin-base`}
       >
         <Badge type={result.category.id} name={result.category.name} />
         <h1>{result.head}</h1>

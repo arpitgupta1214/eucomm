@@ -9,7 +9,7 @@
   .filter {
     @apply text-skin-light;
     .filterName {
-      @apply text-sm flex justify-between items-center my-2 uppercase;
+      @apply text-sm flex justify-between items-center my-2 md:my-1 uppercase;
     }
     .filterOptions {
       @apply flex flex-col overflow-hidden;

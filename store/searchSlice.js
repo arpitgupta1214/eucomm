@@ -57,6 +57,7 @@ const searchSlice = createSlice({
     setResults(state, action) {
       const { results } = action.payload;
       state.results = results || [];
+      state.loading = false;
     },
     setTab(state, action) {
       const { tab } = action.payload;

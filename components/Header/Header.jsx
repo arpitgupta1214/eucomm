@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import s from "./header.module.scss";
 import { useRouter } from "next/router";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
@@ -65,7 +64,7 @@ const Header = () => {
   const currentSubPage = new RegExp(`^${path[1]}$`, "i");
   const headerRef = useRef();
   const [openMenu, setOpenMenu] = useState(false);
-  const [openPageSubmenu, setOpenPageSubmenu] = useState([]);
+  const [openPageSubmenu, setOpenPageSubmenu] = useState(null);
 
   useEffect(() => {
     setOpenMenu(!isMobile);
@@ -84,6 +83,10 @@ const Header = () => {
       }
     });
   };
+
+  const redirect = (path) => {
+    router.push(path);
+  };
   return (
     <header>
       <div
@@ -94,7 +97,7 @@ const Header = () => {
       >
         {/* logo */}
         <div className="text-skin-highlight font-bold text-2xl uppercase">
-          <Link href="/">{config.companyName}</Link>
+          <button onClick={() => redirect("/")}>{config.companyName}</button>
         </div>
         {/* menu  */}
         <button className={s.menuBtn} onClick={toggleMenu}>
@@ -140,24 +143,27 @@ const Header = () => {
                         {page.subpages?.map((subpage, idx) => {
                           const isCurrent = currentSubPage.test(subpage.name);
                           return (
-                            <Link
+                            <button
                               key={`subpage-${idx}`}
-                              href={`/${page.slug}/${subpage.slug}`}
-                              passHref
+                              onClick={() =>
+                                redirect(`/${page.slug}/${subpage.slug}`)
+                              }
                             >
                               <div
-                                className={`text-sm font-medium my-3 md:my-2 cursor-pointer ${
+                                className={`text-sm font-medium my-3 md:my-2 cursor-pointer text-left ${
                                   isCurrent
                                     ? "text-skin-highlight"
                                     : "text-skin-light"
                                 }`}
                                 onClick={() => {
-                                  isMobile && toggleMenu();
+                                  isMobile
+                                    ? toggleMenu()
+                                    : togglePageSubmenu(null);
                                 }}
                               >
                                 {subpage.name}
                               </div>
-                            </Link>
+                            </button>
                           );
                         })}
                       </motion.div>

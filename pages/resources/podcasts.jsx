@@ -32,12 +32,14 @@ const Podcasts = () => {
     (result) => result.id === playingPodcastId
   );
   const seekerValue = parseInt((currentPlaytime / currentTotalTime) * 100);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const getResults = async () => {
       const resultsData = await import(
         "data/resources/podcasts/results.json"
       ).then((data) => data.default);
       dispatch(searchActions.setResults({ results: resultsData }));
+      setLoading(false);
     };
     getResults();
   }, [sortBy, dispatch]);
@@ -62,6 +64,10 @@ const Podcasts = () => {
   useEffect(() => {
     Howler.volume(volume);
   }, [volume]);
+
+  if (loading) {
+    return <></>;
+  }
   return (
     <>
       <div className="pb-24">

@@ -1,4 +1,4 @@
-import Badge from "components/Badge/Badge";
+import Badge from "components/ui/Badge/Badge";
 import s from "../result.module.scss";
 import pS from "./publicationResult.module.scss";
 
@@ -11,7 +11,7 @@ const PublicationResult = ({ result }) => {
         style={{ backgroundImage: `url(${result.img})` }}
       />
       {/* content */}
-      <div className={`${s.content} md:px-5 mt-5 md:my-0`}>
+      <div className={`${s.content} md:px-5 mt-5 md:my-2`}>
         <Badge type={result.category.id} name={result.category.name} />
         <h1>{result.head}</h1>
         <h2>{result.subhead}</h2>

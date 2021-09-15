@@ -1,4 +1,4 @@
-import Badge from "components/Badge/Badge";
+import Badge from "components/ui/Badge/Badge";
 import s from "../result.module.scss";
 import React from "react";
 import { GrDocumentPpt, GrDocumentPdf, GrDocumentWord } from "react-icons/gr";

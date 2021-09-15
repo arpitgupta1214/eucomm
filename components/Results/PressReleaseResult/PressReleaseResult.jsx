@@ -1,4 +1,4 @@
-import Badge from "components/Badge/Badge";
+import Badge from "components/ui/Badge/Badge";
 import s from "../result.module.scss";
 
 const PressReleaseResult = ({ result }) => {

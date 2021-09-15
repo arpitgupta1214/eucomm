@@ -69,12 +69,12 @@ const FilterLayout = ({ children, ...props }) => {
             </div>
           )}
 
-          <div className="flex flex-wrap md:flex-nowrap items-start mb-6 md:mb-4">
+          <div className="flex flex-wrap md:flex-nowrap items-start mb-6 md:mb-3">
             <div className="w-full flex-grow">
               <InlineFilters openFilters={openFilters} />
             </div>
             {props.allowSearch && (
-              <div className="mt-2 md:mt-0 w-full md:w-80">
+              <div className="mt-2 md:mt-0 w-full md:w-80 flex-shrink-0">
                 <Search />
               </div>
             )}

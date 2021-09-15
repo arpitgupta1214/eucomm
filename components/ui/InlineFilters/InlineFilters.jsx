@@ -14,14 +14,14 @@ const InlineFilters = ({ openFilters }) => {
   };
   return (
     <div className="w-full flex text-sm text-skin-light">
-      <span className="whitespace-nowrap mr-3 md:mr-0">
+      <span className="whitespace-nowrap mr-3 md:mr-0 md:mt-2">
         Found {resultsCount} results
       </span>
-      <div className="flex-grow flex items-start md:flex-row-reverse overflow-hidden">
+      <div className="flex-grow md:flex-grow-0 md:pl-3 flex items-start md:flex-row-reverse overflow-hidden">
         {/* clear all  */}
         {activeFilters.length > 0 ? (
           <button
-            className="whitespace-nowrap text-skin-highlight mt-1 pl-3 md:pl-0 border-l border-skin-base md:border-none mr-2 md:mr-0"
+            className="whitespace-nowrap text-skin-highlight mt-1 md:mt-2 pl-3 md:pl-0 border-l border-skin-base md:border-none mr-2"
             onClick={clearAll}
           >
             Clear all
@@ -29,7 +29,7 @@ const InlineFilters = ({ openFilters }) => {
         ) : (
           isMobile && (
             <button
-              className="whitespace-nowrap text-skin-highlight pl-3 md:pl-0 border-l border-skin-base md:border-none mr-2 md:mr-0"
+              className="whitespace-nowrap text-skin-highlight pl-3 border-l border-skin-base md:border-none mr-2"
               onClick={openFilters}
             >
               Filters
@@ -41,7 +41,7 @@ const InlineFilters = ({ openFilters }) => {
           {activeFilters.map((activeFilter) => (
             <div
               key={`inline-filter-${activeFilter.optionName}-${activeFilter.filterName}`}
-              className="px-3 py-1 mx-3 mb-2 border border-skin-base flex items-center"
+              className="px-3 py-1 mr-3 mb-1 border border-skin-base flex items-center"
               onClick={openFilters}
             >
               <span>{activeFilter.filterName}:</span>
