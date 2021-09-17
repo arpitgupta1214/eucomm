@@ -74,16 +74,6 @@ const Header = () => {
     setOpenMenu((openMenu) => !openMenu);
   };
 
-  const togglePageSubmenu = (page) => {
-    setOpenPageSubmenu((openPageSubmenu) => {
-      if (openPageSubmenu === page) {
-        return null;
-      } else {
-        return page;
-      }
-    });
-  };
-
   const redirect = (path) => {
     router.push(path);
   };
@@ -118,6 +108,10 @@ const Header = () => {
                 <div
                   key={`head-page-${idx}`}
                   className="md:mx-4 flex flex-col pb-8 md:pb-4"
+                  onMouseEnter={() => {
+                    setOpenPageSubmenu(page.name);
+                  }}
+                  onMouseLeave={() => setOpenPageSubmenu(null)}
                 >
                   <div
                     className={`text-lg md:text-base flex items-center ${
@@ -125,10 +119,7 @@ const Header = () => {
                     }`}
                   >
                     {page.name}
-                    <button
-                      className="ml-1 pb-1 cursor-pointer"
-                      onClick={() => togglePageSubmenu(page.name)}
-                    >
+                    <button className="ml-1 pb-1 cursor-pointer">
                       {isOpen ? <FaAngleUp /> : <FaAngleDown />}
                     </button>
                   </div>
@@ -136,9 +127,12 @@ const Header = () => {
                     {isOpen && (
                       <motion.div
                         initial={{ height: 0, marginTop: 0 }}
-                        animate={{ height: "auto", marginTop: "5px" }}
+                        animate={{
+                          height: "auto",
+                          marginTop: isMobile ? "5px" : "0px",
+                        }}
                         exit={{ height: 0, marginTop: 0 }}
-                        className="md:absolute md:top-full pl-5 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden"
+                        className="md:absolute md:top-full pl-5 pr-2 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden"
                       >
                         {page.subpages?.map((subpage, idx) => {
                           const isCurrent = currentSubPage.test(subpage.name);
@@ -150,7 +144,7 @@ const Header = () => {
                               }
                             >
                               <div
-                                className={`text-sm font-medium my-3 md:my-2 cursor-pointer text-left ${
+                                className={`text-sm font-medium transition-all transform hover:translate-x-2 my-3 md:my-2 cursor-pointer text-left ${
                                   isCurrent
                                     ? "text-skin-highlight"
                                     : "text-skin-light"
@@ -158,7 +152,7 @@ const Header = () => {
                                 onClick={() => {
                                   isMobile
                                     ? toggleMenu()
-                                    : togglePageSubmenu(null);
+                                    : () => setOpenPageSubmenu(null);
                                 }}
                               >
                                 {subpage.name}
