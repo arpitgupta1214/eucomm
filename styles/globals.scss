@@ -15,3 +15,15 @@ body {
   @apply w-screen min-h-screen font-base text-skin-base px-4 sm:mx-auto cursor-default overflow-x-hidden;
   max-width: 1200px;
 }
+
+input[type="range"] {
+  @apply my-2 bg-skin-base border-none shadow-none;
+  -webkit-appearennce: none;
+  appearance: none;
+  height: 2px;
+  &::-webkit-slider-thumb {
+    @apply w-2 h-2 rounded-full bg-skin-base;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
