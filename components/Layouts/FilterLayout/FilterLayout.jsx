@@ -78,8 +78,16 @@ const FilterLayout = ({ children, ...props }) => {
                 <Search />
               </div>
             )}
-            <div className="w-full md:w-auto md:ml-3 mt-3 md:mt-0">
+            <div className="w-full md:w-auto md:ml-3 mt-3 md:mt-0 flex">
               <Sort sortOptions={props.sortOptions} />
+              {isMobile && (
+                <button
+                  className="whitespace-nowrap text-skin-highlight bg-skin-light flex-grow ml-2"
+                  onClick={openFilters}
+                >
+                  Filters
+                </button>
+              )}
             </div>
           </div>
           {children}

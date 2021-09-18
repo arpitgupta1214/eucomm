@@ -23,7 +23,7 @@ const Wrapper = ({ isMobile, children }) => {
 const DocumentLibraryResult = ({ result }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   return (
-    <div className={`${s.card} bg-skin-light px-6 py-5`}>
+    <div className={`${s.card} bg-skin-light p-4 md:px-6 md:py-5`}>
       {/* file icon  */}
       <div className="w-8 h-8 flex-shrink-0">
         {iconMappings[result.fileType] &&

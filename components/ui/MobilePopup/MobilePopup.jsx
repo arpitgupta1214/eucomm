@@ -44,6 +44,9 @@ const MobilePopup = ({ children, display, onClose }) => {
       </AnimatePresence>
     );
   } else {
+    if (!display) {
+      return <></>;
+    }
     return children;
   }
 };
