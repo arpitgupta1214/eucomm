@@ -25,7 +25,7 @@ const FilterLayout = ({ children, ...props }) => {
     if (props.tabs) dispatch(searchActions.setTab({ tab: props.tabs[0] }));
   }, [dispatch, props.tabs]);
 
-  const [displayFilter, setDisplayFilter] = useState(true);
+  const [displayFilter, setDisplayFilter] = useState(false);
 
   useEffect(() => {
     if (!isMobile) {
