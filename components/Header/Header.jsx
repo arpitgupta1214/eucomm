@@ -5,7 +5,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 const config = {
   companyName: "EU Comm",
   pages: [
@@ -42,8 +42,9 @@ const MenuWrapper = ({ isMobile, openMenu, headerRef, children }) => {
     if (openMenu) {
       return (
         <div
-          className="flex flex-col bg-white absolute left-0 top-full w-full pt-6 px-4 border-t border-skin-base"
+          className="flex flex-col bg-white absolute left-0 top-full w-full pt-6 pb-48 px-4 border-t border-skin-base overflow-y-scroll"
           style={{ height: `calc(100vh - ${headerHeight}px)` }}
+          ref={(menu) => disableBodyScroll(menu)}
         >
           {children}
         </div>
@@ -71,7 +72,12 @@ const Header = () => {
   }, [isMobile]);
 
   const toggleMenu = () => {
-    setOpenMenu((openMenu) => !openMenu);
+    if (openMenu) {
+      setOpenMenu(false);
+      clearAllBodyScrollLocks();
+    } else {
+      setOpenMenu(true);
+    }
   };
 
   const redirect = (path) => {
@@ -112,6 +118,11 @@ const Header = () => {
                     setOpenPageSubmenu(page.name);
                   }}
                   onMouseLeave={() => setOpenPageSubmenu(null)}
+                  onClick={() => {
+                    setOpenPageSubmenu(
+                      page.name === openPageSubmenu ? null : page.name
+                    );
+                  }}
                 >
                   <div
                     className={`text-lg md:text-base flex items-center ${
