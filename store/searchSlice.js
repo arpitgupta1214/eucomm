@@ -7,6 +7,7 @@ const initialState = {
   sortBy: null,
   results: [],
   tab: null,
+  customDate: {},
 };
 
 const searchSlice = createSlice({
@@ -62,6 +63,10 @@ const searchSlice = createSlice({
     setTab(state, action) {
       const { tab } = action.payload;
       state.tab = tab;
+    },
+    setCustomDate(state, action) {
+      const { customDate } = action.payload;
+      state.customDate = customDate;
     },
   },
 });

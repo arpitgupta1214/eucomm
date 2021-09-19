@@ -1,11 +1,12 @@
 import s from "./filters.module.scss";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { Checkbox } from "components/ui";
+import { Calendar, Checkbox } from "components/ui";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 const Filters = ({ filters }) => {
   const activeFilters = useSelector((state) => state.search.activeFilters);
+  const customDate = useSelector((state) => state.search.customDate);
   const openFilterPanels = useSelector(
     (state) => state.search.openFilterPanels
   );
@@ -49,28 +50,73 @@ const Filters = ({ filters }) => {
                     );
 
                     return (
-                      <div
-                        key={`${filter.name}-${option.name}-option`}
-                        className={`${s.filterOption} ${
-                          optionSelected ? s.selected : ""
-                        }`}
-                      >
-                        <span>{option.name}</span>
-                        <Checkbox
-                          onChange={() =>
-                            toggleOption({
-                              optionName: option.name,
-                              filterName: filter.name,
-                            })
-                          }
-                          checked={optionSelected}
-                        />
-                      </div>
+                      <>
+                        <div
+                          key={`${filter.name}-${option.name}-option`}
+                          className={`${s.filterOption} ${
+                            optionSelected ? s.selected : ""
+                          }`}
+                        >
+                          <span>{option.name}</span>
+                          <Checkbox
+                            onChange={() =>
+                              toggleOption({
+                                optionName: option.name,
+                                filterName: filter.name,
+                              })
+                            }
+                            checked={optionSelected}
+                          />
+                        </div>
+                        {filter.name === "Date" &&
+                          option.name === "Custom" &&
+                          optionSelected &&
+                          customDate.from &&
+                          customDate.to && (
+                            <button
+                              className="text-skin-highlight font-base self-start"
+                              onClick={() => {
+                                dispatch(
+                                  searchActions.setCustomDate({
+                                    customDate: {},
+                                  })
+                                );
+                              }}
+                            >
+                              Edit Date
+                            </button>
+                          )}
+                      </>
                     );
                   })}
                 </motion.div>
               )}
             </AnimatePresence>
+            {!customDate.from &&
+              !customDate.to &&
+              activeFilters.find(
+                (activeFilter) =>
+                  activeFilter.filterName === "Date" &&
+                  activeFilter.optionName === "Custom"
+              ) && (
+                <div className="absolute top-full">
+                  <Calendar
+                    cancel={() =>
+                      toggleOption({
+                        optionName: "Custom",
+                        filterName: "Date",
+                      })
+                    }
+                    apply={(from, to) => {
+                      dispatch(
+                        searchActions.setCustomDate({
+                          customDate: { from, to },
+                        })
+                      );
+                    }}
+                  />
+                </div>
+              )}
           </div>
         );
       })}

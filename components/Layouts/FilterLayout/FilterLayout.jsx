@@ -56,7 +56,7 @@ const FilterLayout = ({ children, ...props }) => {
         {/* filter */}
         {props.filtersData && (
           <MobilePopup onClose={closeFilter} display={displayFilter}>
-            <div className={`w-full md:w-1/4 md:mr-10 flex-shrink-0`}>
+            <div className={`w-full md:w-1/4 md:mr-10 flex-shrink-0 z-10`}>
               <Filters filters={props.filtersData} />
             </div>
           </MobilePopup>
