@@ -87,7 +87,7 @@ const Header = () => {
     <header>
       <div
         ref={headerRef}
-        className={`flex items-center md:items-start pt-4 md:pt-6 justify-between z-50 bg-skin-base ${
+        className={`flex items-center md:items-start pt-4 md:pt-6 justify-between z-10 bg-skin-base ${
           isMobile && openMenu ? "fixed top-0 left-0 w-full p-4" : "relative"
         }`}
       >

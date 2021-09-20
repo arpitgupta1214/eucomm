@@ -28,7 +28,6 @@ const Calendar = ({ cancel, apply }) => {
   const [toDate, setToDate] = useState(null);
 
   useEffect(() => {
-    console.log({ currentYear });
     const getMatrix = async () => {
       const newMtrix = await calendarDates.getMatrix(
         new Date(currentYear, currentMonth)
@@ -59,11 +58,14 @@ const Calendar = ({ cancel, apply }) => {
   };
 
   const handleClickDate = (date) => () => {
+    if (date.type !== "current") {
+      return;
+    }
     if (!fromDate) {
-      setFromDate(date);
+      setFromDate(date.iso);
     } else {
       if (!toDate) {
-        setToDate(date);
+        setToDate(date.iso);
       } else {
         setFromDate(null);
         setToDate(null);
@@ -125,7 +127,7 @@ const Calendar = ({ cancel, apply }) => {
                     ? "bg-skin-highlight text-white rounded-full"
                     : ""
                 } `}
-                onClick={handleClickDate(date.iso)}
+                onClick={handleClickDate(date)}
               >
                 <span className="leading-none pt-1">{date.date}</span>
               </div>

@@ -5,6 +5,7 @@ import {
   Tabs,
   Search,
   MobilePopup,
+  Calendar,
 } from "components/ui";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -14,6 +15,8 @@ import Header from "../../Header";
 
 const FilterLayout = ({ children, ...props }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
+  const customDate = useSelector((state) => state.search.customDate);
+  const activeFilters = useSelector((state) => state.search.activeFilters);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,6 +43,16 @@ const FilterLayout = ({ children, ...props }) => {
   const openFilters = () => {
     setDisplayFilter(true);
   };
+
+  const showCalendar =
+    !customDate.from &&
+    !customDate.to &&
+    activeFilters.find(
+      (activeFilter) =>
+        activeFilter.filterName === "Date" &&
+        activeFilter.optionName === "Custom"
+    );
+
   return (
     <>
       <Header />
@@ -55,11 +68,52 @@ const FilterLayout = ({ children, ...props }) => {
       <div className="w-full mt-5 md:mt-16 flex">
         {/* filter */}
         {props.filtersData && (
-          <MobilePopup onClose={closeFilter} display={displayFilter}>
-            <div className={`w-full md:w-1/4 md:mr-10 flex-shrink-0 z-10`}>
-              <Filters filters={props.filtersData} />
-            </div>
-          </MobilePopup>
+          <div className="w-0 md:w-1/4 md:mr-10 flex-shrink-0 z-10">
+            <MobilePopup
+              onClose={closeFilter}
+              display={displayFilter && !(isMobile && showCalendar)}
+            >
+              <div className="w-full">
+                <Filters
+                  filters={props.filtersData}
+                  closeFilter={closeFilter}
+                />
+              </div>
+            </MobilePopup>
+            {
+              <MobilePopup
+                onClose={() =>
+                  dispatch(
+                    searchActions.toggleOption({
+                      optionName: "Custom",
+                      filterName: "Date",
+                    })
+                  )
+                }
+                display={showCalendar}
+              >
+                <div className="w-full md:w-auto md:absolute md:top-full">
+                  <Calendar
+                    cancel={() =>
+                      dispatch(
+                        searchActions.toggleOption({
+                          optionName: "Custom",
+                          filterName: "Date",
+                        })
+                      )
+                    }
+                    apply={(from, to) => {
+                      dispatch(
+                        searchActions.setCustomDate({
+                          customDate: { from, to },
+                        })
+                      );
+                    }}
+                  />
+                </div>
+              </MobilePopup>
+            }
+          </div>
         )}
         {/* cards */}
         <div className="w-full flex-grow flex flex-col">

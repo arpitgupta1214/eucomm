@@ -1,7 +1,7 @@
 import s from "./filters.module.scss";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Checkbox } from "components/ui";
+import { Checkbox } from "components/ui";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 const Filters = ({ filters }) => {
@@ -92,31 +92,6 @@ const Filters = ({ filters }) => {
                 </motion.div>
               )}
             </AnimatePresence>
-            {!customDate.from &&
-              !customDate.to &&
-              activeFilters.find(
-                (activeFilter) =>
-                  activeFilter.filterName === "Date" &&
-                  activeFilter.optionName === "Custom"
-              ) && (
-                <div className="absolute top-full">
-                  <Calendar
-                    cancel={() =>
-                      toggleOption({
-                        optionName: "Custom",
-                        filterName: "Date",
-                      })
-                    }
-                    apply={(from, to) => {
-                      dispatch(
-                        searchActions.setCustomDate({
-                          customDate: { from, to },
-                        })
-                      );
-                    }}
-                  />
-                </div>
-              )}
           </div>
         );
       })}
