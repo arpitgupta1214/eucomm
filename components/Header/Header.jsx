@@ -6,31 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
-const config = {
-  companyName: "EU Comm",
-  pages: [
-    { name: "Conversations", slug: "conversations" },
-    { name: "Agenda", slug: "agenda" },
-    { name: "Members", slug: "members" },
-    { name: "Documents", slug: "documents" },
-    {
-      name: "Resources",
-      slug: "resources",
-      subpages: [
-        { name: "Whitepapers", slug: "whitepapers" },
-        { name: "Videos", slug: "videos" },
-        { name: "Webinars", slug: "webinars" },
-        { name: "Publications", slug: "publications" },
-        { name: "Press releases", slug: "press-releases" },
-        { name: "Podcasts", slug: "podcasts" },
-        { name: "Channels", slug: "channels" },
-        { name: "Document library", slug: "document-library" },
-      ],
-    },
-    { name: "Calendar", slug: "calendar" },
-    { name: "Directory", slug: "directory" },
-  ],
-};
+import config from "data/config.json";
 
 const user = {
   name: "Amanda Smith",
