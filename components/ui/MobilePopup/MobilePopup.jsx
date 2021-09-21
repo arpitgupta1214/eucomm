@@ -5,7 +5,7 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 const MobilePopup = ({ children, display, onClose }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   const onDrag = (event, info) => {
-    if (info.offset.y > 2) {
+    if (info.offset.y > 20) {
       clearAllBodyScrollLocks();
       onClose();
     }
@@ -32,8 +32,10 @@ const MobilePopup = ({ children, display, onClose }) => {
           >
             <motion.div
               drag="y"
-              onDrag={onDrag}
-              className="h-8 flex items-center justify-center"
+              dragConstraints={{ top: 0, bottom: 0 }}
+              dragElastic={0.2}
+              onDragEnd={onDrag}
+              className="h-8 mb-1 flex items-center justify-center"
               ref={(dragger) => dragger && disableBodyScroll(dragger)}
             >
               <div className="rounded-full h-1 w-11 bg-gray-100" />

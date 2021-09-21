@@ -47,7 +47,7 @@ const FilterLayout = ({ children, ...props }) => {
   const showCalendar =
     !customDate.from &&
     !customDate.to &&
-    activeFilters.find(
+    !!activeFilters.find(
       (activeFilter) =>
         activeFilter.filterName === "Date" &&
         activeFilter.optionName === "Custom"

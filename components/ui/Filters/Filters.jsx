@@ -50,9 +50,8 @@ const Filters = ({ filters }) => {
                     );
 
                     return (
-                      <>
+                      <div key={`${filter.name}-${option.name}-option`}>
                         <div
-                          key={`${filter.name}-${option.name}-option`}
                           className={`${s.filterOption} ${
                             optionSelected ? s.selected : ""
                           }`}
@@ -86,7 +85,7 @@ const Filters = ({ filters }) => {
                               Edit Date
                             </button>
                           )}
-                      </>
+                      </div>
                     );
                   })}
                 </motion.div>

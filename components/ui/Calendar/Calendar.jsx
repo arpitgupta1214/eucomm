@@ -82,7 +82,7 @@ const Calendar = ({ cancel, apply }) => {
       className={`${s.calendar} flex flex-col font-base text-skin-base bg-skin-base`}
     >
       {/* month selector */}
-      <div className="flex m-5 mb-3">
+      <div className="flex m-3 md:m-5 md:mb-3">
         <button onClick={minusMonth}>
           <BsChevronLeft />
         </button>
@@ -93,7 +93,7 @@ const Calendar = ({ cancel, apply }) => {
       </div>
       {/* days */}
       <div
-        className="grid mx-5 mb-6"
+        className="grid md:mx-5 md:mb-6"
         style={{ gridTemplateColumns: "repeat(7, 1fr)" }}
       >
         {days.map((day) => (
@@ -135,7 +135,7 @@ const Calendar = ({ cancel, apply }) => {
           ))}
       </div>
 
-      <div className="px-6 py-4 flex border-t border-skin-base">
+      <div className="md:px-6 py-4 flex md:border-t border-skin-base">
         <button
           className="border border-skin-highlight text-skin-highlight py-2 flex-grow"
           onClick={cancel}
