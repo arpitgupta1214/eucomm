@@ -136,6 +136,13 @@ const PodcastResult = ({ result, toggleLike }) => {
     }
   }, [playingPodcastId, playing, audioSource, dispatch, result.id]);
 
+  useEffect(() => {
+    if (playingPodcastId === result.id) {
+      if (Math.abs(parseInt(audioSource.seek()) - currentPlaytime) > 5)
+        audioSource.seek(currentPlaytime);
+    }
+  }, [playingPodcastId, audioSource, currentPlaytime, result.id]);
+
   const graphCanvasRef = useRef();
 
   useEffect(() => {
@@ -178,7 +185,7 @@ const PodcastResult = ({ result, toggleLike }) => {
 
       {/* play button */}
       <button
-        className={`w-10 h-10 md:w-14 md:h-14 p-2 mr-4 rounded-full overflow-hidden flex justify-center items-center bg-skin-highlight ${
+        className={`w-10 h-10 md:w-14 md:h-14 p-2 mr-4 rounded-full overflow-hidden flex justify-center items-center bg-skin-highlight outline-none ${
           playingPodcastId === result.id && playing ? " bg-opacity-10" : ""
         } md:order-1`}
         onClick={() => togglePlay({ podcastId: result.id })}

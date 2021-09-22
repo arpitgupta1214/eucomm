@@ -6,3 +6,4 @@ export { default as Search } from "./Search";
 export { default as Sort } from "./Sort";
 export { default as Tabs } from "./Tabs";
 export { default as MobilePopup } from "./MobilePopup";
+export { default as Player } from "./Player";

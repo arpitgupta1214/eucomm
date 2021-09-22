@@ -22,7 +22,7 @@ input[type="range"] {
   appearance: none;
   height: 2px;
   &::-webkit-slider-thumb {
-    @apply w-2 h-2 rounded-full bg-skin-base;
+    @apply w-4 h-4 rounded-full bg-skin-base;
     -webkit-appearance: none;
     appearance: none;
   }
