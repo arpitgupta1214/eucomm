@@ -131,7 +131,7 @@ const Header = () => {
                               }
                             >
                               <div
-                                className={`text-sm font-medium transition-all transform hover:translate-x-2 my-3 md:my-2 cursor-pointer text-left ${
+                                className={`text-sm font-medium transition-all transform md:hover:translate-x-2 my-3 md:my-2 cursor-pointer text-left ${
                                   isCurrent
                                     ? "text-skin-highlight"
                                     : "text-skin-light"

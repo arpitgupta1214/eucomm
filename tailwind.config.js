@@ -28,19 +28,19 @@ module.exports = {
           highlight: theme.colorHighlight,
           badge1: theme.badgeColor1,
           badge2: theme.badgeColor2,
-          dark: theme.textColorBase,
+          dark: theme.bgColorDark,
         },
       },
       borderColor: {
         skin: {
           base: theme.borderColorBase,
-          highlight: theme.borderColorHighlight,
+          highlight: theme.colorHighlight,
         },
       },
       fontFamily: {
         base: theme.fontFamilyBase,
-        bold: theme.fontFamilyBold,
         medium: theme.fontFamilyMedium,
+        bold: theme.fontFamilyBold,
       },
     },
   },
