@@ -1,10 +1,41 @@
 {
   "companyName": "EU Comm",
+  "copyrightText": "EU Comm© 2020 - All Rights Reserved",
   "pages": [
-    { "name": "Conversations", "slug": "conversations" },
-    { "name": "Agenda", "slug": "agenda" },
-    { "name": "Members", "slug": "members" },
-    { "name": "Documents", "slug": "documents" },
+    {
+      "name": "About",
+      "slug": "about",
+      "subpages": [
+        { "name": "Who we are", "slug": "who-we-are" },
+        { "name": "Team", "slug": "team" },
+        {
+          "name": "Structure and Governance",
+          "slug": "structure-and-governance"
+        },
+        { "name": "Contact", "slug": "contact" },
+        { "name": "Additional Info Page", "slug": "additional-info-page" }
+      ]
+    },
+    {
+      "name": "Policy Areas",
+      "slug": "policy-areas",
+      "subpages": [
+        { "name": "Greener planet", "slug": "greener-planet" },
+        { "name": "Healthier living", "slug": "healthier-living" },
+        { "name": "Thriving economy", "slug": "thriving-economy" },
+        { "name": "Food safety & science", "slug": "food-safety-n-science" }
+      ]
+    },
+    {
+      "name": "Working Groups",
+      "slug": "working-groups",
+      "subpages": [
+        { "name": "Advocacy Committee", "slug": "advocacy-committee" },
+        { "name": "Safety Committee", "slug": "safety-committee" },
+        { "name": "S.T.A.R.S Committees", "slug": "stars-committees" }
+      ]
+    },
+    { "name": "Data", "slug": "data" },
     {
       "name": "Resources",
       "slug": "resources",
@@ -19,7 +50,21 @@
         { "name": "Document library", "slug": "document-library" }
       ]
     },
-    { "name": "Calendar", "slug": "calendar" },
-    { "name": "Directory", "slug": "directory" }
+    { "name": "Projects", "slug": "projects" },
+    {
+      "name": "Events & Webinars",
+      "slug": "events-n-webinars",
+      "subpages": [
+        { "name": "Events", "slug": "events" },
+        { "name": "Webinars", "slug": "webinars" }
+      ]
+    }
+  ],
+  "socialLinks": [
+    { "name": "linkedin", "link": "https://google.com" },
+    { "name": "telegram", "link": "https://google.com" },
+    { "name": "youtube", "link": "https://google.com" },
+    { "name": "twitter", "link": "https://google.com" },
+    { "name": "facebook", "link": "https://google.com" }
   ]
 }

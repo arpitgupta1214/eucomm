@@ -42,6 +42,9 @@ module.exports = {
         medium: theme.fontFamilyMedium,
         bold: theme.fontFamilyBold,
       },
+      maxWidth: {
+        content: theme.maxContentWidth,
+      },
     },
   },
   variants: {
