@@ -1,15 +1,21 @@
 import Badge from "components/ui/Badge/Badge";
 import { BiDownload } from "react-icons/bi";
 import s from "../result.module.scss";
+import Image from "next/image";
 
 const WhitepaperResult = ({ result }) => {
   return (
     <div className={`${s.card} bg-skin-light items-start md:items-center`}>
-      <img
-        src={result.img}
-        alt=""
-        className="w-1/3 md:w-1/5 ml-4 md:ml-5 mt-4 md:mt-0"
-      />
+      <div className="w-1/3 md:w-1/5 ml-4 md:ml-5 mt-4 md:mt-0">
+        <Image
+          src={result.img}
+          alt=""
+          layout="responsive"
+          width={226}
+          height={296}
+        />
+      </div>
+
       {/* content */}
       <div className={`${s.content} px-5 my-4 md:my-6`}>
         <Badge type={result.category.id} name={result.category.name} />
