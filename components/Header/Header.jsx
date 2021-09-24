@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
-import config from "data/config.json";
 
 const user = {
   name: "Amanda Smith",
@@ -33,7 +32,7 @@ const MenuWrapper = ({ isMobile, openMenu, headerRef, children }) => {
   }
 };
 
-const Header = () => {
+const Header = ({ config }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   const router = useRouter();
   const path = router.asPath.split("/").filter((page) => !!page);

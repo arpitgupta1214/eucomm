@@ -66,5 +66,16 @@
     { "name": "youtube", "link": "https://google.com" },
     { "name": "twitter", "link": "https://google.com" },
     { "name": "facebook", "link": "https://google.com" }
-  ]
+  ],
+  "opening": {
+    "days": "Monday -  Friday",
+    "time": "9am - 5pm"
+  },
+  "address": {
+    "line1": "2972 Westheimer Rd",
+    "line2": "Illinois 85486",
+    "country": "USA"
+  },
+  "email": "eu-comm@gmail.com",
+  "phone": "(303) 555-0105"
 }

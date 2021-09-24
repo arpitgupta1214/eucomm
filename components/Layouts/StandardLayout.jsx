@@ -1,12 +1,12 @@
 import Footer from "components/Footer";
 import Header from "../Header";
 
-const StandardLayout = ({ children }) => {
+const StandardLayout = ({ config, children }) => {
   return (
     <>
-      <Header />
+      <Header config={config} />
       {children}
-      <Footer />
+      <Footer config={config} />
     </>
   );
 };

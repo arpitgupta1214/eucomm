@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import Header from "../../Header";
 
-const FilterLayout = ({ children, ...props }) => {
+const FilterLayout = ({ children, config, ...props }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   const customDate = useSelector((state) => state.search.customDate);
   const activeFilters = useSelector((state) => state.search.activeFilters);
@@ -57,7 +57,7 @@ const FilterLayout = ({ children, ...props }) => {
   return (
     <>
       <div className="w-full max-w-content mx-auto px-4">
-        <Header />
+        <Header config={config} />
         {/* head */}
         <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16">
           {props.heading}
@@ -150,7 +150,7 @@ const FilterLayout = ({ children, ...props }) => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer config={config} />
     </>
   );
 };

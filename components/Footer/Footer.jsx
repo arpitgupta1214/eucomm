@@ -1,13 +1,6 @@
-import config from "data/config.json";
+import SocialLinks from "components/SocialLinks/SocialLinks";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaTelegramPlane,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
 
 const Subpage = ({ subpage }) => (
   <div className="mt-5 text-sm font-medium opacity-60">{subpage.name}</div>
@@ -34,15 +27,7 @@ const Subpages = ({ subpages }) => {
   }
 };
 
-const socialIcons = {
-  linkedin: <FaLinkedinIn />,
-  telegram: <FaTelegramPlane />,
-  youtube: <FaYoutube />,
-  twitter: <FaTwitter />,
-  facebook: <FaFacebookF />,
-};
-
-const Footer = () => {
+const Footer = ({ config }) => {
   return (
     <div className="mt-auto bg-skin-dark pt-14">
       <div className="flex flex-wrap text-white max-w-content mx-auto px-4">
@@ -68,15 +53,7 @@ const Footer = () => {
         <div className="w-full flex items-center justify-between py-5 border-t border-skin-light">
           <span className="text-xs opacity-60">{config.copyrightText}</span>
           {/* social */}
-          <div className="flex">
-            {config.socialLinks.map((socialLink) => (
-              <div key={`social-link-${socialLink.name}`} className="ml-5">
-                {React.cloneElement(socialIcons[socialLink.name], {
-                  className: "text-sm",
-                })}
-              </div>
-            ))}
-          </div>
+          <SocialLinks links={config.socialLinks} />
         </div>
       </div>
     </div>
