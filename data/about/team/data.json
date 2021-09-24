@@ -1,0 +1,65 @@
+{
+  "pageHead": "Meet Our Team",
+  "teams": [
+    {
+      "name": "DIRECTOR GENERAL",
+      "members": [
+        {
+          "name": "Amanda Cooper",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Jenny Wilson",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Cameron Williamson",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Jacob Jones",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        }
+      ]
+    },
+    {
+      "name": "ECONOMIC AFFAIRS",
+      "members": [
+        {
+          "name": "Kathryn Murphy",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Bessie Cooper",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Wade Warren",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Ronald Richards",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Kathryn Murphy",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Bessie Cooper",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        }
+      ]
+    }
+  ]
+}
