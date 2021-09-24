@@ -1,0 +1,68 @@
+{
+  "pageHead": "Structure and Governance",
+  "headImg": "/images/placeholder-large.png",
+  "subhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
+  "groups": [
+    {
+      "name": "General Assembly",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras."
+    },
+    {
+      "name": "Execultive Board Members",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.",
+      "members": [
+        {
+          "name": "Floyd Miles",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Cameron Williamson",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Theresa Webb",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Esther Howard",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Ralph Edwards",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Courtney Henry",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        }
+      ]
+    },
+    {
+      "name": "Board Representative",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.",
+      "members": [
+        {
+          "name": "Dianne Russel",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Darlene Robertson",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        },
+        {
+          "name": "Arlene McCoy",
+          "jobTitle": "Job Title",
+          "image": "/images/placeholder-human.png"
+        }
+      ]
+    }
+  ]
+}
