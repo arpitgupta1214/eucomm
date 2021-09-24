@@ -60,7 +60,7 @@ const Header = () => {
     router.push(path);
   };
   return (
-    <header>
+    <header className="w-full max-w-content mx-auto">
       <div
         ref={headerRef}
         className={`flex items-center md:items-start pt-4 md:pt-6 justify-between z-10 bg-skin-base ${

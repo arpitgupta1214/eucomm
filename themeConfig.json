@@ -13,5 +13,6 @@
   "fontFamilyMedium": "'Helvetica Neue LT W1G 65 Medium'",
   "fontFamilyBold": "'Helvetica Neue LT W1G 75 Bold'",
   "borderColorBase": "#eaebee",
+  "borderColorDark": "#142938",
   "maxContentWidth": "1170px"
 }

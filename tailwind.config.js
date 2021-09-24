@@ -34,6 +34,7 @@ module.exports = {
       borderColor: {
         skin: {
           base: theme.borderColorBase,
+          dark: theme.borderColorDark,
           highlight: theme.colorHighlight,
         },
       },
