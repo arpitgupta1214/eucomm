@@ -8,3 +8,4 @@ export { default as Tabs } from "./Tabs";
 export { default as MobilePopup } from "./MobilePopup";
 export { default as Player } from "./Player";
 export { default as Carousel } from "./Carousel";
+export { default as ArrowButton } from "./ArrowButton";

@@ -1,0 +1,36 @@
+{
+  "pageHead": "Working Groups",
+  "pageSubhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium.",
+  "groups": [
+    {
+      "name": "Advocacy Committee",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "advocacy-committee"
+    },
+    {
+      "name": "Saftey Committee",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "safety-committee"
+    },
+    {
+      "name": "S.T.A.R.S Committees",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "stars-committee"
+    },
+    {
+      "name": "Advocacy Committee",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "advocacy-committee"
+    },
+    {
+      "name": "Saftey Committee",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "safety-committee"
+    },
+    {
+      "name": "S.T.A.R.S Committees",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
+      "slug": "stars-committee"
+    }
+  ]
+}

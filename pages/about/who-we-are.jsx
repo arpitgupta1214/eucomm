@@ -45,7 +45,7 @@ const WhoWeAre = (props) => {
 };
 
 export const getStaticProps = async () => {
-  const staticData = await import("data/about/who-we-are/data.json").then(
+  const staticData = await import("data/about/whoWeAre/data.json").then(
     (data) => data.default
   );
 

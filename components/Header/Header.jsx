@@ -101,17 +101,21 @@ const Header = ({ config }) => {
                       page.subpages && setOpenPageSubmenu(page.name);
                     }}
                     onMouseLeave={() => setOpenPageSubmenu(null)}
-                    onClick={() => {
-                      page.subpages &&
-                        setOpenPageSubmenu(
-                          page.name === openPageSubmenu ? null : page.name
-                        );
-                    }}
                   >
                     <div className="text-lg md:text-base flex items-center">
-                      {page.name}
+                      <button onClick={() => redirect(`/${page.slug}`)}>
+                        {page.name}
+                      </button>
                       {page.subpages && (
-                        <button className="ml-1 pb-1 cursor-pointer">
+                        <button
+                          className="ml-1 pb-1 cursor-pointer"
+                          onClick={() => {
+                            page.subpages &&
+                              setOpenPageSubmenu(
+                                page.name === openPageSubmenu ? null : page.name
+                              );
+                          }}
+                        >
                           {isOpen ? <FaAngleUp /> : <FaAngleDown />}
                         </button>
                       )}
@@ -209,8 +213,8 @@ const Header = ({ config }) => {
       </div>
       {/*breadcrumb*/}
       <div className="w-full max-w-content mx-auto px-4 flex mt-3">
-        {["home", ...path].map((page, idx) => {
-          const last = idx === path.length;
+        {path.map((page, idx) => {
+          const last = idx === path.length - 1;
           return (
             <div key={`breadcrumb-page-${idx}`} className="text-xs">
               <span

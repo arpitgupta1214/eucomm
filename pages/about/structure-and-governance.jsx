@@ -70,7 +70,7 @@ const Structure = (props) => {
 
 export const getStaticProps = async () => {
   const staticData = await import(
-    "data/about/structure-and-governance/data.json"
+    "data/about/structureAndGovernance/data.json"
   ).then((data) => data.default);
 
   return {

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { ArrowButton } from "components/ui";
 
 const Carousel = ({ images }) => {
   const [imgList, setImgList] = useState(
@@ -63,18 +63,12 @@ const Carousel = ({ images }) => {
         </AnimatePresence>
       </div>
       <div className="flex mb-6">
-        <button
-          className="w-12 h-12 mx-3 rounded-full border border-skin-dark flex justify-center items-center"
-          onClick={onPrev}
-        >
-          <GrLinkPrevious />
-        </button>
-        <button
-          className="w-12 h-12 mx-3 rounded-full border border-skin-dark flex justify-center items-center"
-          onClick={onNext}
-        >
-          <GrLinkNext />
-        </button>
+        <div className="mx-3 w-12 h-12">
+          <ArrowButton direction="backward" onClick={onPrev} />
+        </div>
+        <div className="mx-3 w-12 h-12">
+          <ArrowButton direction="forward" onClick={onNext} />
+        </div>
       </div>
     </div>
   );
