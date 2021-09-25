@@ -6,33 +6,74 @@
       "name": "About",
       "slug": "about",
       "subpages": [
-        { "name": "Who we are", "slug": "who-we-are" },
-        { "name": "Team", "slug": "team" },
+        {
+          "name": "Who we are",
+          "slug": "who-we-are",
+          "image": "/images/placeholder.png"
+        },
+        { "name": "Team", "slug": "team", "image": "/images/placeholder.png" },
         {
           "name": "Structure and Governance",
-          "slug": "structure-and-governance"
+          "slug": "structure-and-governance",
+          "image": "/images/placeholder.png"
         },
-        { "name": "Contact", "slug": "contact" },
-        { "name": "Additional Info Page", "slug": "additional-info-page" }
+        {
+          "name": "Contact",
+          "slug": "contact",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Additional Info Page",
+          "slug": "additional-info-page",
+          "image": "/images/placeholder.png"
+        }
       ]
     },
     {
       "name": "Policy Areas",
       "slug": "policy-areas",
       "subpages": [
-        { "name": "Greener planet", "slug": "greener-planet" },
-        { "name": "Healthier living", "slug": "healthier-living" },
-        { "name": "Thriving economy", "slug": "thriving-economy" },
-        { "name": "Food safety & science", "slug": "food-safety-n-science" }
+        {
+          "name": "Greener planet",
+          "slug": "greener-planet",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Healthier living",
+          "slug": "healthier-living",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Thriving economy",
+          "slug": "thriving-economy",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Food safety & science",
+          "slug": "food-safety-n-science",
+          "image": "/images/placeholder.png"
+        }
       ]
     },
     {
       "name": "Working Groups",
       "slug": "working-groups",
       "subpages": [
-        { "name": "Advocacy Committee", "slug": "advocacy-committee" },
-        { "name": "Safety Committee", "slug": "safety-committee" },
-        { "name": "S.T.A.R.S Committees", "slug": "stars-committees" }
+        {
+          "name": "Advocacy Committee",
+          "slug": "advocacy-committee",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Safety Committee",
+          "slug": "safety-committee",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "S.T.A.R.S Committees",
+          "slug": "stars-committees",
+          "image": "/images/placeholder.png"
+        }
       ]
     },
     { "name": "Data", "slug": "data" },
@@ -40,14 +81,46 @@
       "name": "Resources",
       "slug": "resources",
       "subpages": [
-        { "name": "Whitepapers", "slug": "whitepapers" },
-        { "name": "Videos", "slug": "videos" },
-        { "name": "Webinars", "slug": "webinars" },
-        { "name": "Publications", "slug": "publications" },
-        { "name": "Press releases", "slug": "press-releases" },
-        { "name": "Podcasts", "slug": "podcasts" },
-        { "name": "Channels", "slug": "channels" },
-        { "name": "Document library", "slug": "document-library" }
+        {
+          "name": "Whitepapers",
+          "slug": "whitepapers",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Videos",
+          "slug": "videos",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Webinars",
+          "slug": "webinars",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Publications",
+          "slug": "publications",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Press releases",
+          "slug": "press-releases",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Podcasts",
+          "slug": "podcasts",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Channels",
+          "slug": "channels",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Document library",
+          "slug": "document-library",
+          "image": "/images/placeholder.png"
+        }
       ]
     },
     { "name": "Projects", "slug": "projects" },
@@ -55,8 +128,16 @@
       "name": "Events & Webinars",
       "slug": "events-n-webinars",
       "subpages": [
-        { "name": "Events", "slug": "events" },
-        { "name": "Webinars", "slug": "webinars" }
+        {
+          "name": "Events",
+          "slug": "events",
+          "image": "/images/placeholder.png"
+        },
+        {
+          "name": "Webinars",
+          "slug": "webinars",
+          "image": "/images/placeholder.png"
+        }
       ]
     }
   ],
