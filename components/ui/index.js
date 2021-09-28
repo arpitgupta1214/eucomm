@@ -1,5 +1,6 @@
 export { default as Checkbox } from "./Checkbox";
 export { default as Calendar } from "./Calendar";
+export { default as Badge } from "./Badge";
 export { default as Filters } from "./Filters";
 export { default as InlineFilters } from "./InlineFilters";
 export { default as Search } from "./Search";

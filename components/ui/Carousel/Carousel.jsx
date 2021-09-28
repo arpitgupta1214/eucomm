@@ -2,23 +2,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowButton } from "components/ui";
 
-const Carousel = ({ images }) => {
-  const [imgList, setImgList] = useState(
-    images.map((img, idx) => ({ src: img, id: idx }))
+const Carousel = ({ children }) => {
+  const [items, setItems] = useState(
+    children.map((child, idx) => ({ component: child, id: idx }))
   );
   const onPrev = () => {
     let last;
-    setImgList((imgList) => {
-      const newImgList = [...imgList];
-      last = newImgList.pop();
-      return newImgList;
+    setItems((items) => {
+      const newItems = [...items];
+      last = newItems.pop();
+      return newItems;
     });
     setTimeout(
       () =>
-        setImgList((imgList) => {
-          const newImgList = [...imgList];
-          newImgList.unshift(last);
-          return newImgList;
+        setItems((items) => {
+          const newItems = [...items];
+          newItems.unshift(last);
+          return newItems;
         }),
       200
     );
@@ -26,43 +26,40 @@ const Carousel = ({ images }) => {
 
   const onNext = () => {
     let first;
-    setImgList((imgList) => {
-      const newImgList = [...imgList];
-      first = newImgList.shift();
-      return newImgList;
+    setItems((items) => {
+      const newItems = [...items];
+      first = newItems.shift();
+      return newItems;
     });
     setTimeout(
       () =>
-        setImgList((imgList) => {
-          const newImgList = [...imgList];
-          newImgList.push(first);
-          return newImgList;
+        setItems((items) => {
+          const newItems = [...items];
+          newItems.push(first);
+          return newItems;
         }),
       200
     );
   };
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="h-80 mb-6 w-full flex overflow-hidden">
+      <div className="mb-6 w-full flex overflow-hidden">
         <AnimatePresence>
-          {imgList.map((img) => (
+          {items.map((item) => (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ width: 0, marginRight: 0 }}
-              key={`carousel-img-${img.id}`}
-              className={`h-full flex-shrink-0 mr-6 overflow-hidden relative`}
+              initial={{ width: "auto", opacity: 1 }}
+              exit={{ width: 0, opacity: 0 }}
+              key={`item-${item.id}`}
+              className={`flex-shrink-0 flex overflow-hidden relative`}
             >
-              <img
-                src={img.src}
-                alt=""
-                className="h-full object-cover object-left"
-              />
+              <div className="flex-shrink-0 object-cover object-left">
+                {item.component}
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>
       </div>
-      <div className="flex mb-6">
+      <div className="flex">
         <div className="mx-3 w-12 h-12">
           <ArrowButton direction="backward" onClick={onPrev} />
         </div>

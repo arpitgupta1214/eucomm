@@ -1,5 +1,6 @@
 import Layout from "components/Layouts";
 import { ArrowButton } from "components/ui";
+import router from "next/router";
 
 const WorkingGroups = (props) => {
   return (
@@ -8,7 +9,9 @@ const WorkingGroups = (props) => {
       <div className="mb-5 text-5xl font-bold">{props.pageHead}</div>
 
       {/* subhead */}
-      <div className="mb-6 max-w-2xl mx-4 text-center">{props.pageSubhead}</div>
+      <div className="mb-6 max-w-2xl mx-4 text-center text-skin-light">
+        {props.pageSubhead}
+      </div>
 
       {/* groups */}
       <div className="mb-32 w-full max-w-content grid grid-cols-3 gap-6">
@@ -21,9 +24,7 @@ const WorkingGroups = (props) => {
             <div className="w-11 h-11">
               <ArrowButton
                 direction="forward"
-                onClick={() => {
-                  console.log(group.slug);
-                }}
+                onClick={() => router.push(`${router.asPath}/${group.slug}`)}
               />
             </div>
           </div>

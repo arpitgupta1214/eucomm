@@ -56,8 +56,8 @@ const FilterLayout = ({ children, config, ...props }) => {
 
   return (
     <>
+      <Header config={config} />
       <div className="w-full max-w-content mx-auto px-4">
-        <Header config={config} />
         {/* head */}
         <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16">
           {props.heading}
@@ -70,7 +70,7 @@ const FilterLayout = ({ children, config, ...props }) => {
         <div className="w-full mt-5 md:mt-16 flex">
           {/* filter */}
           {props.filtersData && (
-            <div className="w-0 md:w-1/4 md:mr-10 flex-shrink-0 z-10">
+            <div className="w-0 md:w-1/4 md:mr-10 flex-shrink-0">
               <MobilePopup
                 onClose={closeFilter}
                 display={displayFilter && !(isMobile && showCalendar)}

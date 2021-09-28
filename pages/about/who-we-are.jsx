@@ -9,8 +9,20 @@ const WhoWeAre = (props) => {
       {/* head */}
       <div className="mb-6 text-5xl font-bold">{props.pageHead}</div>
       {/* carousel */}
-      <div className="w-full pl-32 mb-24">
-        <Carousel images={props.carouselImages} />
+      <div className="w-full pl-32 mb-32">
+        <Carousel>
+          {props.carouselImages.map((image, idx) => (
+            <div key={`carousel-img-${idx}`} className="mr-6">
+              <Image
+                src={image}
+                alt=""
+                width={472}
+                height={320}
+                layout="fixed"
+              />
+            </div>
+          ))}
+        </Carousel>
       </div>
       {/* purpose */}
       <div className="w-full mb-32 px-5 bg-skin-light">
