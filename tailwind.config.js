@@ -45,6 +45,10 @@ module.exports = {
       },
       maxWidth: {
         content: theme.maxContentWidth,
+        "content-small": theme.maxSmallContentWidth,
+      },
+      boxShadow: {
+        sm: theme.shadowSmall,
       },
     },
   },

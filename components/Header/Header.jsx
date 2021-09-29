@@ -60,11 +60,11 @@ const Header = ({ config }) => {
     router.push(path);
   };
   return (
-    <header className="w-full z-10">
-      <div className="w-full relative">
+    <header className="w-full z-10 flex flex-col items-center">
+      <div className="w-full relative flex flex-col items-center">
         <div
           ref={headerRef}
-          className={`w-full max-w-content mx-auto px-4 flex items-center md:items-start pt-4 md:pt-6 justify-between bg-skin-base${
+          className={`content-md flex items-center md:items-start pt-4 md:pt-6 justify-between bg-skin-base${
             isMobile && openMenu ? "fixed top-0 left-0 w-full p-4" : ""
           }`}
         >
@@ -128,10 +128,9 @@ const Header = ({ config }) => {
                             height: "auto",
                             marginTop: isMobile ? "5px" : "0px",
                           }}
-                          exit={{ height: 0, opacity: 0 }}
                           className={`${s.subpages} md:w-screen md:absolute md:left-0 md:top-full pl-5 pr-2 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden`}
                         >
-                          <div className="md:my-7 w-full max-w-content mx-auto px-4 md:grid grid-cols-3 gap-6">
+                          <div className="md:my-7 content-md md:grid grid-cols-3 gap-6">
                             {page.subpages?.map((subpage, idx) => {
                               const isCurrent = currentSubPage.test(
                                 subpage.name
@@ -212,7 +211,7 @@ const Header = ({ config }) => {
         </div>
       </div>
       {/*breadcrumb*/}
-      <div className="w-full max-w-content mx-auto px-4 flex mt-3">
+      <div className="content-md flex mt-3">
         {path.map((page, idx) => {
           const last = idx === path.length - 1;
           return (

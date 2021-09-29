@@ -28,3 +28,11 @@ input[type="range"] {
     appearance: none;
   }
 }
+
+.content-md {
+  @apply w-full max-w-content mx-4;
+}
+
+.content-sm {
+  @apply w-full max-w-content-small mx-4;
+}

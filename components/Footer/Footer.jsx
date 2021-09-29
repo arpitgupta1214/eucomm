@@ -29,8 +29,8 @@ const Subpages = ({ subpages }) => {
 
 const Footer = ({ config }) => {
   return (
-    <div className="mt-auto bg-skin-dark pt-14">
-      <div className="flex flex-wrap text-white max-w-content mx-auto px-4">
+    <div className="mt-auto bg-skin-dark pt-14 flex flex-col items-center">
+      <div className="flex flex-wrap text-white content-md px-4">
         <div className="w-full flex">
           <div className="flex-shrink-0 whitespace-nowrap text-xl font-medium">
             {config.companyName}

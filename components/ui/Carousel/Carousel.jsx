@@ -43,7 +43,7 @@ const Carousel = ({ children }) => {
   };
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="mb-6 w-full flex overflow-hidden">
+      <div className="mb-6 w-full flex">
         <AnimatePresence>
           {items.map((item) => (
             <motion.div

@@ -1,13 +1,13 @@
-import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const ArrowButton = ({ direction, onClick }) => {
   return (
     <button
-      className="w-full h-full rounded-full border border-skin-dark flex justify-center items-center"
+      className="w-full h-full border border-skin-highlight text-skin-highlight text-2xl flex justify-center items-center"
       onClick={onClick}
     >
-      {direction === "forward" && <GrLinkNext />}
-      {direction === "backward" && <GrLinkPrevious />}
+      {direction === "forward" && <BsArrowRight />}
+      {direction === "backward" && <BsArrowLeft />}
     </button>
   );
 };
