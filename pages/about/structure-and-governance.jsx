@@ -11,10 +11,10 @@ const Structure = (props) => {
       {/* headimg */}
       <div className="w-full mb-12">
         <Image
-          src={props.headImg}
+          src={props.headImg.src}
           alt=""
-          width={5760}
-          height={1120}
+          width={props.headImg.width}
+          height={props.headImg.height}
           layout="responsive"
         />
       </div>
@@ -42,12 +42,12 @@ const Structure = (props) => {
                 {group?.members?.map((member) => (
                   <div key={`${group.name}-${member.name}`} className="w-full">
                     {/* img */}
-                    <div className="mb-3 rounded-xl overflow-hidden">
+                    <div className="mb-3">
                       <Image
                         src={member.image}
                         alt=""
-                        width={200}
-                        height={200}
+                        width={1}
+                        height={1}
                         layout="responsive"
                       />
                     </div>
@@ -61,7 +61,7 @@ const Structure = (props) => {
         </div>
       </div>
 
-      <div className="w-full max-w-content mb-32 rounded-xl overflow-hidden">
+      <div className="content-sm mb-32">
         <Newsletter />
       </div>
     </div>

@@ -1,6 +1,10 @@
 {
   "pageHead": "Structure and Governance",
-  "headImg": "/images/placeholder-large.png",
+  "headImg": {
+    "src": "/images/governance/headImage.png",
+    "width": 2880,
+    "height": 560
+  },
   "subhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
   "groups": [
     {
@@ -12,34 +16,34 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.",
       "members": [
         {
-          "name": "Floyd Miles",
+          "name": "Amanda Cooper",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-10.png"
         },
         {
-          "name": "Cameron Williamson",
+          "name": "Jenny Wilson",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-1.png"
         },
         {
-          "name": "Theresa Webb",
+          "name": "Cameron Smith",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-2.png"
         },
         {
-          "name": "Esther Howard",
+          "name": "Jacob Jones",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-3.png"
         },
         {
-          "name": "Ralph Edwards",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Kathryn Murphy",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-4.png"
         },
         {
-          "name": "Courtney Henry",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Bessie Cooper",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-5.png"
         }
       ]
     },
@@ -48,19 +52,19 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.",
       "members": [
         {
-          "name": "Dianne Russel",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Kathryn Murphy",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-8.png"
         },
         {
-          "name": "Darlene Robertson",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Ted Cooper",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-9.png"
         },
         {
-          "name": "Arlene McCoy",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Wade Warren",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-6.png"
         }
       ]
     }
