@@ -12,7 +12,7 @@ const Newsletter = () => {
         <div className="flex w-full max-w-xl">
           <input
             type="text"
-            className="mr-4 flex-grow shadow-sm bg-skin-base py-3 px-5 text-skin-light"
+            className="mr-4 flex-grow shadow-sm bg-skin-base py-3 px-5 text-skin-light border border-skin-base"
             placeholder="Email"
           />
           <button className="bg-skin-highlight font-bold py-3 px-7 text-white">
