@@ -7,7 +7,7 @@ const Contact = ({ config, ...props }) => {
       {/* head */}
       <div className="mb-5 text-5xl font-bold">{props.pageHead}</div>
 
-      <div className="mb-28 w-full max-w-content mx-2 flex">
+      <div className="mb-28 content-md flex">
         <div className="mr-9 flex-shrink-0 py-24 px-20 grid grid-cols-2 gap-14">
           <div>
             <div className="mb-3 text-xs font-bold text-skin-light">

@@ -14,7 +14,7 @@ const WorkingGroups = (props) => {
       </div>
 
       {/* groups */}
-      <div className="mb-32 w-full max-w-content grid grid-cols-3 gap-6">
+      <div className="mb-32 content-md grid grid-cols-3 gap-6">
         {props.groups.map((group, idx) => (
           <div key={`group-${idx}`} className="rounded-xl bg-skin-light p-6">
             <div className="text-xl mb-2">{group.name}</div>

@@ -16,7 +16,7 @@ const Group = (props) => {
           layout="responsive"
         />
       </div>
-      <div className="mx-4 mb-32 w-full max-w-content flex">
+      <div className="mx-4 mb-32 content-md flex">
         <div className="w-full">
           <div className="mb-12 text-skin-light">{props.pageSubhead}</div>
           <div className="mb-5 font-bold text-2xl">{props.descriptionHead}</div>
@@ -27,7 +27,7 @@ const Group = (props) => {
               </div>
             ))}
           </div>
-          <div className="mb-12 w-full p-8 bg-skin-light">
+          <div className="mb-12 w-full p-8 bg-skin-light overflow-hidden">
             <div className="mb-5 text-2xl font-bold">
               {props.positionPaperHead}
             </div>
@@ -48,7 +48,7 @@ const Group = (props) => {
               ))}
             </Carousel>
           </div>
-          <div className="w-full p-8 bg-skin-light">
+          <div className="w-full p-8 bg-skin-light overflow-hidden">
             <div className="mb-5 text-2xl font-bold">{props.newsHead}</div>
             <Carousel>
               {props.newsItems
@@ -99,7 +99,7 @@ const Group = (props) => {
           </div>
         </div>
       </div>
-      <div className="mb-28 w-full max-w-content">
+      <div className="mb-28 content-sm">
         <Newsletter />
       </div>
     </div>

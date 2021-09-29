@@ -9,7 +9,7 @@ const WhoWeAre = (props) => {
       {/* head */}
       <div className="mb-6 text-5xl font-bold">{props.pageHead}</div>
       {/* carousel */}
-      <div className="w-full max-w-content mb-32">
+      <div className="content-md mb-32">
         <Carousel>
           {props.carouselImages.map((image, idx) => (
             <div key={`carousel-img-${idx}`} className="mr-6">
@@ -25,7 +25,7 @@ const WhoWeAre = (props) => {
         </Carousel>
       </div>
       {/* purpose */}
-      <div className="mb-32 w-full max-w-content-small relative">
+      <div className="mb-32 content-sm relative">
         <div className="m-14 max-w-2xl pl-7 border-l-2 border-white text-white">
           <div className="mb-3 text-sm font-bold">{props.purposeHead}</div>
           <div className="text-sm">{props.purposeText}</div>
@@ -43,7 +43,7 @@ const WhoWeAre = (props) => {
         </div>
       </div>
       {/* mission */}
-      <div className="mb-32 max-w-content mx-auto flex flex-wrap justify-between items-center">
+      <div className="mb-32 content-md mx-auto flex flex-wrap justify-between items-center">
         {/* image */}
         <div className="w-1/2">
           <Image
