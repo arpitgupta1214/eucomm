@@ -7,22 +7,22 @@
         {
           "name": "Amanda Cooper",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-10.png"
         },
         {
           "name": "Jenny Wilson",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-1.png"
         },
         {
-          "name": "Cameron Williamson",
+          "name": "Cameron Smith",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-2.png"
         },
         {
           "name": "Jacob Jones",
           "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "image": "/images/team/img-3.png"
         }
       ]
     },
@@ -31,33 +31,33 @@
       "members": [
         {
           "name": "Kathryn Murphy",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-4.png"
         },
         {
           "name": "Bessie Cooper",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-5.png"
         },
         {
           "name": "Wade Warren",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-6.png"
         },
         {
           "name": "Ronald Richards",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-7.png"
         },
         {
           "name": "Kathryn Murphy",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-8.png"
         },
         {
-          "name": "Bessie Cooper",
-          "jobTitle": "Job Title",
-          "image": "/images/placeholder-human.png"
+          "name": "Ted Cooper",
+          "jobTitle": "JOB TITLE",
+          "image": "/images/team/img-9.png"
         }
       ]
     }
