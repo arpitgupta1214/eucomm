@@ -3,10 +3,11 @@ import s from "./header.module.scss";
 import { useRouter } from "next/router";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
+import loadable from "@loadable/component";
 
 const user = {
   name: "Amanda Smith",
@@ -128,7 +129,7 @@ const Header = ({ config }) => {
                             height: "auto",
                             marginTop: isMobile ? "5px" : "0px",
                           }}
-                          className={`${s.subpages} md:w-screen md:absolute md:left-0 md:top-full pl-5 pr-2 border-l border-skin-base flex flex-col bg-skin-base overflow-hidden`}
+                          className={`${s.subpages} md:w-screen md:absolute md:left-0 md:top-full pl-5 pr-2 text-skin-base border-l border-skin-base flex flex-col bg-skin-base overflow-hidden`}
                         >
                           <div className="md:my-7 content-md md:grid grid-cols-3 gap-6">
                             {page.subpages?.map((subpage, idx) => {
@@ -141,26 +142,30 @@ const Header = ({ config }) => {
                                   onClick={() =>
                                     redirect(`/${page.slug}/${subpage.slug}`)
                                   }
-                                  className="md:bg-skin-light rounded-xl md:p-4 flex items-center"
+                                  className={`${s.subpage} md:p-4 flex items-center hover:bg-skin-light`}
                                 >
                                   {/* image */}
                                   {!isMobile && (
-                                    <div className="mr-4 w-12 rounded-xl overflow-hidden">
-                                      <Image
-                                        src={subpage.image}
-                                        alt=""
-                                        height="1284"
-                                        width="1896"
-                                        layout="responsive"
-                                      />
+                                    <div
+                                      className={`${s.icon} mr-4 w-12 h-12 bg-skin-light flex items-center justify-center`}
+                                    >
+                                      {React.createElement(
+                                        loadable(() =>
+                                          import("react-icons/all").then(
+                                            (icons) =>
+                                              icons[
+                                                subpage.icon || "FaMountain"
+                                              ]
+                                          )
+                                        ),
+                                        { className: "text-2xl" }
+                                      )}
                                     </div>
                                   )}
                                   <div className="flex flex-col">
                                     <div
-                                      className={`text-sm md:text-lg font-bold transition-all transform md:hover:translate-x-2 my-3 md:mt-0 md:mb-2 cursor-pointer text-left ${
-                                        isCurrent
-                                          ? "text-skin-highlight"
-                                          : "text-skin-light"
+                                      className={`text-sm md:text-lg font-bold my-3 md:mt-0 md:mb-2 cursor-pointer text-left ${
+                                        isCurrent ? "text-skin-highlight" : ""
                                       }`}
                                       onClick={() => {
                                         isMobile
@@ -172,7 +177,7 @@ const Header = ({ config }) => {
                                     </div>
                                     {!isMobile && (
                                       <div className="flex">
-                                        <span className="text-sm text-skin-light mr-1">
+                                        <span className="text-sm text-skin-highlight mr-1">
                                           View More
                                         </span>
                                         <BsArrowRight />

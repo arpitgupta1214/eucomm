@@ -1,7 +1,6 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import Image from "next/image";
-
 const Structure = (props) => {
   return (
     <div className="w-full mt-16 flex flex-col items-center">

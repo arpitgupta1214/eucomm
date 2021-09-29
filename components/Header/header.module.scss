@@ -21,4 +21,11 @@
 
 .subpages {
   box-shadow: 0px 3000px 0 3000px rgba(64, 68, 78, 0.7);
+  .subpage {
+    &:hover {
+      .icon {
+        @apply bg-skin-base shadow-sm text-skin-highlight;
+      }
+    }
+  }
 }

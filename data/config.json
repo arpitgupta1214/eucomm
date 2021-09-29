@@ -9,23 +9,27 @@
         {
           "name": "Who we are",
           "slug": "who-we-are",
-          "image": "/images/placeholder.png"
+          "icon": "MdWork"
         },
-        { "name": "Team", "slug": "team", "image": "/images/placeholder.png" },
+        {
+          "name": "Team",
+          "slug": "team",
+          "icon": "TiGroup"
+        },
         {
           "name": "Structure and Governance",
           "slug": "structure-and-governance",
-          "image": "/images/placeholder.png"
+          "icon": "AiFillPieChart"
         },
         {
           "name": "Contact",
           "slug": "contact",
-          "image": "/images/placeholder.png"
+          "icon": "FaPhoneAlt"
         },
         {
-          "name": "Additional Info Page",
-          "slug": "additional-info-page",
-          "image": "/images/placeholder.png"
+          "name": "Additional Page",
+          "slug": "additional-page",
+          "icon": "HiDocumentText"
         }
       ]
     },
@@ -35,23 +39,19 @@
       "subpages": [
         {
           "name": "Greener planet",
-          "slug": "greener-planet",
-          "image": "/images/placeholder.png"
+          "slug": "greener-planet"
         },
         {
           "name": "Healthier living",
-          "slug": "healthier-living",
-          "image": "/images/placeholder.png"
+          "slug": "healthier-living"
         },
         {
           "name": "Thriving economy",
-          "slug": "thriving-economy",
-          "image": "/images/placeholder.png"
+          "slug": "thriving-economy"
         },
         {
           "name": "Food safety & science",
-          "slug": "food-safety-n-science",
-          "image": "/images/placeholder.png"
+          "slug": "food-safety-n-science"
         }
       ]
     },
@@ -61,18 +61,15 @@
       "subpages": [
         {
           "name": "Advocacy Committee",
-          "slug": "advocacy-committee",
-          "image": "/images/placeholder.png"
+          "slug": "advocacy-committee"
         },
         {
           "name": "Safety Committee",
-          "slug": "safety-committee",
-          "image": "/images/placeholder.png"
+          "slug": "safety-committee"
         },
         {
           "name": "S.T.A.R.S Committees",
-          "slug": "stars-committees",
-          "image": "/images/placeholder.png"
+          "slug": "stars-committees"
         }
       ]
     },
@@ -83,43 +80,35 @@
       "subpages": [
         {
           "name": "Whitepapers",
-          "slug": "whitepapers",
-          "image": "/images/placeholder.png"
+          "slug": "whitepapers"
         },
         {
           "name": "Videos",
-          "slug": "videos",
-          "image": "/images/placeholder.png"
+          "slug": "videos"
         },
         {
           "name": "Webinars",
-          "slug": "webinars",
-          "image": "/images/placeholder.png"
+          "slug": "webinars"
         },
         {
           "name": "Publications",
-          "slug": "publications",
-          "image": "/images/placeholder.png"
+          "slug": "publications"
         },
         {
           "name": "Press releases",
-          "slug": "press-releases",
-          "image": "/images/placeholder.png"
+          "slug": "press-releases"
         },
         {
           "name": "Podcasts",
-          "slug": "podcasts",
-          "image": "/images/placeholder.png"
+          "slug": "podcasts"
         },
         {
           "name": "Channels",
-          "slug": "channels",
-          "image": "/images/placeholder.png"
+          "slug": "channels"
         },
         {
           "name": "Document library",
-          "slug": "document-library",
-          "image": "/images/placeholder.png"
+          "slug": "document-library"
         }
       ]
     },
@@ -130,13 +119,11 @@
       "subpages": [
         {
           "name": "Events",
-          "slug": "events",
-          "image": "/images/placeholder.png"
+          "slug": "events"
         },
         {
           "name": "Webinars",
-          "slug": "webinars",
-          "image": "/images/placeholder.png"
+          "slug": "webinars"
         }
       ]
     }
