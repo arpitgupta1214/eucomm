@@ -129,11 +129,31 @@
     }
   ],
   "socialLinks": [
-    { "name": "linkedin", "link": "https://google.com" },
-    { "name": "telegram", "link": "https://google.com" },
-    { "name": "youtube", "link": "https://google.com" },
-    { "name": "twitter", "link": "https://google.com" },
-    { "name": "facebook", "link": "https://google.com" }
+    {
+      "name": "linkedin",
+      "link": "https://google.com",
+      "image": "/images/channels/result-9.png"
+    },
+    {
+      "name": "telegram",
+      "link": "https://google.com",
+      "image": "/images/channels/result-10.png"
+    },
+    {
+      "name": "youtube",
+      "link": "https://google.com",
+      "image": "/images/channels/result-1.png"
+    },
+    {
+      "name": "twitter",
+      "link": "https://google.com",
+      "image": "/images/channels/result-4.png"
+    },
+    {
+      "name": "facebook",
+      "link": "https://google.com",
+      "image": "/images/channels/result-2.png"
+    }
   ],
   "opening": {
     "days": "Monday -  Friday",

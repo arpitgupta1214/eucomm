@@ -8,34 +8,33 @@ const Contact = ({ config, ...props }) => {
       <div className="mb-5 text-5xl font-bold">{props.pageHead}</div>
 
       <div className="mb-28 content-md flex">
-        <div className="mr-9 flex-shrink-0 py-24 px-20 grid grid-cols-2 gap-14">
+        {/* content */}
+        <div className="mr-28 flex-shrink-0 py-24 grid grid-cols-2 gap-y-20">
           <div>
-            <div className="mb-3 text-xs font-bold text-skin-light">
-              {props.openHead}
+            <div className="mb-3 text-xs font-bold">{props.openHead}</div>
+            <div className="text-skin-light">
+              <div className="mb-2">{config.opening.days}</div>
+              <div>{config.opening.time}</div>
             </div>
-            <div className="mb-2">{config.opening.days}</div>
-            <div>{config.opening.time}</div>
           </div>
           <div>
-            <div className="mb-3 text-xs font-bold text-skin-light">
-              {props.addressHead}
+            <div className="mb-3 text-xs font-bold">{props.addressHead}</div>
+            <div className="text-skin-light">
+              <div className="mb-2">{config.address.line1},</div>
+              <div className="mb-2">{config.address.line2}</div>
+              <div>{config.address.country}</div>
             </div>
-            <div className="mb-2">{config.address.line1},</div>
-            <div className="mb-2">{config.address.line2}</div>
-            <div>{config.address.country}</div>
           </div>
           <div>
-            <div className="mb-3 text-xs font-bold text-skin-light">
-              {props.contactHead}
+            <div className="mb-3 text-xs font-bold">{props.contactHead}</div>
+            <div className="text-skin-light">
+              <div className="mb-2">{config.email}</div>
+              <div>{config.phone}</div>
             </div>
-            <div className="mb-2">{config.email}</div>
-            <div>{config.phone}</div>
           </div>
           <div>
-            <div className="mb-3 text-xs font-bold text-skin-light">
-              {props.socialHead}
-            </div>
-            <SocialLinks links={config.socialLinks} />
+            <div className="mb-3 text-xs font-bold">{props.socialHead}</div>
+            <SocialLinks links={config.socialLinks} color />
           </div>
         </div>
         <div className="flex-grow bg-red-200 overflow-hidden"></div>
