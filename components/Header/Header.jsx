@@ -129,7 +129,7 @@ const Header = ({ config }) => {
                             height: "auto",
                             marginTop: isMobile ? "5px" : "0px",
                           }}
-                          className={`${s.subpages} md:w-screen md:absolute md:left-0 md:top-full pl-5 pr-2 text-skin-base border-l border-skin-base flex flex-col bg-skin-base overflow-hidden`}
+                          className={`${s.subpages} md:w-screen md:absolute md:left-0 md:top-full md:pl-5 md:pr-2 text-skin-base border-l border-skin-base flex flex-col md:items-center bg-skin-base overflow-hidden`}
                         >
                           <div className="md:my-7 content-md md:grid grid-cols-3 gap-6">
                             {page.subpages?.map((subpage, idx) => {
@@ -164,7 +164,7 @@ const Header = ({ config }) => {
                                   )}
                                   <div className="flex flex-col">
                                     <div
-                                      className={`text-sm md:text-lg font-bold my-3 md:mt-0 md:mb-2 cursor-pointer text-left ${
+                                      className={`text-sm md:text-lg md:font-bold text-skin-light md:text-skin-base my-3 md:mt-0 md:mb-2 cursor-pointer text-left ${
                                         isCurrent ? "text-skin-highlight" : ""
                                       }`}
                                       onClick={() => {

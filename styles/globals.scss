@@ -30,9 +30,11 @@ input[type="range"] {
 }
 
 .content-md {
-  @apply w-full max-w-content mx-4;
+  @apply max-w-content mx-4;
+  width: calc(100% - theme("spacing.8"));
 }
 
 .content-sm {
-  @apply w-full max-w-content-small mx-4;
+  @apply max-w-content-small mx-4;
+  width: calc(100% - theme("spacing.8"));
 }
