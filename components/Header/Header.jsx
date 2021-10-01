@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
-import loadable from "@loadable/component";
+import CustomIcon from "components/CustomIcon";
 
 const user = {
   name: "Amanda Smith",
@@ -149,17 +149,10 @@ const Header = ({ config }) => {
                                     <div
                                       className={`${s.icon} mr-4 w-12 h-12 bg-skin-light flex items-center justify-center`}
                                     >
-                                      {React.createElement(
-                                        loadable(() =>
-                                          import("react-icons/all").then(
-                                            (icons) =>
-                                              icons[
-                                                subpage.icon || "FaMountain"
-                                              ]
-                                          )
-                                        ),
-                                        { className: "text-2xl" }
-                                      )}
+                                      <CustomIcon
+                                        name={subpage.icon}
+                                        className="text-2xl"
+                                      />
                                     </div>
                                   )}
                                   <div className="flex flex-col">

@@ -1,6 +1,6 @@
 import React from "react";
-import loadable from "@loadable/component";
 import Image from "next/image";
+import CustomIcon from "components/CustomIcon";
 
 const socialIcons = {
   linkedin: "FaLinkedinIn",
@@ -8,13 +8,6 @@ const socialIcons = {
   youtube: "FaYoutube",
   twitter: "FaTwitter",
   facebook: "FaFacebookF",
-};
-
-const IconLoader = ({ name }) => {
-  const Icon = loadable(() =>
-    import("react-icons/fa").then((icons) => icons[name])
-  );
-  return <Icon className="text-sm" />;
 };
 
 const SocialLinks = ({ links, color }) => {
@@ -36,7 +29,10 @@ const SocialLinks = ({ links, color }) => {
               />
             </div>
           ) : (
-            <IconLoader name={socialIcons[socialLink.name]} />
+            <CustomIcon
+              name={socialIcons[socialLink.name]}
+              className="text-sm"
+            />
           )}
         </button>
       ))}
