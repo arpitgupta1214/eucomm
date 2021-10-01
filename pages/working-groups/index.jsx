@@ -1,7 +1,7 @@
 import Layout from "components/Layouts";
 import { ArrowButton } from "components/ui";
 import router from "next/router";
-
+import Image from "next/image";
 const WorkingGroups = (props) => {
   return (
     <div className="w-full mt-16 flex flex-col items-center">
@@ -14,18 +14,26 @@ const WorkingGroups = (props) => {
       </div>
 
       {/* groups */}
-      <div className="mb-32 content-md grid grid-cols-3 gap-6">
+      <div className="mb-32 content-md grid grid-cols-2 gap-6">
         {props.groups.map((group, idx) => (
-          <div key={`group-${idx}`} className="rounded-xl bg-skin-light p-6">
-            <div className="text-xl mb-2">{group.name}</div>
-            <div className="text-xs text-skin-light mb-2">
-              {group.description}
+          <div
+            key={`group-${idx}`}
+            className="bg-skin-light p-6 flex items-center"
+          >
+            <div className="w-40 h-40 flex-shrink-0 mr-5 relative">
+              <Image src={group.image.src} alt="" layout="fill" />
             </div>
-            <div className="w-11 h-11">
-              <ArrowButton
-                direction="forward"
-                onClick={() => router.push(`${router.asPath}/${group.slug}`)}
-              />
+            <div className="flex-grow">
+              <div className="text-xl font-bold mb-2">{group.name}</div>
+              <div className="text-sm text-skin-light mb-2">
+                {group.description}
+              </div>
+              <div className="w-12 h-12">
+                <ArrowButton
+                  direction="forward"
+                  onClick={() => router.push(`${router.asPath}/${group.slug}`)}
+                />
+              </div>
             </div>
           </div>
         ))}

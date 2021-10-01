@@ -19,8 +19,8 @@ const WhitepaperResult = ({ result }) => {
       {/* content */}
       <div className={`${s.content} px-5 my-4 md:my-6`}>
         <Badge type={result.category.id} name={result.category.name} />
-        <h1 className="md:w-3/5">{result.head}</h1>
-        <h2 className="hidden md:block">{result.subhead}</h2>
+        <h1 className="md:w-3/5 max-line-2">{result.head}</h1>
+        <h2 className="hidden md:block max-line-2">{result.subhead}</h2>
         <h3>{result.date}</h3>
         <button className={`${s.cta} flex items-center`}>
           <BiDownload className="text-lg mb-1 mr-2" />

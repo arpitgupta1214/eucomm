@@ -1,6 +1,6 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
-import { Carousel, Badge } from "components/ui";
+import { Carousel, Badge, ArrowButton } from "components/ui";
 import Image from "next/image";
 
 const Group = (props) => {
@@ -17,36 +17,46 @@ const Group = (props) => {
         />
       </div>
       <div className="mx-4 mb-32 content-md flex">
-        <div className="w-full">
-          <div className="mb-12 text-skin-light">{props.pageSubhead}</div>
-          <div className="mb-5 font-bold text-2xl">{props.descriptionHead}</div>
+        <div className="mr-6 flex-shrink overflow-hidden">
+          <div className="mb-7 text-lg text-skin-light">
+            {props.pageSubhead}
+          </div>
+          <div className="mb-4 font-bold text-2xl">{props.descriptionHead}</div>
           <div className="mb-7">
             {props.description.split("\n").map((line, idx) => (
-              <div key={`description-${idx}`} className="mb-5 text-skin-light">
+              <div
+                key={`description-${idx}`}
+                className="mb-4 text-skin-light text-lg"
+              >
                 {line}
               </div>
             ))}
           </div>
-          <div className="mb-12 w-full p-8 bg-skin-light overflow-hidden">
+          <div className="mb-12 w-full p-8 bg-skin-light">
             <div className="mb-5 text-2xl font-bold">
               {props.positionPaperHead}
             </div>
-            <Carousel>
+            <div className="w-full grid grid-cols-3 gap-5">
               {props.positionPapers.map((positionPaper, idx) => (
                 <div
                   key={`position-paper-${idx}`}
-                  className="mr-5 max-w-xs p-6 pt-5 bg-skin-base rounded-xl "
+                  className="w-full p-6 pt-5 bg-skin-base"
                 >
                   <div className="mb-3 text-xs text-skin-light">
                     {positionPaper.head}
                   </div>
-                  <div className="text-lg">{positionPaper.description}</div>
-                  <div className="text-skin-extra-light text-sm">
+                  <div className="font-bold mb-3">
+                    {positionPaper.description}
+                  </div>
+                  <div className="mb-3 text-skin-light text-xs">
                     {positionPaper.date}
+                  </div>
+                  <div className="w-12 h-12">
+                    <ArrowButton direction="forward" />
                   </div>
                 </div>
               ))}
-            </Carousel>
+            </div>
           </div>
           <div className="w-full p-8 bg-skin-light overflow-hidden">
             <div className="mb-5 text-2xl font-bold">{props.newsHead}</div>
@@ -83,8 +93,9 @@ const Group = (props) => {
                           <Badge
                             type={newsItem.category.id}
                             name={newsItem.category.name}
+                            small
                           />
-                          <div className="mb-2 font-bold text-sm">
+                          <div className="mb-2 font-bold text-sm max-line-2">
                             {newsItem.head}
                           </div>
                           <div className="text-skin-light text-xs mb-2">
@@ -97,6 +108,34 @@ const Group = (props) => {
                 ))}
             </Carousel>
           </div>
+        </div>
+
+        {/* chair members */}
+        <div className="flex-grow flex flex-col">
+          {props.chairGroups.map((group, idx) => (
+            <div key={`group-${idx}`} className="mb-5 bg-skin-light py-4 px-5">
+              {/* head  */}
+              <div className="mb-2 text-xs text-skin-light">{group.name}</div>
+              {/* members */}
+              {group.members.map((member, idx) => (
+                <div key={`member-${idx}`} className="mb-3 w-full flex">
+                  {/* image */}
+                  <div className="mr-3 w-10 h-10 flex-shrink-0 rounded-full overflow-hidden relative">
+                    <Image src={member.image.src} alt="" layout="fill" />
+                  </div>
+
+                  <div className="flex-grow flex flex-col">
+                    <div className="whitespace-nowrap font-bold text-sm">
+                      {member.name}
+                    </div>
+                    <div className="whitespace-nowrap text-skin-light text-xs">
+                      {member.title}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
       <div className="mb-28 content-sm">

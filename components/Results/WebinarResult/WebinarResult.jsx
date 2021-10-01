@@ -18,8 +18,8 @@ const WebinarResult = ({ result }) => {
         className={`${s.content} w-1/2 md:w-auto px-5 my-5 md:my-6 border-r border-skin-base`}
       >
         <Badge type={result.category.id} name={result.category.name} />
-        <h1>{result.head}</h1>
-        <h2>{result.subhead}</h2>
+        <h1 className="max-line-2">{result.head}</h1>
+        <h2 className="max-line-2">{result.subhead}</h2>
         <h3>{result.date}</h3>
         <button className={s.cta}>
           <span>Register Now</span>

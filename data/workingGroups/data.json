@@ -5,32 +5,62 @@
     {
       "name": "Advocacy Committee",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "advocacy-committee"
+      "slug": "advocacy-committee",
+      "image": {
+        "src": "/images/workingGroups/group-1.png",
+        "width": 246,
+        "height": 246
+      }
     },
     {
       "name": "Saftey Committee",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "safety-committee"
+      "slug": "safety-committee",
+      "image": {
+        "src": "/images/workingGroups/group-2.png",
+        "width": 246,
+        "height": 246
+      }
     },
     {
       "name": "S.T.A.R.S Committees",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "stars-committee"
+      "slug": "stars-committees",
+      "image": {
+        "src": "/images/workingGroups/group-3.png",
+        "width": 246,
+        "height": 246
+      }
     },
     {
       "name": "Advocacy Committee",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "advocacy-committee"
+      "slug": "advocacy-committee",
+      "image": {
+        "src": "/images/workingGroups/group-1.png",
+        "width": 246,
+        "height": 246
+      }
     },
     {
       "name": "Saftey Committee",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "safety-committee"
+      "slug": "safety-committee",
+      "image": {
+        "src": "/images/workingGroups/group-2.png",
+        "width": 246,
+        "height": 246
+      }
     },
     {
       "name": "S.T.A.R.S Committees",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
-      "slug": "stars-committee"
+      "slug": "stars-committees",
+      "image": {
+        "src": "/images/workingGroups/group-3.png",
+        "width": 246,
+        "height": 246
+      }
     }
   ]
 }

@@ -13,8 +13,8 @@ const PublicationResult = ({ result }) => {
       {/* content */}
       <div className={`${s.content} md:px-5 mt-5 md:my-2`}>
         <Badge type={result.category.id} name={result.category.name} />
-        <h1>{result.head}</h1>
-        <h2>{result.subhead}</h2>
+        <h1 className="max-line-2">{result.head}</h1>
+        <h2 className="max-line-2">{result.subhead}</h2>
         <h3>{result.date}</h3>
         <button className={`${s.cta} hidden md:block`}>
           <span>Read More</span>

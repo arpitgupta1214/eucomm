@@ -38,3 +38,11 @@ input[type="range"] {
   @apply max-w-content-small mx-4;
   width: calc(100% - theme("spacing.8"));
 }
+
+.max-line-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
