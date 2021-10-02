@@ -1,0 +1,119 @@
+{
+  "pageHead": "Policy Areas",
+  "policyAreas": [
+    {
+      "name": "Greener Planet",
+      "slug": "greener-planet",
+      "policies": [
+        {
+          "name": "Biodiversity",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "biodiversity",
+          "image": {
+            "src": "/images/policies/img-1.png",
+            "width": 561,
+            "height": 405
+          }
+        },
+        {
+          "name": "Climate Change",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "climate-change",
+          "image": {
+            "src": "/images/policies/img-2.png",
+            "width": 561,
+            "height": 405
+          }
+        },
+        {
+          "name": "Environmental Info",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "environmental-info",
+          "image": {
+            "src": "/images/policies/img-3.png",
+            "width": 561,
+            "height": 405
+          }
+        },
+        {
+          "name": "Food Waste",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "food-waste",
+          "image": {
+            "src": "/images/policies/img-4.png",
+            "width": 561,
+            "height": 405
+          }
+        },
+        {
+          "name": "Packaging & Circularity",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "packaging-n-circularity",
+          "image": {
+            "src": "/images/policies/img-5.png",
+            "width": 561,
+            "height": 405
+          }
+        },
+        {
+          "name": "Sustainable Food System",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "sustainable-food-system",
+          "image": {
+            "src": "/images/policies/img-6.png",
+            "width": 561,
+            "height": 405
+          }
+        }
+      ]
+    },
+    {
+      "name": "Healthier Living",
+      "slug": "healthier-living",
+      "policies": [
+        {
+          "name": "Biodiversity",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "biodiversity",
+          "image": {
+            "src": "/images/policies/img-2.png",
+            "width": 561,
+            "height": 405
+          }
+        }
+      ]
+    },
+    {
+      "name": "Thriving Economy",
+      "slug": "thriving-economy",
+      "policies": [
+        {
+          "name": "Biodiversity",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "biodiversity",
+          "image": {
+            "src": "/images/policies/img-1.png",
+            "width": 561,
+            "height": 405
+          }
+        }
+      ]
+    },
+    {
+      "name": "Food Safety & Science",
+      "slug": "food-safety-n-science",
+      "policies": [
+        {
+          "name": "Biodiversity",
+          "description": "Lorem ipsum dolor sit amet",
+          "slug": "biodiversity",
+          "image": {
+            "src": "/images/policies/img-1.png",
+            "width": 561,
+            "height": 405
+          }
+        }
+      ]
+    }
+  ]
+}
