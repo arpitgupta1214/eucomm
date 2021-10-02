@@ -61,7 +61,7 @@ const Header = ({ config }) => {
     router.push(path);
   };
   return (
-    <header className="w-full z-10 flex flex-col items-center">
+    <header className="w-full z-20 flex flex-col items-center">
       <div className="w-full relative flex flex-col items-center">
         <div
           ref={headerRef}
