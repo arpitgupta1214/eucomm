@@ -12,7 +12,7 @@ import { MdWork } from "react-icons/md";
 import { TiGroup } from "react-icons/ti";
 import { AiFillPieChart } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
-
+import { VscLoading } from "react-icons/vsc";
 const icons = {
   FaLinkedinIn,
   FaTelegramPlane,
@@ -25,6 +25,7 @@ const icons = {
   TiGroup,
   AiFillPieChart,
   HiDocumentText,
+  VscLoading,
 };
 
 const CustomIcon = ({ name, className }) =>
