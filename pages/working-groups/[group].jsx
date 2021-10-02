@@ -2,8 +2,17 @@ import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import { Carousel, Badge, ArrowButton } from "components/ui";
 import Image from "next/image";
+import router from "next/router";
+import { useState } from "react";
 
 const Group = (props) => {
+  const [otherGroups, setOtherGroups] = useState(props.otherGroups.slice(0, 2));
+  const [moreGroups, setMoreGroups] = useState(true);
+
+  const loadOtherGroups = () => {
+    setOtherGroups(props.otherGroups);
+    setMoreGroups(false);
+  };
   return (
     <div className="mt-7 w-full flex flex-col items-center">
       <div className="font-bold text-5xl mb-6">{props.pageHead}</div>
@@ -141,6 +150,45 @@ const Group = (props) => {
       <div className="mb-28 content-sm">
         <Newsletter />
       </div>
+      <div className="w-full bg-skin-light py-32 flex flex-col items-center">
+        <div className="mb-10 font-bold text-4xl">{props.otherGroupsHead}</div>
+        <div className="mb-6 content-md">
+          <div className="w-full grid grid-cols-2 gap-6">
+            {otherGroups.map((group, idx) => (
+              <div
+                key={`group-${idx}`}
+                className="bg-skin-base p-6 flex items-center"
+              >
+                <div className="w-40 h-40 flex-shrink-0 mr-5 relative">
+                  <Image src={group.image.src} alt="" layout="fill" />
+                </div>
+                <div className="flex-grow">
+                  <div className="text-xl font-bold mb-2">{group.name}</div>
+                  <div className="text-sm text-skin-light mb-2">
+                    {group.description}
+                  </div>
+                  <div className="w-12 h-12">
+                    <ArrowButton
+                      direction="forward"
+                      onClick={() =>
+                        router.push(`${router.asPath}/${group.slug}`)
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {moreGroups && (
+          <button
+            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
+            onClick={loadOtherGroups}
+          >
+            {props.otherGroupsMoreText}
+          </button>
+        )}
+      </div>
     </div>
   );
 };
@@ -161,7 +209,11 @@ export const getStaticPaths = async () => {
   };
 };
 export const getStaticProps = async ({ params }) => {
-  const { group } = params;
-  const staticData = await import(`data/workingGroups/${group}/data.json`);
-  return { props: { ...staticData } };
+  const { group: groupSlug } = params;
+  const staticData = await import(`data/workingGroups/${groupSlug}/data.json`);
+  const commonData = await import(`data/workingGroups/data.json`);
+  commonData.otherGroups = commonData.groups.filter(
+    (group) => group.slug !== groupSlug
+  );
+  return { props: { ...commonData, ...staticData } };
 };
