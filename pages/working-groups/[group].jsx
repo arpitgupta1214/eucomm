@@ -210,7 +210,18 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params }) => {
   const { group: groupSlug } = params;
-  const staticData = await import(`data/workingGroups/${groupSlug}/data.json`);
+  const groups = [];
+  const context = require.context(
+    "data/workingGroups",
+    true,
+    /^\.\/.+\/.+\.json$/
+  );
+  context.keys().forEach((key) => {
+    const resource = require(`data/workingGroups/${key.slice(2)}`);
+    groups.push(JSON.parse(JSON.stringify(resource)));
+  });
+
+  const staticData = groups.find((group) => group.slug === groupSlug);
   const commonData = await import(`data/workingGroups/data.json`);
   commonData.otherGroups = commonData.groups.filter(
     (group) => group.slug !== groupSlug
