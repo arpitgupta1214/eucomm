@@ -26,6 +26,7 @@ const Team = (props) => {
                       width={1}
                       height={1}
                       layout="responsive"
+                      priority={true}
                     />
                   </div>
                   <div className="mb-1 font-bold text-xl">{member.name}</div>

@@ -19,6 +19,7 @@ const WhoWeAre = (props) => {
                 width={parseInt((image.width / image.height) * 320)}
                 height={320}
                 layout="fixed"
+                priority={true}
               />
             </div>
           ))}

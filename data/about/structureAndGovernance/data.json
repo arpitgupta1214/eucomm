@@ -18,32 +18,32 @@
         {
           "name": "Amanda Cooper",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-10.png"
+          "image": "/images/team/img-10.webp"
         },
         {
           "name": "Jenny Wilson",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-1.png"
+          "image": "/images/team/img-1.webp"
         },
         {
           "name": "Cameron Smith",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-2.png"
+          "image": "/images/team/img-2.webp"
         },
         {
           "name": "Jacob Jones",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-3.png"
+          "image": "/images/team/img-3.webp"
         },
         {
           "name": "Kathryn Murphy",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-4.png"
+          "image": "/images/team/img-4.webp"
         },
         {
           "name": "Bessie Cooper",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-5.png"
+          "image": "/images/team/img-5.webp"
         }
       ]
     },
@@ -54,17 +54,17 @@
         {
           "name": "Kathryn Murphy",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-8.png"
+          "image": "/images/team/img-8.webp"
         },
         {
           "name": "Ted Cooper",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-9.png"
+          "image": "/images/team/img-9.webp"
         },
         {
           "name": "Wade Warren",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-6.png"
+          "image": "/images/team/img-6.webp"
         }
       ]
     }
