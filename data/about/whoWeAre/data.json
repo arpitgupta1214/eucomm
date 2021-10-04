@@ -2,17 +2,17 @@
   "pageHead": "Who we are",
   "carouselImages": [
     {
-      "src": "/images/whoWeAre/carousel/img-1.png",
+      "src": "/images/whoWeAre/carousel/img-1.webp",
       "width": 474,
       "height": 321
     },
     {
-      "src": "/images/whoWeAre/carousel/img-2.png",
+      "src": "/images/whoWeAre/carousel/img-2.webp",
       "width": 308,
       "height": 321
     },
     {
-      "src": "/images/whoWeAre/carousel/img-3.png",
+      "src": "/images/whoWeAre/carousel/img-3.webp",
       "width": 474,
       "height": 321
     }
