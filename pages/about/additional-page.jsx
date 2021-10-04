@@ -17,7 +17,12 @@ const AdditionalPage = (props) => {
         </div>
         {/* image */}
         <div className="flex-grow">
-          <Image {...props.overviewImage} alt="" layout="responsive" />
+          <Image
+            {...props.overviewImage}
+            alt=""
+            layout="responsive"
+            priority={true}
+          />
         </div>
       </div>
 

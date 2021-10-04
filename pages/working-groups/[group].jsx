@@ -23,6 +23,7 @@ const Group = (props) => {
           width={5760}
           height={1120}
           layout="responsive"
+          priority={true}
         />
       </div>
       <div className="mx-4 mb-32 content-md flex">

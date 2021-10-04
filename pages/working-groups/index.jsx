@@ -21,7 +21,12 @@ const WorkingGroups = (props) => {
             className="bg-skin-light p-6 flex items-center"
           >
             <div className="w-40 h-40 flex-shrink-0 mr-5 relative">
-              <Image src={group.image.src} alt="" layout="fill" />
+              <Image
+                src={group.image.src}
+                alt=""
+                layout="fill"
+                priority={true}
+              />
             </div>
             <div className="flex-grow">
               <div className="text-xl font-bold mb-2">{group.name}</div>

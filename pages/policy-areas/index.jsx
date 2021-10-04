@@ -51,6 +51,7 @@ const PolicyAreas = (props) => {
               width={policy.image.width}
               height={policy.image.height}
               layout="responsive"
+              priority={true}
             />
           </div>
         ))}

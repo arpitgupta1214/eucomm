@@ -10,7 +10,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "biodiversity",
           "image": {
-            "src": "/images/policies/img-1.png",
+            "src": "/images/policies/img-1.webp",
             "width": 561,
             "height": 405
           }
@@ -20,7 +20,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "climate-change",
           "image": {
-            "src": "/images/policies/img-2.png",
+            "src": "/images/policies/img-2.webp",
             "width": 561,
             "height": 405
           }
@@ -30,7 +30,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "environmental-info",
           "image": {
-            "src": "/images/policies/img-3.png",
+            "src": "/images/policies/img-3.webp",
             "width": 561,
             "height": 405
           }
@@ -40,7 +40,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "food-waste",
           "image": {
-            "src": "/images/policies/img-4.png",
+            "src": "/images/policies/img-4.webp",
             "width": 561,
             "height": 405
           }
@@ -50,7 +50,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "packaging-n-circularity",
           "image": {
-            "src": "/images/policies/img-5.png",
+            "src": "/images/policies/img-5.webp",
             "width": 561,
             "height": 405
           }
@@ -60,7 +60,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "sustainable-food-system",
           "image": {
-            "src": "/images/policies/img-6.png",
+            "src": "/images/policies/img-6.webp",
             "width": 561,
             "height": 405
           }
@@ -76,7 +76,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "biodiversity",
           "image": {
-            "src": "/images/policies/img-2.png",
+            "src": "/images/policies/img-2.webp",
             "width": 561,
             "height": 405
           }
@@ -92,7 +92,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "biodiversity",
           "image": {
-            "src": "/images/policies/img-1.png",
+            "src": "/images/policies/img-1.webp",
             "width": 561,
             "height": 405
           }
@@ -108,7 +108,7 @@
           "description": "Lorem ipsum dolor sit amet",
           "slug": "biodiversity",
           "image": {
-            "src": "/images/policies/img-1.png",
+            "src": "/images/policies/img-1.webp",
             "width": 561,
             "height": 405
           }

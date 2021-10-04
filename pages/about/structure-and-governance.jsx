@@ -15,6 +15,7 @@ const Structure = (props) => {
           width={props.headImg.width}
           height={props.headImg.height}
           layout="responsive"
+          priority={true}
         />
       </div>
 
