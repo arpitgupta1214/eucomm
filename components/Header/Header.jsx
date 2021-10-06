@@ -1,8 +1,6 @@
 import Image from "next/image";
 import s from "./header.module.scss";
 import { useRouter } from "next/router";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { BsArrowRight } from "react-icons/bs";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
@@ -117,7 +115,11 @@ const Header = ({ config }) => {
                               );
                           }}
                         >
-                          {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+                          {isOpen ? (
+                            <CustomIcon name="FaAngleUp" />
+                          ) : (
+                            <CustomIcon name="FaAngleDown" />
+                          )}
                         </button>
                       )}
                     </div>
@@ -173,7 +175,7 @@ const Header = ({ config }) => {
                                         <span className="text-sm text-skin-highlight mr-1">
                                           View More
                                         </span>
-                                        <BsArrowRight />
+                                        <CustomIcon name="BsArrowRight" />
                                       </div>
                                     )}
                                   </div>

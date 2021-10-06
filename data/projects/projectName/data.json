@@ -1,0 +1,31 @@
+{
+  "slug": "project-name",
+  "pageHead": "Project Name",
+  "headImg": {
+    "src": "/images/projects/projectName/head.webp",
+    "width": 2161,
+    "height": 421
+  },
+  "pageSubhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
+  "descriptionHead": "Description",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.",
+  "descriptionBullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque."
+  ],
+  "descriptionFoot": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+  "relatedLinksHead": "RELATED LINKS",
+  "relatedLinks": [
+    {
+      "name": "Training working group",
+      "href": "/"
+    },
+    {
+      "name": "Health working group",
+      "href": "/"
+    }
+  ]
+}
