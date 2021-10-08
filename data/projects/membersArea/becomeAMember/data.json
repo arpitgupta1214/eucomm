@@ -1,0 +1,43 @@
+{
+  "pageHead": "Become a Member",
+  "headImage": {
+    "src": "/images/becomeAMember/head.webp",
+    "width": 2161,
+    "height": 421
+  },
+  "headStats": [
+    { "number": "400+", "title": "Members" },
+    { "number": "35+", "title": "Countries" },
+    { "number": "20+", "title": "Selectors of activity" },
+    { "number": "50+", "title": "Experts" }
+  ],
+  "benefitsHead": "Benefits",
+  "benefits": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel lectus aliquam consequat sed in purus mauris. Amet, risus urna velit volutpat urna, senectus pellentesque."
+  ],
+  "contactHead": "CONTACT THE MEMBERSHIP TEAM",
+  "contacts": [
+    {
+      "image": {
+        "src": "/images/team/img-10.webp",
+        "height": 301,
+        "width": 301
+      },
+      "name": "Amanda Cooper",
+      "title": "Director"
+    },
+    {
+      "image": {
+        "src": "/images/team/img-1.webp",
+        "height": 301,
+        "width": 301
+      },
+      "name": "Jenny Wilson",
+      "title": "Senior Manager"
+    }
+  ],
+  "contactButtonText": "Send Email"
+}
