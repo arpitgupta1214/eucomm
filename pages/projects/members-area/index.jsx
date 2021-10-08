@@ -76,7 +76,7 @@ MembersArea.layout = Layout;
 export default MembersArea;
 
 export const getStaticProps = async () => {
-  const staticData = await import("data/projects/membersArea/data.json");
+  const staticData = await import("data/membersArea/data.json");
 
   return { props: { ...staticData } };
 };

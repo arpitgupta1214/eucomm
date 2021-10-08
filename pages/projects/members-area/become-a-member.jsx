@@ -84,9 +84,7 @@ BecomeAMember.layout = Layout;
 export default BecomeAMember;
 
 export const getStaticProps = async () => {
-  const staticData = await import(
-    "data/projects/membersArea/becomeAMember/data.json"
-  );
+  const staticData = await import("data/membersArea/becomeAMember/data.json");
 
   return { props: { ...staticData } };
 };
