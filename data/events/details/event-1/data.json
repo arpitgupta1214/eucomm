@@ -1,0 +1,49 @@
+{
+  "slug": "5g-for-local-communities",
+  "pageHead": "5G for local communities: a guide for users",
+  "headImage": {
+    "src": "/images/events/event-1/headImage.webp",
+    "width": 2160,
+    "height": 421
+  },
+  "descriptionHead": "Description",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
+  "detailsHead": "DETAILS",
+  "date": "09 Sept 2021",
+  "time": "11:00 - 12:00 CET",
+  "mode": "Online",
+  "registerText": "Register Now",
+  "speakersHead": "Speakers",
+  "speakers": [
+    {
+      "name": "Kathryn Murphy",
+      "title": "JOB TITLE AT THE COMPANY",
+      "image": { "src": "/images/team/img-8.webp", "width": 301, "height": 301 }
+    },
+    {
+      "name": "Ted Cooper",
+      "title": "JOB TITLE AT THE COMPANY",
+      "image": { "src": "/images/team/img-9.webp", "width": 301, "height": 301 }
+    },
+    {
+      "name": "Wade Warren",
+      "title": "JOB TITLE AT THE COMPANY",
+      "image": { "src": "/images/team/img-6.webp", "width": 301, "height": 301 }
+    }
+  ],
+  "agendaHead": "Agenda",
+  "agenda": [
+    {
+      "time": "11:00 - 11:30 CET",
+      "head": "Lorem ipsum dolor sit amet",
+      "description": "consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend."
+    },
+    {
+      "time": "11:30 - 12:00 CET",
+      "head": "Lorem ipsum dolor sit amet",
+      "description": "consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend."
+    }
+  ],
+  "otherEventsHead": "Other Events",
+  "loadMoreText": "Load More"
+}

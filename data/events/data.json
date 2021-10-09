@@ -7,36 +7,63 @@
         {
           "date": "09 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "13 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "09 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "24 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "27 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "27 SEP 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
+          "time": "11:00 - 12:00 CET",
+          "mode": "Online"
+        },
+        {
+          "date": "24 SEP 2021",
+          "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
+          "time": "11:00 - 12:00 CET",
+          "mode": "Online"
+        },
+        {
+          "date": "27 SEP 2021",
+          "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
+          "time": "11:00 - 12:00 CET",
+          "mode": "Online"
+        },
+        {
+          "date": "27 SEP 2021",
+          "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         }
@@ -48,46 +75,54 @@
         {
           "date": "09 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "13 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "09 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "24 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "27 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "27 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         },
         {
           "date": "30 Sept 2021",
           "head": "5G for local communities: a guide for users",
+          "slug": "5g-for-local-communities",
           "time": "11:00 - 12:00 CET",
           "mode": "Online"
         }
       ]
     }
-  ]
+  ],
+  "loadMoreText": "Load More"
 }

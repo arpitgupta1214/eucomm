@@ -149,7 +149,6 @@ export const getStaticPaths = async () => {
     const resource = require(`data/projects/${key.slice(2)}`);
     projects.push(JSON.parse(JSON.stringify(resource)));
   });
-  console.log({ projects });
   return {
     paths: projects.map((project) => ({
       params: { project: project.slug },
