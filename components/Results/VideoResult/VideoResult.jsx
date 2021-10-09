@@ -1,4 +1,4 @@
-import { HiPlay } from "react-icons/hi";
+import CustomIcon from "components/CustomIcon";
 import Image from "next/image";
 
 const VideoResult = ({ result }) => {
@@ -39,7 +39,7 @@ const VideoResult = ({ result }) => {
       </div>
       {/* play button */}
       <button className="w-12 h-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-        <HiPlay className="text-white w-full h-full" />
+        <CustomIcon name="HiPlay" className="text-white w-full h-full" />
       </button>
     </div>
   );

@@ -1,13 +1,13 @@
 import Badge from "components/ui/Badge/Badge";
 import s from "../result.module.scss";
 import React from "react";
-import { GrDocumentPpt, GrDocumentPdf, GrDocumentWord } from "react-icons/gr";
 import { FiDownload } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import CustomIcon from "components/CustomIcon";
 const iconMappings = {
-  pdf: <GrDocumentPdf />,
-  ppt: <GrDocumentPpt />,
-  doc: <GrDocumentWord />,
+  pdf: <CustomIcon name="GrDocumentPdf" />,
+  ppt: <CustomIcon name="GrDocumentPpt" />,
+  doc: <CustomIcon name="GrDocumentWord" />,
 };
 
 const Wrapper = ({ isMobile, children }) => {

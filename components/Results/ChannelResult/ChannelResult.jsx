@@ -1,5 +1,5 @@
+import CustomIcon from "components/CustomIcon";
 import Image from "next/image";
-import { BsArrowRight, BsThreeDotsVertical } from "react-icons/bs";
 
 const ChannelResult = ({ result }) => {
   return (
@@ -24,12 +24,15 @@ const ChannelResult = ({ result }) => {
         </h2>
         <button className="flex items-center text-skin-highlight">
           <span className="text-sm md:text-base font-medium">Explore Now</span>
-          <BsArrowRight className="ml-2 pb-1 text-lg md:text-2xl" />
+          <CustomIcon
+            name="BsArrowRight"
+            className="ml-2 pb-1 text-lg md:text-2xl"
+          />
         </button>
 
         {/* options */}
         <button className="w-6 h-6 absolute top-0 right-0 text-skin-extra-light">
-          <BsThreeDotsVertical className="w-full h-full" />
+          <CustomIcon name="BsThreeDotsVertical" className="w-full h-full" />
         </button>
       </div>
     </div>

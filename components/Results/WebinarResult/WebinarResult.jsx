@@ -1,6 +1,5 @@
+import CustomIcon from "components/CustomIcon";
 import Badge from "components/ui/Badge/Badge";
-import { BiCalendar } from "react-icons/bi";
-import { BsClockFill } from "react-icons/bs";
 import s from "../result.module.scss";
 import wS from "./webinarResult.module.scss";
 const WebinarResult = ({ result }) => {
@@ -30,13 +29,13 @@ const WebinarResult = ({ result }) => {
       <div className="w-1/3 mx-6 flex flex-col justify-center items-center">
         <div className="font-medium text-sm flex items-center">
           <span className="text-skin-highlight mr-2 text-lg pb-1">
-            <BiCalendar />
+            <CustomIcon name="BiCalendar" />
           </span>
           <span>{result.date}</span>
         </div>
         <div className="font-medium text-sm flex items-center mt-4">
           <span className="text-skin-highlight mr-2 text-lg pb-1">
-            <BsClockFill />
+            <CustomIcon name="BsClockFill" />
           </span>
           <span>{result.time}</span>
         </div>

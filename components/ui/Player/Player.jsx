@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { AiOutlinePause } from "react-icons/ai";
-import { FaPlay, FaStepBackward, FaStepForward } from "react-icons/fa";
-import { RiVolumeDownFill, RiVolumeMuteFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import formatSeconds from "util/formatSeconds";
 import { Howler } from "howler";
 import { podcastActions } from "store/podcastSlice";
+import CustomIcon from "components/CustomIcon";
 
 const Player = () => {
   const dispatch = useDispatch();
@@ -91,7 +89,7 @@ const Player = () => {
         <div className="flex items-center md:mr-8">
           {!isMobile && (
             <button className="w-4 h-4">
-              <FaStepBackward className="w-full h-full" />
+              <CustomIcon name="FaStepBackward" className="w-full h-full" />
             </button>
           )}
           <button
@@ -99,13 +97,13 @@ const Player = () => {
             onClick={() => togglePlay()}
           >
             {playing ? (
-              <AiOutlinePause className="w-full h-full" />
+              <CustomIcon name="AiOutlinePause" className="w-full h-full" />
             ) : (
-              <FaPlay className="w-1/2 h-1/2 " />
+              <CustomIcon name="FaPlay" className="w-1/2 h-1/2 " />
             )}
           </button>
           <button className="w-4 h-4">
-            <FaStepForward className="w-full h-full" />
+            <CustomIcon name="FaStepForward" className="w-full h-full" />
           </button>
         </div>
 
@@ -124,9 +122,9 @@ const Player = () => {
             }}
           >
             {volume ? (
-              <RiVolumeDownFill className="h-full w-full" />
+              <CustomIcon name="RiVolumeDownFill" className="h-full w-full" />
             ) : (
-              <RiVolumeMuteFill className="h-full w-full" />
+              <CustomIcon name="RiVolumeMuteFill" className="h-full w-full" />
             )}
           </button>
         )}

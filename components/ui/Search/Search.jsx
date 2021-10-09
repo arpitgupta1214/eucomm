@@ -1,4 +1,4 @@
-import { FiSearch } from "react-icons/fi";
+import CustomIcon from "components/CustomIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
@@ -14,7 +14,7 @@ const Search = () => {
   return (
     <div className="w-full text-sm bg-skin-light py-1 px-3 flex items-center">
       <span className="my-1 text-skin-light text-xl">
-        <FiSearch />
+        <CustomIcon name="FiSearch" />
       </span>
       <input
         type="text"

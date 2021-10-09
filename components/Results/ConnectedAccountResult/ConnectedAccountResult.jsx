@@ -1,8 +1,6 @@
+import CustomIcon from "components/CustomIcon";
 import { MobilePopup } from "components/ui";
 import Image from "next/image";
-import { AiOutlineDelete } from "react-icons/ai";
-import { BsArrowRepeat, BsThreeDotsVertical } from "react-icons/bs";
-import { RiAddCircleLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { accountIntegrationActions } from "store/accountIntegrationSlice";
 import s from "./connectedAccountResult.module.scss";
@@ -52,7 +50,7 @@ const ConnectedAccountResult = ({ result }) => {
         {/* add button  */}
         <button className="w-full px-6 pt-4 pb-3 flex items-center justify-center md:justify-start text-skin-highlight border-2 border-skin-highlight">
           <span className="h-5 w-5 mr-2 mb-1">
-            <RiAddCircleLine className="w-full h-full" />
+            <CustomIcon name="RiAddCircleLine" className="w-full h-full" />
           </span>
           <span className="text-sm font-medium whitespace-nowrap">
             Add New Account
@@ -75,7 +73,10 @@ const ConnectedAccountResult = ({ result }) => {
               className="w-6 h-6text-skin-extra-light"
               onClick={() => onClickMenu({ accountName: account.name })}
             >
-              <BsThreeDotsVertical className="w-full h-full" />
+              <CustomIcon
+                name="BsThreeDotsVertical"
+                className="w-full h-full"
+              />
             </button>
             <MobilePopup
               display={
@@ -86,11 +87,11 @@ const ConnectedAccountResult = ({ result }) => {
             >
               <div className={s.menu}>
                 <button className={s.btn}>
-                  <BsArrowRepeat className={s.symbol} />
+                  <CustomIcon name="BsArrowRepeat" className={s.symbol} />
                   <div className={s.text}>Reconnect</div>
                 </button>
                 <button className={`${s.btn} text-red-500`}>
-                  <AiOutlineDelete className={s.symbol} />
+                  <CustomIcon name="AiOutlineDelete" className={s.symbol} />
                   <div className={s.text}>Remove</div>
                 </button>
               </div>

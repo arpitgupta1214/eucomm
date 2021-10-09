@@ -1,4 +1,4 @@
-import { FiCheck } from "react-icons/fi";
+import CustomIcon from "components/CustomIcon";
 const Checkbox = ({ checked, onChange }) => {
   return (
     <button
@@ -9,7 +9,7 @@ const Checkbox = ({ checked, onChange }) => {
           : "bg-white border-skin-base"
       }`}
     >
-      <FiCheck />
+      <CustomIcon name="FiCheck" />
     </button>
   );
 };

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { searchActions } from "store/searchSlice";
+import CustomIcon from "components/CustomIcon";
 
 const Sort = ({ sortOptions }) => {
   const sortBy = useSelector((state) => state.search.sortBy);
@@ -28,7 +28,11 @@ const Sort = ({ sortOptions }) => {
         className="ml-1 pb-1 text-skin-highlight text-2xl"
         onClick={toggleShowOptions}
       >
-        {showOptions ? <BiChevronUp /> : <BiChevronDown />}
+        {showOptions ? (
+          <CustomIcon name="BiChevronUp" />
+        ) : (
+          <CustomIcon name="BiChevronDown" />
+        )}
       </button>
 
       {/* sort options */}

@@ -1,6 +1,3 @@
-import { BiUpload } from "react-icons/bi";
-import { AiFillHeart, AiOutlineHeart, AiOutlinePause } from "react-icons/ai";
-import { FaPlay } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { podcastActions } from "store/podcastSlice";
 import { useSelector } from "react-redux";
@@ -8,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { Howl } from "howler";
 import theme from "themeConfig.json";
 import formatSeconds from "util/formatSeconds";
+import CustomIcon from "components/CustomIcon";
 
 const processAudioData = (audioBuffer) => {
   const rawData = audioBuffer.getChannelData(0);
@@ -191,9 +189,12 @@ const PodcastResult = ({ result, toggleLike }) => {
         onClick={() => togglePlay({ podcastId: result.id })}
       >
         {playingPodcastId === result.id && playing ? (
-          <AiOutlinePause className="w-full h-full text-skin-highlight" />
+          <CustomIcon
+            name="AiOutlinePause"
+            className="w-full h-full text-skin-highlight"
+          />
         ) : (
-          <FaPlay className="w-1/2 h-1/2 text-white" />
+          <CustomIcon name="FaPlay" className="w-1/2 h-1/2 text-white" />
         )}
       </button>
       {/* visualisation */}
@@ -212,7 +213,7 @@ const PodcastResult = ({ result, toggleLike }) => {
       {/* download like */}
       <div className="w-full md:w-auto flex justify-evenly mt-3 md:mt-0 md:ml-auto p-3 md:p-0 border-t border-skin-base md:border-none md:order-3">
         <button className="w-6 h-6 text-skin-extra-light mr-4">
-          <BiUpload className="h-full w-full" />
+          <CustomIcon name="BiUpload" className="h-full w-full" />
         </button>
         <button
           className="w-6 h-6"
@@ -221,9 +222,15 @@ const PodcastResult = ({ result, toggleLike }) => {
           }}
         >
           {result.liked ? (
-            <AiFillHeart className="w-full h-full text-red-600" />
+            <CustomIcon
+              name="AiFillHeart"
+              className="w-full h-full text-red-600"
+            />
           ) : (
-            <AiOutlineHeart className="w-full h-full text-skin-extra-light" />
+            <CustomIcon
+              name="AiOutlineHeart"
+              className="w-full h-full text-skin-extra-light"
+            />
           )}
         </button>
       </div>

@@ -152,7 +152,7 @@ const Header = ({ config }) => {
                                       className={`${s.icon} mr-4 w-12 h-12 bg-skin-light flex items-center justify-center`}
                                     >
                                       <CustomIcon
-                                        name={subpage.icon}
+                                        name={subpage.icon || "FaMountain"}
                                         className="text-2xl"
                                       />
                                     </div>

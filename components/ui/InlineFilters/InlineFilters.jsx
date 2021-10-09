@@ -1,4 +1,4 @@
-import { IoIosClose } from "react-icons/io";
+import CustomIcon from "components/CustomIcon";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 const InlineFilters = ({ openFilters }) => {
@@ -42,7 +42,7 @@ const InlineFilters = ({ openFilters }) => {
                 className="text-red-600 ml-1 pb-1 text-2xl"
                 onClick={() => toggleOption(activeFilter)}
               >
-                <IoIosClose />
+                <CustomIcon name="IoIosClose" />
               </button>
             </div>
           ))}

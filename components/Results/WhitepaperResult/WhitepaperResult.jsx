@@ -1,7 +1,7 @@
 import Badge from "components/ui/Badge/Badge";
-import { BiDownload } from "react-icons/bi";
 import s from "../result.module.scss";
 import Image from "next/image";
+import CustomIcon from "components/CustomIcon";
 
 const WhitepaperResult = ({ result }) => {
   return (
@@ -23,7 +23,7 @@ const WhitepaperResult = ({ result }) => {
         <h2 className="hidden md:block max-line-2">{result.subhead}</h2>
         <h3>{result.date}</h3>
         <button className={`${s.cta} flex items-center`}>
-          <BiDownload className="text-lg mb-1 mr-2" />
+          <CustomIcon name="BiDownload" className="text-lg mb-1 mr-2" />
           <span>Download</span>
         </button>
       </div>

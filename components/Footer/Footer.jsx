@@ -1,6 +1,6 @@
+import CustomIcon from "components/CustomIcon";
 import SocialLinks from "components/SocialLinks/SocialLinks";
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
 
 const Subpage = ({ subpage }) => (
   <div className="mt-5 text-sm font-medium opacity-60">{subpage.name}</div>
@@ -43,7 +43,7 @@ const Footer = ({ config }) => {
               >
                 <div className="w-full flex items-center justify-between">
                   <span className="text-xl font-medium">{page.name}</span>
-                  <BsArrowRight />
+                  <CustomIcon name="BsArrowRight" />
                 </div>
                 {page.subpages && <Subpages subpages={page.subpages} />}
               </div>

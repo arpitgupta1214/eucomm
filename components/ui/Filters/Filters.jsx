@@ -1,9 +1,9 @@
 import s from "./filters.module.scss";
-import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "components/ui";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
+import CustomIcon from "components/CustomIcon";
 const Filters = ({ filters }) => {
   const activeFilters = useSelector((state) => state.search.activeFilters);
   const customDate = useSelector((state) => state.search.customDate);
@@ -31,7 +31,11 @@ const Filters = ({ filters }) => {
             <div className={s.filterName}>
               <span>{filter.name}</span>
               <button onClick={() => toggleFilter({ filterName: filter.name })}>
-                {panelOpen ? <FaMinus /> : <FaPlus />}{" "}
+                {panelOpen ? (
+                  <CustomIcon name="FaMinus" />
+                ) : (
+                  <CustomIcon name="FaPlus" />
+                )}{" "}
               </button>
             </div>
             <AnimatePresence>
