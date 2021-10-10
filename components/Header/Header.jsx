@@ -221,7 +221,7 @@ const Header = ({ config }) => {
                   last ? "text-skin-light" : "text-skin-highlight"
                 }`}
               >
-                {page.replace(/-/g, " ")}
+                {decodeURIComponent(page).replace(/-/g, " ")}
               </span>
               {!last && <span className="text-skin-light mx-5">/</span>}
             </div>

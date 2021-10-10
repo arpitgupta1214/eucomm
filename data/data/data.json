@@ -1,0 +1,57 @@
+{
+  "pageHead": "Data",
+  "loadMoreText": "Load More",
+  "downloadAsText": "Download as",
+  "interactiveText": "Interactive Version",
+  "data": [
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-1.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-2.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-3.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-4.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-5.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-6.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-1.webp", "width": 854, "height": 339 }
+    },
+    {
+      "name": "Refinery/Steam Cracker Sites in Europe",
+      "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+      "fileType": "PDF",
+      "image": { "src": "/images/data/img-2.webp", "width": 854, "height": 339 }
+    }
+  ],
+  "otherDataHead": "Other Data"
+}

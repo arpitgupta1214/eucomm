@@ -1,0 +1,33 @@
+{
+  "slug": "Refinery/Steam-Cracker-Sites-in-Europe",
+  "pageHead": "Refinery/Steam Cracker Sites in Europe",
+  "pageSubHead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus fermentum molestie placerat hendrerit rhoncus sociis molestie.",
+  "headGraph": {
+    "src": "/images/data/details/headGraph.webp",
+    "width": 1169,
+    "height": 394
+  },
+  "sections": [
+    {
+      "head": "Ethylene production, consumption and trade balance",
+      "subHead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus.",
+      "graphs": [
+        {
+          "src": "/images/data/details/section-1-graph-1.webp",
+          "width": 568,
+          "height": 352
+        },
+        {
+          "src": "/images/data/details/section-1-graph-2.webp",
+          "width": 568,
+          "height": 352
+        },
+        {
+          "src": "/images/data/details/section-1-graph-2.webp",
+          "width": 568,
+          "height": 352
+        }
+      ]
+    }
+  ]
+}

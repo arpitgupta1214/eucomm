@@ -47,7 +47,7 @@ import {
   BiCalendar,
   BiDownload,
 } from "react-icons/bi";
-import { FiCheck, FiSearch } from "react-icons/fi";
+import { FiCheck, FiSearch, FiPlayCircle } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
 import {
   RiVolumeDownFill,
@@ -103,6 +103,7 @@ const icons = {
   BsArrowRepeat,
   AiOutlineDelete,
   RiAddCircleLine,
+  FiPlayCircle,
 };
 
 const CustomIcon = ({ name, className }) => {
