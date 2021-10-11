@@ -7,13 +7,19 @@ const AdditionalPage = (props) => {
   return (
     <div className="w-full mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-7 text-5xl font-bold">{props.pageHead}</div>
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
       {/* overview */}
-      <div className="mb-32 content-md flex items-center">
+      <div className="mb-10 md:mb-32 content-md flex flex-col md:flex-row md:items-center">
         {/* content */}
         <div className="mr-24 w-full max-w-lg">
-          <div className="mb-5 text-4xl font-bold">{props.overviewHead}</div>
-          <div className="text-skin-light">{props.overviewContent}</div>
+          <div className="mb-4 md:mb-5 text-2xl md:text-4xl font-bold">
+            {props.overviewHead}
+          </div>
+          <div className="mb-6 md:mb-0 text-sm md:text-base text-skin-light">
+            {props.overviewContent}
+          </div>
         </div>
         {/* image */}
         <div className="flex-grow">
@@ -27,20 +33,13 @@ const AdditionalPage = (props) => {
       </div>
 
       {/* challenges */}
-      <div className="mb-32 w-full flex items-center bg-skin-light">
-        <div className="w-full max-w-xl">
-          <Image
-            src={props.challengesImage.src}
-            height={props.challengesImage.height}
-            width={props.challengesImage.width}
-            alt=""
-            layout="responsive"
-          />
-        </div>
-
-        <div className="ml-16 max-w-xl pr-5">
-          <div className="mb-5 text-4xl font-bold">{props.challengesHead}</div>
-          <div className="text-skin-light">
+      <div className="mb-10 md:mb-32 w-full flex flex-col md:flex-row-reverse md:justify-end md:items-center bg-skin-light py-10 px-4 md:p-0">
+        {/* content */}
+        <div className="md:ml-16 max-w-xl pr-5">
+          <div className="mb-3 md:mb-5 text-2xl md:text-4xl font-bold">
+            {props.challengesHead}
+          </div>
+          <div className="text-sm md:text-base text-skin-light">
             {props.challenges.map((challenge, idx) => (
               <div key={`challenge-${idx}`} className="mb-3 flex">
                 <div className="w-5 h-5 flex-shrink-0 mr-3 text-skin-highlight">
@@ -51,9 +50,19 @@ const AdditionalPage = (props) => {
             ))}
           </div>
         </div>
+
+        <div className="w-full max-w-xl">
+          <Image
+            src={props.challengesImage.src}
+            height={props.challengesImage.height}
+            width={props.challengesImage.width}
+            alt=""
+            layout="responsive"
+          />
+        </div>
       </div>
 
-      <div className="content-sm mb-32">
+      <div className="mb-3 md:mb-32 content-sm">
         <Newsletter />
       </div>
     </div>

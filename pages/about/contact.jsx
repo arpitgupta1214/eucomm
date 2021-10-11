@@ -7,7 +7,9 @@ const Contact = ({ config, ...props }) => {
   return (
     <div className="w-full mt-11 md:mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-5 text-5xl font-bold">{props.pageHead}</div>
+      <div className="mb-5 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
 
       <div className="mb-10 md:mb-28 content-md flex flex-col md:flex-row-reverse">
         {/* map */}
