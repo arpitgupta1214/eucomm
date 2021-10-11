@@ -1,6 +1,7 @@
 import CustomIcon from "components/CustomIcon";
 import SocialLinks from "components/SocialLinks/SocialLinks";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Subpage = ({ subpage }) => (
   <div className="mt-5 text-sm font-medium opacity-60">{subpage.name}</div>
@@ -28,8 +29,9 @@ const Subpages = ({ subpages }) => {
 };
 
 const Footer = ({ config }) => {
+  const isMobile = useSelector((state) => state.ui.isMobile);
   return (
-    <div className="mt-auto bg-skin-dark pt-14 flex items-center">
+    <div className="mt-auto bg-skin-dark pt-14 flex items-center justify-center">
       <div className="flex flex-wrap text-white content-md px-4">
         <div className="w-full flex flex-col md:flex-row">
           <div className="mb-4 md:mb-0 flex-shrink-0 whitespace-nowrap text-xl font-medium pb-10 md:pb-0 border-b border-skin-base md:border-none">
@@ -53,7 +55,11 @@ const Footer = ({ config }) => {
         <div className="w-full flex flex-col md:flex-row-reverse md:items-center justify-between py-5 md:border-t md:border-skin-light">
           {/* social */}
           <div className="mb-6 md:mb-0 w-full md:w-auto">
-            <SocialLinks links={config.socialLinks} />
+            <SocialLinks
+              links={config.socialLinks}
+              w={isMobile && 6}
+              full={isMobile}
+            />
           </div>
 
           <span className="text-xs opacity-60">{config.copyrightText}</span>

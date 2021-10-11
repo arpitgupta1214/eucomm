@@ -29,10 +29,12 @@ const SocialLinks = ({ links, color, w, full }) => {
               />
             </div>
           ) : (
-            <CustomIcon
-              name={socialIcons[socialLink.name]}
-              className="text-sm"
-            />
+            <div className={`w-${w || 3} h-${w || 3}`}>
+              <CustomIcon
+                name={socialIcons[socialLink.name]}
+                className="w-full h-full"
+              />
+            </div>
           )}
         </button>
       ))}
