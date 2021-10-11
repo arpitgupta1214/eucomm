@@ -29,17 +29,17 @@ const Subpages = ({ subpages }) => {
 
 const Footer = ({ config }) => {
   return (
-    <div className="mt-auto bg-skin-dark pt-14 flex flex-col items-center">
+    <div className="mt-auto bg-skin-dark pt-14 flex items-center">
       <div className="flex flex-wrap text-white content-md px-4">
-        <div className="w-full flex">
-          <div className="flex-shrink-0 whitespace-nowrap text-xl font-medium">
+        <div className="w-full flex flex-col md:flex-row">
+          <div className="mb-4 md:mb-0 flex-shrink-0 whitespace-nowrap text-xl font-medium pb-10 md:pb-0 border-b border-skin-base md:border-none">
             {config.companyName}
           </div>
-          <div className="flex-grow flex flex-wrap">
+          <div className="flex-grow flex flex-col md:flex-row md:flex-wrap">
             {config.pages.map((page) => (
               <div
                 key={`footer-page-${page.slug}`}
-                className="ml-12 mb-12 flex-shrink-0 w-52 flex flex-col"
+                className="md:ml-12 mb-12 flex-shrink-0 w-full md:w-52 flex flex-col"
               >
                 <div className="w-full flex items-center justify-between">
                   <span className="text-xl font-medium">{page.name}</span>
@@ -50,10 +50,13 @@ const Footer = ({ config }) => {
             ))}
           </div>
         </div>
-        <div className="w-full flex items-center justify-between py-5 border-t border-skin-light">
-          <span className="text-xs opacity-60">{config.copyrightText}</span>
+        <div className="w-full flex flex-col md:flex-row-reverse md:items-center justify-between py-5 md:border-t md:border-skin-light">
           {/* social */}
-          <SocialLinks links={config.socialLinks} />
+          <div className="mb-6 md:mb-0 w-full md:w-auto">
+            <SocialLinks links={config.socialLinks} />
+          </div>
+
+          <span className="text-xs opacity-60">{config.copyrightText}</span>
         </div>
       </div>
     </div>
