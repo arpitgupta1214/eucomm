@@ -8,7 +8,7 @@ const Newsletter = () => {
         <div className="mb-2 md:mb-5 font-bold text-lg md:text-2xl">
           Sign Up to Our Newsletter
         </div>
-        <div className="mb-3 md:mb-6 text-sm md:text-base text-skin-light">
+        <div className="mb-3 md:mb-6 w-3/4 md:w-auto text-sm md:text-base text-skin-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
         </div>
         <div className="flex w-full max-w-xl">
