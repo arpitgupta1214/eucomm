@@ -10,16 +10,16 @@ const socialIcons = {
   facebook: "FaFacebookF",
 };
 
-const SocialLinks = ({ links, color }) => {
+const SocialLinks = ({ links, color, w, full }) => {
   return (
-    <div className="flex">
+    <div className={`flex ${full ? "w-full justify-between" : ""}`}>
       {links.map((socialLink, idx) => (
         <button
           key={`social-link-${socialLink.name}`}
           className={`${idx !== 0 ? "ml-5" : ""}`}
         >
           {color ? (
-            <div className="w-8 h-8">
+            <div className={`w-${w || 8} h-${w || 8}`}>
               <Image
                 src={socialLink.image}
                 alt=""

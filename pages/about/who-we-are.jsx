@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const WhoWeAre = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   return (
-    <div className="w-full mt-16 flex flex-col items-center">
+    <div className="w-full mt-11 md:mt-16 flex flex-col items-center">
       {/* head */}
       <div className="mb-6 content-md text-5xl font-bold md:text-center">
         {props.pageHead}
