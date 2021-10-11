@@ -2,8 +2,10 @@ import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import Image from "next/image";
 import { BsCheckCircle } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 const AdditionalPage = (props) => {
+  const isMobile = useSelector((state) => state.ui.isMobile);
   return (
     <div className="w-full mt-16 flex flex-col items-center">
       {/* head */}
@@ -62,7 +64,7 @@ const AdditionalPage = (props) => {
         </div>
       </div>
 
-      <div className="mb-3 md:mb-32 content-sm">
+      <div className={`mb-3 md:mb-32 ${!isMobile ? "content-sm" : ""}`}>
         <Newsletter />
       </div>
     </div>
