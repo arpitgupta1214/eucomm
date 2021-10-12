@@ -1,5 +1,6 @@
 {
   "pageHead": "Projects",
+  "loadMoreText": "Load More",
   "projects": [
     {
       "name": "Project Name",
@@ -51,6 +52,24 @@
       "slug": "project-name",
       "image": {
         "src": "/images/projects/project-6.webp",
+        "width": 561,
+        "height": 340
+      }
+    },
+    {
+      "name": "Project Name",
+      "slug": "project-name",
+      "image": {
+        "src": "/images/projects/project-4.webp",
+        "width": 561,
+        "height": 340
+      }
+    },
+    {
+      "name": "Project Name",
+      "slug": "project-name",
+      "image": {
+        "src": "/images/projects/project-5.webp",
         "width": 561,
         "height": 340
       }

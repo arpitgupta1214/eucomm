@@ -4,8 +4,10 @@ import Newsletter from "components/Newsletter";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Project = (props) => {
+  const isMobile = useSelector((state) => state.ui.isMobile);
   const [otherProjects, setOtherProjects] = useState(
     props.otherProjects.slice(0, 3)
   );
@@ -18,27 +20,29 @@ const Project = (props) => {
   return (
     <div className="mt-7 w-full flex flex-col items-center">
       {/* head  */}
-      <div className="font-bold text-5xl mb-6">{props.pageHead}</div>
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
 
       {/* headimg  */}
-      <div className="w-full mb-10">
+      <div className="mb-6 md:mb-10 w-full h-40 md:h-72 relative">
         <Image
           src={props.headImg.src}
           alt=""
-          width={props.headImg.width}
-          height={props.headImg.height}
-          layout="responsive"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
           priority={true}
         />
       </div>
 
-      <div className="mx-4 mb-32 content-md flex">
-        <div className="mr-6 flex-shrink overflow-hidden text-skin-light text-lg text-justify">
+      <div className="mb-10 md:mb-32 content-md flex flex-col md:flex-row">
+        <div className="md:mr-6 flex-shrink overflow-hidden text-skin-light text-sm md:text-lg text-justify">
           {/* subhead */}
-          <div className="mb-7">{props.pageSubhead}</div>
+          <div className="mb-6 md:mb-7">{props.pageSubhead}</div>
 
           {/* description head */}
-          <div className="mb-4 font-bold text-skin-base text-2xl">
+          <div className="mb-4 font-bold text-skin-base text-lg md:text-2xl">
             {props.descriptionHead}
           </div>
 
@@ -62,14 +66,14 @@ const Project = (props) => {
           </div>
 
           {/* description foot */}
-          <div className="w-full bg-skin-light py-4 px-6 text-left">
+          <div className="mb-10 md:mb-0 w-full bg-skin-light py-4 px-6 text-left">
             {props.descriptionFoot}
           </div>
           {}
         </div>
 
         {/* related links */}
-        <div className="w-64 flex-shrink-0 self-start flex flex-col bg-skin-light py-4 px-5">
+        <div className="w-full md:w-64 flex-shrink-0 self-start flex flex-col bg-skin-light py-4 px-5">
           <div className="mb-2 text-xs text-skin-light">
             {props.relatedLinksHead}
           </div>
@@ -87,15 +91,18 @@ const Project = (props) => {
           </div>
         </div>
       </div>
-      <div className="mb-28 content-sm">
+
+      <div className={`mb-10 md:mb-28 ${isMobile ? "w-full" : "content-sm"}`}>
         <Newsletter />
       </div>
-      <div className="w-full bg-skin-light py-32 flex flex-col items-center">
-        <div className="mb-10 font-bold text-4xl">
+
+      {/* other projects  */}
+      <div className="w-full bg-skin-light py-10 md:py-32 flex flex-col items-center">
+        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl content-md md:text-center">
           {props.otherProjectsHead}
         </div>
         <div className="mb-6 content-md">
-          <div className="w-full grid grid-cols-3 gap-6">
+          <div className="w-full grid md:grid-cols-3 gap-6">
             {otherProjects.map((project, idx) => (
               <div key={`project-${idx}`} className="w-full bg-skin-base">
                 <Image
@@ -107,7 +114,9 @@ const Project = (props) => {
                 />
 
                 <div className="px-6 py-4 flex flex-col">
-                  <div className="text-xl font-bold mb-2">{project.name}</div>
+                  <div className="text-lg md:text-xl font-bold mb-2">
+                    {project.name}
+                  </div>
                   <button
                     className="flex items-center text-skin-highlight text-sm"
                     onClick={() =>
