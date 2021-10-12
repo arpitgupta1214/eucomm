@@ -13,11 +13,13 @@ const Data = (props) => {
   return (
     <div className="mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-3 font-bold text-5xl">{props.pageHead}</div>
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
 
       {/* data */}
-      <div className="mb-32 content-md flex flex-col items-center">
-        <div className="mb-6 w-full grid grid-cols-2 gap-6">
+      <div className="mb-10 md:mb-32 content-md flex flex-col items-center">
+        <div className="mb-6 w-full grid md:grid-cols-2 gap-6">
           {data.map((datum, idx) => (
             <DataCard
               key={`datum-${idx}`}

@@ -2,8 +2,10 @@ import Layout from "components/Layouts";
 import { useState } from "react";
 import Image from "next/image";
 import DataCard from "components/DataCard";
+import { useSelector } from "react-redux";
 
 const Data = (props) => {
+  const isMobile = useSelector((state) => state.ui.isMobile);
   const [otherData, setOtherData] = useState(props.otherData.slice(0, 2));
   const [moreData, setMoreData] = useState(true);
 
@@ -14,11 +16,11 @@ const Data = (props) => {
   return (
     <div className="mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-3 w-full max-w-xl font-bold text-5xl leading-normal text-center">
+      <div className="mb-6 mx-4 max-w-xl text-3xl md:text-5xl font-bold md:text-center md:leading-normal">
         {props.pageHead}
       </div>
       {/* subhead */}
-      <div className="mb-3 w-full max-w-xl text-skin-light text-lg leading-relaxed text-center">
+      <div className="mx-4 md:mx-0 mb-3 md:w-full max-w-xl text-skin-light text-lg leading-relaxed md:text-center">
         {props.pageSubHead}
       </div>
 
@@ -34,23 +36,25 @@ const Data = (props) => {
       </div>
 
       {/* sections */}
-      <div className="mb-72 content-md grid grid-flow-row gap-6">
+      <div className="mb-10 md:mb-32 content-md grid grid-flow-row gap-6">
         {props.sections.map((section, idx) => (
           <div
             key={`section-${idx}`}
             className="w-full flex flex-col items-center"
           >
-            <div className="mb-3 max-w-3xl font-bold text-2xl text-center">
+            <div className="mb-2 md:mb-3 max-w-3xl font-bold text-lg md:text-2xl md:text-center">
               {section.head}
             </div>
-            <div className="mb-8 max-w-3xl text-skin-light text-center">
+            <div className="mb-6 md:mb-8 max-w-3xl text-sm md:text-base text-skin-light md:text-center">
               {section.subHead}
             </div>
             <div className="w-full flex justify-center flex-wrap">
               {section.graphs.map((graph, idx) => (
                 <div
                   key={`graph-${idx}`}
-                  className={`mb-6 w-1/2 ${idx % 2 === 0 ? "pr-3" : "pl-3"}`}
+                  className={`mb-6 w-full md:w-1/2 ${
+                    !isMobile ? (idx % 2 === 0 ? "pr-3" : "pl-3") : ""
+                  }`}
                 >
                   <div className={`w-full`}>
                     <Image
@@ -69,10 +73,12 @@ const Data = (props) => {
       </div>
 
       {/* other data */}
-      <div className="w-full py-32 flex flex-col items-center bg-skin-light">
-        <div className="mb-4 font-bold text-4xl">{props.otherDataHead}</div>
+      <div className="w-full py-10 md:py-32 flex flex-col items-center bg-skin-light">
+        <div className="mb-4 font-bold text-2xl md:text-4xl content-md md:text-center">
+          {props.otherDataHead}
+        </div>
         <div className="content-md flex flex-col items-center">
-          <div className="mb-6 grid grid-cols-2 gap-6">
+          <div className="mb-6 grid md:grid-cols-2 gap-6">
             {otherData.map((datum, idx) => (
               <DataCard
                 key={`datum-${idx}`}

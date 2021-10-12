@@ -27,8 +27,6 @@ const Group = (props) => {
         <Image
           src={props.headImage.src}
           alt=""
-          width={props.headImage.width}
-          height={props.headImage.height}
           layout="fill"
           objectFit="cover"
           objectPosition="center"

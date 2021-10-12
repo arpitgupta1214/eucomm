@@ -14,17 +14,17 @@ const DataCard = ({ datum, downloadAsText, interactiveText, light }) => (
     />
     {/* content */}
     <div
-      className={`w-full py-5 px-6  ${
+      className={`w-full py-5 px-4 md:px-6  ${
         light ? "bg-skin-light" : "bg-skin-base"
       }`}
     >
-      <div className="mb-1 font-bold text-xl">{datum.name}</div>
+      <div className="mb-1 font-bold md:text-xl">{datum.name}</div>
       <div className="mb-3 flex">
         <CustomIcon
           name="BiDownload"
-          className="mr-2 text-skin-highlight text-xl"
+          className="mr-2 text-skin-highlight md:text-xl"
         />
-        <div className="text-skin-light">
+        <div className="text-sm md:text-base text-skin-light">
           {downloadAsText}{" "}
           <button className="text-skin-highlight underline">
             {datum.fileType}
@@ -34,10 +34,10 @@ const DataCard = ({ datum, downloadAsText, interactiveText, light }) => (
       <div className="flex">
         <CustomIcon
           name="FiPlayCircle"
-          className="mr-2 text-skin-highlight text-xl"
+          className="mr-2 text-skin-highlight md:text-xl"
         />
         <button
-          className="text-skin-highlight underline"
+          className="text-sm md:text-base text-skin-highlight underline"
           onClick={() =>
             router.push(`${router.asPath}/${encodeURIComponent(datum.slug)}`)
           }
