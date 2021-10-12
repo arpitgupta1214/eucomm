@@ -11,7 +11,7 @@ const PolicyAreas = (props) => {
     setMorePolicies(false);
   };
   return (
-    <div className="mt-16 flex flex-col items-center">
+    <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
       <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
         {props.pageHead}

@@ -4,8 +4,10 @@ import { Carousel, Badge, ArrowButton } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Group = (props) => {
+  const isMobile = useSelector((state) => state.ui.isMobile);
   const [otherGroups, setOtherGroups] = useState(props.otherGroups.slice(0, 2));
   const [moreGroups, setMoreGroups] = useState(true);
 
@@ -15,47 +17,66 @@ const Group = (props) => {
   };
   return (
     <div className="mt-7 w-full flex flex-col items-center">
-      <div className="font-bold text-5xl mb-6">{props.pageHead}</div>
-      <div className="w-full mb-7">
+      {/* head */}
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
+
+      {/* headimg */}
+      <div className="mb-6 md:mb-7 w-full h-40 md:h-64 relative">
         <Image
-          src={props.headImg}
+          src={props.headImage.src}
           alt=""
-          width={5760}
-          height={1120}
-          layout="responsive"
+          width={props.headImage.width}
+          height={props.headImage.height}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
           priority={true}
         />
       </div>
-      <div className="mx-4 mb-32 content-md flex">
-        <div className="mr-6 flex-shrink overflow-hidden">
-          <div className="mb-7 text-lg text-skin-light">
+      {/* content */}
+      <div
+        className={`mb-10 md:mb-32 ${
+          !isMobile ? "content-md" : "w-full"
+        } flex flex-col md:flex-row`}
+      >
+        <div className="md:mr-6 md:flex-shrink overflow-hidden">
+          {/* subhead */}
+          <div className="mb-6 md:mb-7 mx-4 md:mx-0 text-sm md:text-lg text-skin-light">
             {props.pageSubhead}
           </div>
-          <div className="mb-4 font-bold text-2xl">{props.descriptionHead}</div>
-          <div className="mb-7">
+
+          {/* desctipion */}
+          <div className="mb-4 mx-4 md:mx-0 font-bold text-lg md:text-2xl">
+            {props.descriptionHead}
+          </div>
+          <div className="mb-7 mx-4 md:mx-0">
             {props.description.split("\n").map((line, idx) => (
               <div
                 key={`description-${idx}`}
-                className="mb-4 text-skin-light text-lg"
+                className="mb-4 text-skin-light text-sm md:text-lg"
               >
                 {line}
               </div>
             ))}
           </div>
-          <div className="mb-12 w-full p-8 bg-skin-light">
-            <div className="mb-5 text-2xl font-bold">
+
+          {/* position papers */}
+          <div className="mb-10 md:mb-12 w-full px-4 py-10 md:p-8 bg-skin-light">
+            <div className="mb-4 md:mb-5 text-lg md:text-2xl font-bold">
               {props.positionPaperHead}
             </div>
-            <div className="w-full grid grid-cols-3 gap-5">
+            <div className="w-full grid md:grid-cols-3 gap-5">
               {props.positionPapers.map((positionPaper, idx) => (
                 <div
                   key={`position-paper-${idx}`}
-                  className="w-full p-6 pt-5 bg-skin-base"
+                  className="w-full p-5 md:p-6 md:pt-5 bg-skin-base"
                 >
-                  <div className="mb-3 text-xs text-skin-light">
+                  <div className="mb-1.5 md:mb-3 text-xs text-skin-light">
                     {positionPaper.head}
                   </div>
-                  <div className="font-bold mb-3">
+                  <div className="text-sm md:text-base font-bold mb-3">
                     {positionPaper.description}
                   </div>
                   <div className="mb-3 text-skin-light text-xs">
@@ -68,14 +89,18 @@ const Group = (props) => {
               ))}
             </div>
           </div>
-          <div className="w-full p-8 bg-skin-light overflow-hidden">
-            <div className="mb-5 text-2xl font-bold">{props.newsHead}</div>
+
+          {/* news */}
+          <div className="mb-10 md:mb-0 w-full px-4 py-10 md:p-8 bg-skin-light overflow-hidden">
+            <div className="mb-4 md:mb-5 text-lg md:text-2xl font-bold">
+              {props.newsHead}
+            </div>
             <Carousel>
               {props.newsItems
                 .reduce(
                   (acc, newsItem) => {
                     const last = acc[acc.length - 1];
-                    if (last.length < 2) {
+                    if (last.length < (isMobile ? 3 : 2)) {
                       last.push(newsItem);
                     } else {
                       acc.push([newsItem]);
@@ -148,27 +173,34 @@ const Group = (props) => {
           ))}
         </div>
       </div>
-      <div className="mb-28 content-sm">
+
+      <div className={`mb-10 md:mb-28 ${isMobile ? "w-full" : "content-sm"} `}>
         <Newsletter />
       </div>
-      <div className="w-full bg-skin-light py-32 flex flex-col items-center">
-        <div className="mb-10 font-bold text-4xl">{props.otherGroupsHead}</div>
-        <div className="mb-6 content-md">
-          <div className="w-full grid grid-cols-2 gap-6">
+
+      {/* other groups */}
+      <div className="w-full bg-skin-light py-10 px-4 md:py-32 flex flex-col items-center">
+        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl self-start md:self-center">
+          {props.otherGroupsHead}
+        </div>
+        <div className={`mb-6 ${isMobile ? "w-full" : "content-md"}`}>
+          <div className="w-full grid md:grid-cols-2 gap-6">
             {otherGroups.map((group, idx) => (
               <div
                 key={`group-${idx}`}
-                className="bg-skin-base p-6 flex items-center"
+                className="bg-skin-base p-3 md:p-6 flex md:items-center"
               >
-                <div className="w-40 h-40 flex-shrink-0 mr-5 relative">
+                <div className="w-20 md:w-40 h-20 md:h-40 flex-shrink-0 mr-5 relative">
                   <Image src={group.image.src} alt="" layout="fill" />
                 </div>
                 <div className="flex-grow">
-                  <div className="text-xl font-bold mb-2">{group.name}</div>
-                  <div className="text-sm text-skin-light mb-2">
+                  <div className="mb-1.5 md:mb-2 text-sm md:text-xl font-bold">
+                    {group.name}
+                  </div>
+                  <div className="mb-1.5 md:mb-2 text-xs md:text-sm text-skin-light">
                     {group.description}
                   </div>
-                  <div className="w-12 h-12">
+                  <div className="w-9 md:w-12 h-9 md:h-12">
                     <ArrowButton
                       direction="forward"
                       onClick={() =>

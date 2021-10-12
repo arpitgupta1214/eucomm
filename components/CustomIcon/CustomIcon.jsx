@@ -24,6 +24,8 @@ import {
   AiFillHeart,
   AiOutlineHeart,
   AiOutlineDelete,
+  AiOutlineRight,
+  AiOutlineLeft,
 } from "react-icons/ai";
 import {
   HiDocumentText,
@@ -104,6 +106,8 @@ const icons = {
   AiOutlineDelete,
   RiAddCircleLine,
   FiPlayCircle,
+  AiOutlineRight,
+  AiOutlineLeft,
 };
 
 const CustomIcon = ({ name, className }) => {
