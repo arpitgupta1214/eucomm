@@ -1,5 +1,5 @@
 import Layout from "components/Layouts";
-import { ArrowButton } from "components/ui";
+import { ArrowButton, Button } from "components/ui";
 import router from "next/router";
 import Image from "next/image";
 import { useState } from "react";
@@ -61,12 +61,7 @@ const WorkingGroups = (props) => {
 
         {/* load more */}
         {moreWorkingGroups && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-            onClick={loadMore}
-          >
-            {props.loadMoreText}
-          </button>
+          <Button text={props.loadMoreText} onClick={loadMore} />
         )}
       </div>
     </div>

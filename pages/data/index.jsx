@@ -1,5 +1,6 @@
 import DataCard from "components/DataCard";
 import Layout from "components/Layouts";
+import { Button } from "components/ui";
 import { useState } from "react";
 
 const Data = (props) => {
@@ -32,14 +33,7 @@ const Data = (props) => {
         </div>
 
         {/* load more */}
-        {moreData && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-            onClick={loadMore}
-          >
-            {props.loadMoreText}
-          </button>
-        )}
+        {moreData && <Button text={props.loadMoreText} onClick={loadMore} />}
       </div>
     </div>
   );

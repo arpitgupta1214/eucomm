@@ -1,6 +1,6 @@
 import EventCard from "components/EventCard/EventCard";
 import Layout from "components/Layouts";
-import { Selector } from "components/ui";
+import { Button, Selector } from "components/ui";
 import { useEffect, useState } from "react";
 
 const Events = (props) => {
@@ -63,14 +63,7 @@ const Events = (props) => {
         </div>
 
         {/* load more */}
-        {moreEvents && (
-          <button
-            className="py-3 px-7 border border-skin-highlight text-skin-highlight font-medium"
-            onClick={loadMore}
-          >
-            {props.loadMoreText}
-          </button>
-        )}
+        {moreEvents && <Button text={props.loadMoreText} onClick={loadMore} />}
       </div>
     </div>
   );

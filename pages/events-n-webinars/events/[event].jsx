@@ -1,6 +1,7 @@
 import CustomIcon from "components/CustomIcon";
 import EventCard from "components/EventCard";
 import Layout from "components/Layouts";
+import { Button } from "components/ui";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -147,12 +148,7 @@ const Event = (props) => {
           </div>
           {/* load more */}
           {moreEvents && (
-            <button
-              className="py-3 px-7 border border-skin-highlight text-skin-highlight font-medium"
-              onClick={loadMore}
-            >
-              {props.loadMoreText}
-            </button>
+            <Button text={props.loadMoreText} onClick={loadMore} />
           )}
         </div>
       </div>

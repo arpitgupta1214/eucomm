@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import DataCard from "components/DataCard";
 import { useSelector } from "react-redux";
+import { Button } from "components/ui";
 
 const Data = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -88,14 +89,7 @@ const Data = (props) => {
               />
             ))}
           </div>
-          {moreData && (
-            <button
-              className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-              onClick={loadMore}
-            >
-              {props.loadMoreText}
-            </button>
-          )}
+          {moreData && <Button text={props.loadMoreText} onClick={loadMore} />}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Layout from "components/Layouts";
 import { useState } from "react";
 import Image from "next/image";
+import { Button } from "components/ui";
 
 const PolicyAreas = (props) => {
   const [policies, setPolicies] = useState(props.policies.slice(0, 6));
@@ -48,12 +49,7 @@ const PolicyAreas = (props) => {
 
         {/* load more */}
         {morePolicies && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-            onClick={loadMore}
-          >
-            {props.loadMoreText}
-          </button>
+          <Button text={props.loadMoreText} onClick={loadMore} />
         )}
       </div>
     </div>

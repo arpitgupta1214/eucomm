@@ -3,6 +3,7 @@ import router from "next/router";
 import Image from "next/image";
 import CustomIcon from "components/CustomIcon/CustomIcon";
 import { useState } from "react";
+import { Button } from "components/ui";
 const Projects = (props) => {
   const [projects, setProjects] = useState(props.projects.slice(0, 6));
   const [moreProjects, setMoreProjects] = useState(true);
@@ -53,12 +54,7 @@ const Projects = (props) => {
 
         {/* load more */}
         {moreProjects && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-            onClick={loadMore}
-          >
-            {props.loadMoreText}
-          </button>
+          <Button text={props.loadMoreText} onClick={loadMore} />
         )}
       </div>
     </div>
