@@ -30,9 +30,11 @@ const BecomeAMember = (props) => {
       {/* content */}
       <div className="md:mb-32 content-md flex flex-col items-center md:flex-row">
         <div className="mb-10 md:mb-0 md:mr-9 flex-shrink overflow-hidden grid grid-flow-row gap-4">
-          <div className="font-bold text-2xl">{props.benefitsHead}</div>
+          <div className="font-bold text-xl md:text-2xl">
+            {props.benefitsHead}
+          </div>
           {props.benefits.map((benefit, idx) => (
-            <div key={`benefit-${idx}`} className="text-lg">
+            <div key={`benefit-${idx}`} className="md:text-lg">
               <span className="font-bold">{idx + 1}. </span>
               <span className="text-skin-light">{benefit}</span>
             </div>
@@ -48,9 +50,9 @@ const BecomeAMember = (props) => {
             {props.contacts.map((contact, idx) => (
               <div
                 key={`contact-${idx}`}
-                className="p-3 shadow-sm bg-skin-base flex flex-col md:flex-row"
+                className="p-6 md:p-3 shadow-sm bg-skin-base flex flex-col md:flex-row"
               >
-                <div className="mr-3 w-10 h-10 rounded-full overflow-hidden">
+                <div className="mb-2 md:mb-0 md:mr-3 w-10 h-10 rounded-full overflow-hidden">
                   <Image
                     src={contact.image.src}
                     alt=""
