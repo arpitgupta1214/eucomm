@@ -12,3 +12,4 @@ export { default as Carousel } from "./Carousel";
 export { default as ArrowButton } from "./ArrowButton";
 export { default as Selector } from "./Selector";
 export { default as Button } from "./Button";
+export { default as HeadImage } from "./HeadImage";

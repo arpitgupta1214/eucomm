@@ -1,5 +1,6 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
+import { HeadImage } from "components/ui";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 const Structure = (props) => {
@@ -12,16 +13,7 @@ const Structure = (props) => {
       </div>
 
       {/* headimg */}
-      <div className="w-full h-40 md:h-72 mb-6 md:mb-12 relative">
-        <Image
-          src={props.headImg.src}
-          alt=""
-          layout="fill"
-          priority={true}
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </div>
+      <HeadImage src={props.headImage.src} />
 
       <div className="px-4 md:px-0 w-full max-w-4xl">
         {/* subhead */}

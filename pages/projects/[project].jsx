@@ -1,7 +1,7 @@
 import CustomIcon from "components/CustomIcon/CustomIcon";
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
-import { Button } from "components/ui";
+import { Button, HeadImage } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
@@ -19,23 +19,14 @@ const Project = (props) => {
     setMoreProjects(false);
   };
   return (
-    <div className="mt-7 w-full flex flex-col items-center">
+    <div className="mt-10 md:mt-16 w-full flex flex-col items-center">
       {/* head  */}
       <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
         {props.pageHead}
       </div>
 
       {/* headimg  */}
-      <div className="mb-6 md:mb-10 w-full h-40 md:h-72 relative">
-        <Image
-          src={props.headImg.src}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority={true}
-        />
-      </div>
+      <HeadImage src={props.headImage.src} />
 
       <div className="mb-10 md:mb-32 content-md flex flex-col md:flex-row">
         <div className="md:mr-6 flex-shrink overflow-hidden text-skin-light text-sm md:text-lg text-justify">

@@ -27,26 +27,30 @@ const Events = (props) => {
     setMoreEvents(false);
   };
   return (
-    <div className="mt-16 flex flex-col items-center">
+    <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-3 font-bold text-5xl">{props.pageHead}</div>
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
 
       {/* selector */}
-      <Selector
-        options={props.eventGroups.map((eventGroup) => eventGroup.name)}
-        active={activeEventGroup.name}
-        onSelect={(eventGroupName) =>
-          setActiveEventGroup(
-            props.eventGroups.find(
-              (eventGroup) => eventGroup.name === eventGroupName
+      <div className="mb-6 content-md flex md:justify-center">
+        <Selector
+          options={props.eventGroups.map((eventGroup) => eventGroup.name)}
+          active={activeEventGroup.name}
+          onSelect={(eventGroupName) =>
+            setActiveEventGroup(
+              props.eventGroups.find(
+                (eventGroup) => eventGroup.name === eventGroupName
+              )
             )
-          )
-        }
-      />
+          }
+        />
+      </div>
 
-      <div className="mb-32 content-md flex flex-col items-center">
+      <div className="mb-10 md:mb-32 content-md flex flex-col items-center">
         {/* envents */}
-        <div className="mb-6 w-full grid grid-cols-3 gap-6">
+        <div className="mb-6 w-full grid md:grid-cols-3 gap-5 md:gap-6">
           {events.map((event, idx) => {
             const [date, month, year] = event.date.split(" ");
             return (

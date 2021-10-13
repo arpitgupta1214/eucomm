@@ -1,4 +1,5 @@
 import Layout from "components/Layouts";
+import { HeadImage } from "components/ui";
 import Image from "next/image";
 
 const BecomeAMember = (props) => {
@@ -10,15 +11,7 @@ const BecomeAMember = (props) => {
       </div>
 
       {/* head image */}
-      <div className="mb-6 md:mb-10 w-full h-40 md:h-64 relative">
-        <Image
-          src={props.headImage.src}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </div>
+      <HeadImage src={props.headImage.src} />
 
       {/* stats */}
       <div className="mb-10 md:mb-16 content-sm grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-6">

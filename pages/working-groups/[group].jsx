@@ -1,6 +1,6 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
-import { Carousel, Badge, ArrowButton } from "components/ui";
+import { Carousel, Badge, ArrowButton, HeadImage } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
@@ -23,16 +23,8 @@ const Group = (props) => {
       </div>
 
       {/* headimg */}
-      <div className="mb-6 md:mb-7 w-full h-40 md:h-64 relative">
-        <Image
-          src={props.headImage.src}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority={true}
-        />
-      </div>
+      <HeadImage src={props.headImage.src} />
+
       {/* content */}
       <div
         className={`mb-10 md:mb-32 ${

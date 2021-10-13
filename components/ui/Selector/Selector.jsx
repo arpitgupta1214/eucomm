@@ -1,6 +1,6 @@
 const Selector = ({ options, active, onSelect }) => {
   return (
-    <div className="mb-10 bg-skin-light rounded-full p-0.5 flex">
+    <div className="bg-skin-light rounded-full p-0.5 flex">
       {options.map((option, idx) => (
         <button
           key={`option-${idx}`}

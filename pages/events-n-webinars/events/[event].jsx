@@ -1,7 +1,7 @@
 import CustomIcon from "components/CustomIcon";
 import EventCard from "components/EventCard";
 import Layout from "components/Layouts";
-import { Button } from "components/ui";
+import { Button, HeadImage } from "components/ui";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -20,42 +20,39 @@ const Event = (props) => {
   const [date, month, year] = props.date.split(" ");
 
   return (
-    <div className="mt-16 flex flex-col items-center">
+    <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-3 max-w-2xl text-center font-bold text-5xl leading-normal">
+      <div className="mb-6 mx-4 max-w-2xl text-3xl md:text-5xl font-bold md:text-center md:leading-normal">
         {props.pageHead}
       </div>
 
       {/* headimg */}
-      <div className="mb-10 w-full">
-        <Image
-          src={props.headImage.src}
-          alt=""
-          width={props.headImage.width}
-          height={props.headImage.height}
-        />
-      </div>
+      <HeadImage src={props.headImage.src} />
 
-      <div className="mb-32 content-md flex">
+      <div className="mb-10 md:mb-32 content-md flex flex-col md:flex-row">
         <div className="w-full flex-shrink overflow-hidden mr-8">
           {/* description */}
-          <div className="mb-4 font-bold text-2xl">{props.descriptionHead}</div>
-          <div className="mb-12 grid grid-flow-row gap-4">
+          <div className="mb-3 md:mb-4 font-bold text-lg md:text-2xl">
+            {props.descriptionHead}
+          </div>
+          <div className="mb-6 md:mb-12 grid grid-flow-row gap-3 md:gap-4">
             {props.description.split("\n").map((line, idx) => (
               <div
                 key={`line-${idx}`}
-                className="w-full text-lg text-skin-light text-justify"
+                className="w-full text-sm md:text-lg text-skin-light text-justify"
               >
                 {line}
               </div>
             ))}
           </div>
           {/* speakers */}
-          <div className="mb-4 font-bold text-2xl">{props.speakersHead}</div>
-          <div className="mb-12 w-full flex flex-wrap">
+          <div className="mb-4 font-bold text-lg md:text-2xl">
+            {props.speakersHead}
+          </div>
+          <div className="mb-6 md:mb-12 w-full grid grid-cols-2 md:grid-cols-4 gap-5">
             {props.speakers.map((speaker, idx) => (
-              <div key={`speaker-${idx}`} className="mr-5 w-52">
-                <div className="mb-4 w-full">
+              <div key={`speaker-${idx}`} className="w-full">
+                <div className="mb-3 md:mb-4 w-full">
                   <Image
                     src={speaker.image.src}
                     alt=""
@@ -64,16 +61,18 @@ const Event = (props) => {
                     layout="responsive"
                   />
                 </div>
-                <div className="mb-1 font-bold text-xl">{speaker.name}</div>
+                <div className="mb-1 font-bold md:text-xl">{speaker.name}</div>
                 <div className="text-xs text-skin-light">{speaker.title}</div>
               </div>
             ))}
           </div>
 
           {/* agenda */}
-          <div className="mb-5 font-bold text-2xl">{props.agendaHead}</div>
-          <div className="w-full p-7 pl-0 bg-skin-light flex">
-            <div className="px-16 py-10 border-r border-skin-base">
+          <div className="mb-5 font-bold text-lg md:text-2xl">
+            {props.agendaHead}
+          </div>
+          <div className="mb-10 md:mb-0 w-full px-5 py-7 md:p-7 md:pl-0 bg-skin-light flex flex-col md:flex-row">
+            <div className="mb-6 md:mb-0 pb-6 md:px-16 md:py-10 border-b md:border-r border-skin-base">
               <div className="font-bold text-5xl text-skin-highlight">
                 {date}
               </div>
@@ -81,10 +80,13 @@ const Event = (props) => {
                 {month}, {year}
               </div>
             </div>
-            <div className="pl-8">
+            <div className="md:pl-8">
               {props.agenda.map((slot, idx) => (
-                <div key={`slot-${idx}`} className="mb-5 flex">
-                  <div className="mr-6 text-sm font-bold text-skin-light whitespace-nowrap">
+                <div
+                  key={`slot-${idx}`}
+                  className="mb-5 flex flex-col md:flex-row"
+                >
+                  <div className="mb-3 md:mb-0 md:mr-6 text-sm font-bold text-skin-light whitespace-nowrap">
                     {slot.time}
                   </div>
                   <div>
@@ -100,7 +102,7 @@ const Event = (props) => {
         </div>
 
         {/* details */}
-        <div className="w-80 self-start py-4 px-5 bg-skin-light">
+        <div className="w-full md:w-80 self-start py-4 px-5 bg-skin-light">
           <div className="mb-3 text-xs text-skin-light">
             {props.detailsHead}
           </div>
@@ -129,10 +131,12 @@ const Event = (props) => {
       </div>
 
       {/* other events */}
-      <div className="w-full py-32 bg-skin-light flex flex-col items-center">
-        <div className="mb-4 font-bold text-4xl">{props.otherEventsHead}</div>
+      <div className="w-full py-10 md:py-32 bg-skin-light flex flex-col items-center">
+        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl content-md md:text-center">
+          {props.otherEventsHead}
+        </div>
         <div className="content-md flex flex-col items-center">
-          <div className="mb-6 w-full grid grid-cols-3 gap-6">
+          <div className="mb-6 w-full grid md:grid-cols-3 gap-6">
             {otherEvents.map((otherEvent, idx) => {
               const [date, month, year] = otherEvent.date.split(" ");
               return (
