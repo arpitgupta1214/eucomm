@@ -8,8 +8,8 @@ const Loader = () => {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{
-          ease: "linear",
-          duration: 3,
+          ease: "easeInOut",
+          duration: 1.5,
           repeat: Infinity,
           repeatType: "loop",
         }}

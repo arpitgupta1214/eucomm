@@ -3,36 +3,40 @@ import Image from "next/image";
 
 const BecomeAMember = (props) => {
   return (
-    <div className="mt-16 flex flex-col items-center">
+    <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
-      <div className="mb-3 font-bold text-5xl">{props.pageHead}</div>
+      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+        {props.pageHead}
+      </div>
 
       {/* head image */}
-      <div className="mb-10 w-full">
+      <div className="mb-6 md:mb-10 w-full h-40 md:h-64 relative">
         <Image
           src={props.headImage.src}
           alt=""
-          width={props.headImage.width}
-          height={props.headImage.height}
-          layout="responsive"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
         />
       </div>
 
       {/* stats */}
-      <div className="mb-16 content-sm flex justify-between">
+      <div className="mb-10 md:mb-16 content-sm grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-6">
         {props.headStats.map((stat, idx) => (
-          <div key={`stat-${idx}`} className="flex flex-col items-center">
+          <div key={`stat-${idx}`} className="flex flex-col md:items-center">
             <div className="mb-2 font-bold text-4xl text-skin-highlight">
               {stat.number}
             </div>
-            <div className="text-skin-light">{stat.title}</div>
+            <div className="text-skin-light whitespace-nowrap">
+              {stat.title}
+            </div>
           </div>
         ))}
       </div>
 
       {/* content */}
-      <div className="mb-32 content-md flex">
-        <div className="mr-9 flex-shrink overflow-hidden grid grid-flow-row gap-4">
+      <div className="md:mb-32 content-md flex flex-col items-center md:flex-row">
+        <div className="mb-10 md:mb-0 md:mr-9 flex-shrink overflow-hidden grid grid-flow-row gap-4">
           <div className="font-bold text-2xl">{props.benefitsHead}</div>
           {props.benefits.map((benefit, idx) => (
             <div key={`benefit-${idx}`} className="text-lg">
@@ -43,15 +47,15 @@ const BecomeAMember = (props) => {
         </div>
 
         {/* contacts */}
-        <div className="self-start px-5 py-4 bg-skin-light">
+        <div className="w-screen md:w-auto md:self-start px-5 py-10 md:py-4 bg-skin-light">
           <div className="mb-2 text-xs whitespace-nowrap text-skin-light">
             {props.contactHead}
           </div>
-          <div className="w-56 grid grid-flow-row gap-3">
+          <div className="md:w-56 grid grid-flow-col md:grid-flow-row gap-4 md:gap-3">
             {props.contacts.map((contact, idx) => (
               <div
                 key={`contact-${idx}`}
-                className="p-3 shadow-sm bg-skin-base flex"
+                className="p-3 shadow-sm bg-skin-base flex flex-col md:flex-row"
               >
                 <div className="mr-3 w-10 h-10 rounded-full overflow-hidden">
                   <Image

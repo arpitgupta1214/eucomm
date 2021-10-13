@@ -1,133 +1,144 @@
 {
   "pageHead": "Members Area",
   "joinText": "Become A Member",
-  "memberGroups": [
+  "loadMoreText": "Load More",
+  "members": [
     {
-      "name": "Affilate Member",
-      "members": [
-        {
-          "name": "Wirecard",
-          "image": {
-            "src": "/images/members/img-1.svg",
-            "width": 180,
-            "height": 47
-          }
-        },
-        {
-          "name": "Exdy",
-          "image": {
-            "src": "/images/members/img-2.svg",
-            "width": 151,
-            "height": 43
-          }
-        },
-        {
-          "name": "Honda Racing",
-          "image": {
-            "src": "/images/members/img-3.svg",
-            "width": 196,
-            "height": 54
-          }
-        },
-        {
-          "name": "SkyDrive",
-          "image": {
-            "src": "/images/members/img-4.svg",
-            "width": 196,
-            "height": 41
-          }
-        },
-        {
-          "name": "One Drive",
-          "image": {
-            "src": "/images/members/img-5.svg",
-            "width": 181,
-            "height": 33
-          }
-        }
-      ]
+      "name": "Wirecard",
+      "image": {
+        "src": "/images/members/img-1.svg",
+        "width": 180,
+        "height": 47
+      }
     },
     {
-      "name": "Full Member",
-      "members": [
-        {
-          "name": "Exdy",
-          "image": {
-            "src": "/images/members/img-2.svg",
-            "width": 151,
-            "height": 43
-          }
-        },
-        {
-          "name": "Wirecard",
-          "image": {
-            "src": "/images/members/img-1.svg",
-            "width": 180,
-            "height": 47
-          }
-        },
-        {
-          "name": "One Drive",
-          "image": {
-            "src": "/images/members/img-5.svg",
-            "width": 181,
-            "height": 33
-          }
-        },
-        {
-          "name": "SkyDrive",
-          "image": {
-            "src": "/images/members/img-4.svg",
-            "width": 196,
-            "height": 41
-          }
-        },
-        {
-          "name": "Honda Racing",
-          "image": {
-            "src": "/images/members/img-3.svg",
-            "width": 196,
-            "height": 54
-          }
-        }
-      ]
+      "name": "Exdy",
+      "image": {
+        "src": "/images/members/img-2.svg",
+        "width": 151,
+        "height": 43
+      }
     },
     {
-      "name": "Food Safety & Science",
-      "members": [
-        {
-          "name": "Honda Racing",
-          "image": {
-            "src": "/images/members/img-3.svg",
-            "width": 196,
-            "height": 54
-          }
-        },
-        {
-          "name": "Wirecard",
-          "image": {
-            "src": "/images/members/img-1.svg",
-            "width": 180,
-            "height": 47
-          }
-        },
-        {
-          "name": "Exdy",
-          "image": {
-            "src": "/images/members/img-2.svg",
-            "width": 151,
-            "height": 43
-          }
-        },
-        {
-          "name": "One Drive",
-          "image": {
-            "src": "/images/members/img-5.svg",
-            "width": 181,
-            "height": 33
-          }
-        }
-      ]
+      "name": "Honda Racing",
+      "image": {
+        "src": "/images/members/img-3.svg",
+        "width": 196,
+        "height": 54
+      }
+    },
+    {
+      "name": "SkyDrive",
+      "image": {
+        "src": "/images/members/img-4.svg",
+        "width": 196,
+        "height": 41
+      }
+    },
+    {
+      "name": "One Drive",
+      "image": {
+        "src": "/images/members/img-5.svg",
+        "width": 181,
+        "height": 33
+      }
+    },
+
+    {
+      "name": "Exdy",
+      "image": {
+        "src": "/images/members/img-2.svg",
+        "width": 151,
+        "height": 43
+      }
+    },
+    {
+      "name": "Wirecard",
+      "image": {
+        "src": "/images/members/img-1.svg",
+        "width": 180,
+        "height": 47
+      }
+    },
+    {
+      "name": "One Drive",
+      "image": {
+        "src": "/images/members/img-5.svg",
+        "width": 181,
+        "height": 33
+      }
+    },
+    {
+      "name": "SkyDrive",
+      "image": {
+        "src": "/images/members/img-4.svg",
+        "width": 196,
+        "height": 41
+      }
+    },
+    {
+      "name": "Honda Racing",
+      "image": {
+        "src": "/images/members/img-3.svg",
+        "width": 196,
+        "height": 54
+      }
+    },
+    {
+      "name": "Honda Racing",
+      "image": {
+        "src": "/images/members/img-3.svg",
+        "width": 196,
+        "height": 54
+      }
+    },
+    {
+      "name": "Wirecard",
+      "image": {
+        "src": "/images/members/img-1.svg",
+        "width": 180,
+        "height": 47
+      }
+    },
+    {
+      "name": "Exdy",
+      "image": {
+        "src": "/images/members/img-2.svg",
+        "width": 151,
+        "height": 43
+      }
+    },
+    {
+      "name": "One Drive",
+      "image": {
+        "src": "/images/members/img-5.svg",
+        "width": 181,
+        "height": 33
+      }
+    },
+    {
+      "name": "Exdy",
+      "image": {
+        "src": "/images/members/img-2.svg",
+        "width": 151,
+        "height": 43
+      }
+    },
+    {
+      "name": "Honda Racing",
+      "image": {
+        "src": "/images/members/img-3.svg",
+        "width": 196,
+        "height": 54
+      }
+    },
+    {
+      "name": "SkyDrive",
+      "image": {
+        "src": "/images/members/img-4.svg",
+        "width": 196,
+        "height": 41
+      }
     }
   ]
 }

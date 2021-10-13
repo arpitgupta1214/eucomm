@@ -11,3 +11,4 @@ export { default as Player } from "./Player";
 export { default as Carousel } from "./Carousel";
 export { default as ArrowButton } from "./ArrowButton";
 export { default as Selector } from "./Selector";
+export { default as Button } from "./Button";

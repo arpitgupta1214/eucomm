@@ -1,6 +1,7 @@
 import CustomIcon from "components/CustomIcon/CustomIcon";
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
+import { Button } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
@@ -136,12 +137,10 @@ const Project = (props) => {
           </div>
         </div>
         {moreProjects && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
+          <Button
+            text={props.otherProjectsMoreText}
             onClick={loadOtherProjects}
-          >
-            {props.otherProjectsMoreText}
-          </button>
+          />
         )}
       </div>
     </div>
