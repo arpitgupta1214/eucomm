@@ -86,8 +86,8 @@ const Header = ({ config }) => {
             {/* pages */}
             <div className="flex flex-col md:flex-row">
               {config.pages.map((page, idx) => {
-                const isCurrent = currentPage.test(page.name);
-                const isOpen = openPageSubmenu === page.name;
+                const isCurrent = currentPage.test(page.slug);
+                const isOpen = openPageSubmenu === page.slug;
                 return (
                   <div
                     key={`head-page-${idx}`}
@@ -97,7 +97,7 @@ const Header = ({ config }) => {
                         : ""
                     }`}
                     onMouseEnter={() => {
-                      page.subpages && setOpenPageSubmenu(page.name);
+                      page.subpages && setOpenPageSubmenu(page.slug);
                     }}
                     onMouseLeave={() => setOpenPageSubmenu(null)}
                   >
@@ -111,7 +111,7 @@ const Header = ({ config }) => {
                           onClick={() => {
                             page.subpages &&
                               setOpenPageSubmenu(
-                                page.name === openPageSubmenu ? null : page.name
+                                page.slug === openPageSubmenu ? null : page.slug
                               );
                           }}
                         >
