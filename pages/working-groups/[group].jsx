@@ -1,6 +1,7 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
-import { Carousel, Badge, ArrowButton, HeadImage } from "components/ui";
+import RelatedItemsCarousel from "components/RelatedItemsCarousel";
+import { ArrowButton, HeadImage, Button } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
@@ -81,57 +82,11 @@ const Group = (props) => {
           </div>
 
           {/* news */}
-          <div className="mb-10 md:mb-0 w-full px-4 py-10 md:p-8 bg-skin-light overflow-hidden">
-            <div className="mb-4 md:mb-5 text-lg md:text-2xl font-bold">
-              {props.newsHead}
-            </div>
-            <Carousel>
-              {props.newsItems
-                .reduce(
-                  (acc, newsItem) => {
-                    const last = acc[acc.length - 1];
-                    if (last.length < (isMobile ? 3 : 2)) {
-                      last.push(newsItem);
-                    } else {
-                      acc.push([newsItem]);
-                    }
-                    return acc;
-                  },
-                  [[]]
-                )
-                .map((newsItemGroup, idx) => (
-                  <div key={`news-group-${idx}`} className="flex flex-col">
-                    {newsItemGroup.map((newsItem, idx) => (
-                      <div
-                        key={`position-paper-${idx}`}
-                        className="mr-5 mb-5 max-w-xs flex"
-                      >
-                        <div className="w-24 h-24 flex-shrink-0 mr-4 relative">
-                          <Image
-                            src={newsItem.image}
-                            alt=""
-                            layout="fill"
-                            objectFit="cover"
-                          />
-                        </div>
-                        <div className="flex-grow flex-col">
-                          <Badge
-                            type={newsItem.category.id}
-                            name={newsItem.category.name}
-                            small
-                          />
-                          <div className="mb-2 font-bold text-sm max-line-2">
-                            {newsItem.head}
-                          </div>
-                          <div className="text-skin-light text-xs mb-2">
-                            {newsItem.date}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-            </Carousel>
+          <div className="mb-10 md:mb-0 w-full">
+            <RelatedItemsCarousel
+              head={props.relatedHead}
+              items={props.relatedItems}
+            />
           </div>
         </div>
 
@@ -204,12 +159,7 @@ const Group = (props) => {
           </div>
         </div>
         {moreGroups && (
-          <button
-            className="py-3 px-6 text-skin-highlight border border-skin-highlight"
-            onClick={loadOtherGroups}
-          >
-            {props.otherGroupsMoreText}
-          </button>
+          <Button text={props.otherGroupsMoreText} onClick={loadOtherGroups} />
         )}
       </div>
     </div>

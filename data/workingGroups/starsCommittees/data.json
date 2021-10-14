@@ -23,8 +23,8 @@
       "date": "12 May 2021"
     }
   ],
-  "newsHead": "Related News",
-  "newsItems": [
+  "relatedHead": "Related News",
+  "relatedItems": [
     {
       "image": "/images/workingGroups/starsCommittees/news/news-1.webp",
       "category": { "name": "Studies", "id": 2 },
