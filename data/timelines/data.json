@@ -1,0 +1,78 @@
+{
+  "pageHead": "Timeline",
+  "timelines": [
+    {
+      "image": {
+        "src": "/images/timelines/img-6.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Communication Technology",
+      "slug": "communication-technology"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-1.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Discoveries and Inventions",
+      "slug": "discoveries-and-inventions"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-2.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Environment",
+      "slug": "environment"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-3.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "History of the European Union",
+      "slug": "history-of-the-european-union"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-4.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Politics and Global Events",
+      "slug": "politics-and-global-events"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-5.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Sport and Society",
+      "slug": "sport-and-society"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-6.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Communication Technology",
+      "slug": "communication-technology"
+    },
+    {
+      "image": {
+        "src": "/images/timelines/img-1.webp",
+        "width": 561,
+        "height": 377
+      },
+      "name": "Discoveries and Inventions",
+      "slug": "discoveries-and-inventions"
+    }
+  ],
+  "loadMoreText": "Load More"
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "discoveries-and-inventions",
+  "pageHead": "Discoveries and Inventions",
+  "headImage": {
+    "src": "/images/timelines/details/head-1.webp",
+    "width": 2161,
+    "height": 421
+  },
+
+  "periods": [
+    {
+      "name": "1990-1945",
+      "head": "From hopeful beginnings to a continent at war",
+      "events": [
+        {
+          "head": "First succcessful air flight",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam.",
+          "image": {
+            "src": "/images/timelines/details/img-1.webp",
+            "width": 509,
+            "height": 413
+          }
+        },
+        {
+          "head": "First radio signal set across the Atlantic",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam. Ut egestas imperdiet massa donec purus proin. Urna dolor, viverra eget leo. Maecenas nunc, facilisis leo sed accumsan mollis quisque. Placerat donec tempor diam lacus. Metus netus tellus quam tristique neque sed mauris, potenti.",
+          "image": {
+            "src": "/images/timelines/details/img-2.webp",
+            "width": 509,
+            "height": 413
+          }
+        },
+        {
+          "head": "First succcessful air flight",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam.",
+          "image": {
+            "src": "/images/timelines/details/img-1.webp",
+            "width": 509,
+            "height": 413
+          }
+        },
+        {
+          "head": "First radio signal set across the Atlantic",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam. Ut egestas imperdiet massa donec purus proin. Urna dolor, viverra eget leo. Maecenas nunc, facilisis leo sed accumsan mollis quisque. Placerat donec tempor diam lacus. Metus netus tellus quam tristique neque sed mauris, potenti.",
+          "image": {
+            "src": "/images/timelines/details/img-2.webp",
+            "width": 509,
+            "height": 413
+          }
+        }
+      ]
+    },
+    {
+      "name": "1945-1959",
+      "head": "From hopeful beginnings to a continent at war",
+      "events": [
+        {
+          "head": "First succcessful air flight",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam.",
+          "image": {
+            "src": "/images/timelines/details/img-1.webp",
+            "width": 509,
+            "height": 413
+          }
+        },
+        {
+          "head": "First radio signal set across the Atlantic",
+          "date": "12 Dec, 1901",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus turpis enim nisl nisi quis. Aliquet massa non, aliquet ut volutpat aliquet. Auctor aliquam pulvinar purus egestas. Eget ultrices euismod rutrum dictum non aliquam. Ut egestas imperdiet massa donec purus proin. Urna dolor, viverra eget leo. Maecenas nunc, facilisis leo sed accumsan mollis quisque. Placerat donec tempor diam lacus. Metus netus tellus quam tristique neque sed mauris, potenti.",
+          "image": {
+            "src": "/images/timelines/details/img-2.webp",
+            "width": 509,
+            "height": 413
+          }
+        }
+      ]
+    }
+  ],
+
+  "otherHead": "Other Timeline",
+  "loadMoreText": "Load More"
+}

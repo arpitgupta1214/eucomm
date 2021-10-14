@@ -124,6 +124,10 @@
         {
           "name": "Webinars",
           "slug": "webinars"
+        },
+        {
+          "name": "Timelines",
+          "slug": "timelines"
         }
       ]
     }
