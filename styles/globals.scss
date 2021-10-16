@@ -9,10 +9,10 @@
 }
 
 html {
-  @apply w-screen overflow-x-hidden;
+  @apply overflow-x-hidden;
 }
 body {
-  @apply w-screen min-h-screen font-base text-skin-base sm:mx-auto cursor-default overflow-x-hidden;
+  @apply min-h-screen font-base text-skin-base sm:mx-auto cursor-default overflow-x-hidden;
 }
 #__next {
   @apply min-h-screen flex flex-col;
@@ -30,12 +30,17 @@ input[type="range"] {
 }
 
 .content-md {
-  @apply max-w-content mx-4;
+  @apply max-w-content-md mx-4;
   width: calc(100% - theme("spacing.8"));
 }
 
 .content-sm {
-  @apply max-w-content-small mx-4;
+  @apply max-w-content-sm mx-4;
+  width: calc(100% - theme("spacing.8"));
+}
+
+.content-xs {
+  @apply max-w-content-xs mx-4;
   width: calc(100% - theme("spacing.8"));
 }
 

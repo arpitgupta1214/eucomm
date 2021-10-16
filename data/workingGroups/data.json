@@ -1,6 +1,6 @@
 {
   "pageHead": "Working Groups",
-  "pageSubhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium.",
+  "pageSubhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus fermentum molestie placerat hendrerit rhoncus sociis molestie.",
   "loadMoreText": "Load More",
   "groups": [
     {
@@ -28,7 +28,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
       "slug": "stars-committees",
       "image": {
-        "src": "/images/workingGroups/group-3.webp",
+        "src": "/images/workingGroups/group-4.webp",
         "width": 246,
         "height": 246
       }
@@ -58,7 +58,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, Lorem ipsum dolor sit amet.",
       "slug": "stars-committees",
       "image": {
-        "src": "/images/workingGroups/group-3.webp",
+        "src": "/images/workingGroups/group-4.webp",
         "width": 246,
         "height": 246
       }

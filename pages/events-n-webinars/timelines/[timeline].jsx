@@ -3,21 +3,40 @@ import TimelineCard from "components/TimelineCard";
 import { Button, HeadImage, Selector } from "components/ui";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { searchActions } from "store/searchSlice";
+import Loader from "components/Loader/Loader";
 
 const Timeline = (props) => {
-  const [activePeriod, setActivePeriod] = useState(props.periods[0]);
-  const selectPeriod = (periodName) => {
-    setActivePeriod(props.periods.find((period) => period.name === periodName));
-  };
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
+  const activeTab = useSelector((state) => state.search.tab);
+  useEffect(() => {
+    dispatch(searchActions.setTab({ tab: props.periods[0].name }));
+  }, [dispatch, props.periods]);
 
+  const [activePeriod, setActivePeriod] = useState(null);
   const [events, setEvents] = useState([]);
   const [moreEvents, setMoreEvents] = useState(true);
 
   useEffect(() => {
-    setEvents(activePeriod.events.slice(0, 2));
-    setMoreEvents(true);
-  }, [activePeriod]);
+    if (activeTab) {
+      const activePeriod = props.periods.find(
+        (period) => period.name === activeTab
+      );
+      setActivePeriod(activePeriod);
+      setEvents(activePeriod.events.slice(0, 2));
+      setMoreEvents(true);
+    }
+  }, [activeTab, props.periods]);
 
+  // cut loading
+
+  useEffect(() => {
+    if (activePeriod) {
+      setLoading(false);
+    }
+  }, [activePeriod]);
   const loadMoreEvents = () => {
     setEvents(activePeriod.events);
     setMoreEvents(false);
@@ -32,6 +51,9 @@ const Timeline = (props) => {
     setMoreTimelines(false);
   };
 
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
@@ -46,11 +68,7 @@ const Timeline = (props) => {
       <div className="mb-10 md:mb-32 content-md flex flex-col items-center">
         {/* selector */}
         <div className="mb-8">
-          <Selector
-            options={props.periods.map((period) => period.name)}
-            active={activePeriod.name}
-            onSelect={selectPeriod}
-          />
+          <Selector options={props.periods.map((period) => period.name)} />
         </div>
         {/* period */}
         <div className="mb-3 self-start font-bold text-xl md:text-4xl leading-tight">

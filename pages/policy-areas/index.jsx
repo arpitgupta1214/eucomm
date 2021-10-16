@@ -19,8 +19,8 @@ const PolicyAreas = (props) => {
       </div>
 
       {/* policies */}
-      <div className="mb-10 content-md flex flex-col">
-        <div className="mb-6 grid md:grid-cols-3 gap-6">
+      <div className="mb-10 content-md flex flex-col items-center">
+        <div className="mb-6 w-full grid md:grid-cols-3 gap-6">
           {policies.map((policy, idx) => (
             <PolicyCard key={`policy-${idx}`} policy={policy} />
           ))}

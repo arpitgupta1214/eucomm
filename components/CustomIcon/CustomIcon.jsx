@@ -41,6 +41,8 @@ import {
   BsThreeDotsVertical,
   BsClockFill,
   BsArrowRepeat,
+  BsChevronDown,
+  BsChevronUp,
 } from "react-icons/bs";
 import {
   BiChevronDown,
@@ -108,6 +110,8 @@ const icons = {
   FiPlayCircle,
   AiOutlineRight,
   AiOutlineLeft,
+  BsChevronDown,
+  BsChevronUp,
 };
 
 const CustomIcon = ({ name, className }) => {

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import s from "./header.module.scss";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
@@ -7,10 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 import CustomIcon from "components/CustomIcon";
 
-const user = {
-  name: "Amanda Smith",
-  img: "/2.png",
-};
 const MenuWrapper = ({ isMobile, openMenu, headerRef, children }) => {
   const headerHeight = headerRef.current?.offsetHeight;
   if (isMobile) {
@@ -84,25 +79,28 @@ const Header = ({ config }) => {
             headerRef={headerRef}
           >
             {/* pages */}
-            <div className="flex flex-col md:flex-row">
+            <div className="grid md:grid-flow-col md:gap-7">
               {config.pages.map((page, idx) => {
                 const isCurrent = currentPage.test(page.slug);
                 const isOpen = openPageSubmenu === page.slug;
                 return (
                   <div
                     key={`head-page-${idx}`}
-                    className={`md:mx-4 flex flex-col pb-8 md:pb-4 ${
+                    className={`flex flex-col pb-8 md:pb-4 ${
                       isCurrent
-                        ? "text-skin-highlight md:border-b-2 border-skin-highlight font-medium"
-                        : ""
+                        ? "md:border-b-2 border-skin-highlight font-medium"
+                        : "text-skin-light"
                     }`}
                     onMouseEnter={() => {
                       page.subpages && setOpenPageSubmenu(page.slug);
                     }}
                     onMouseLeave={() => setOpenPageSubmenu(null)}
                   >
-                    <div className="text-lg md:text-base flex items-center">
-                      <button onClick={() => redirect(`/${page.slug}`)}>
+                    <div className="text-lg md:text-sm flex items-center">
+                      <button
+                        className="mr-1"
+                        onClick={() => redirect(`/${page.slug}`)}
+                      >
                         {page.name}
                       </button>
                       {page.subpages && (
@@ -115,11 +113,12 @@ const Header = ({ config }) => {
                               );
                           }}
                         >
-                          {isOpen ? (
-                            <CustomIcon name="FaAngleUp" />
-                          ) : (
-                            <CustomIcon name="FaAngleDown" />
-                          )}
+                          <CustomIcon
+                            name="BsChevronDown"
+                            className={`text-xs transition-all ${
+                              isOpen ? "transform rotate-180" : ""
+                            }`}
+                          />
                         </button>
                       )}
                     </div>
@@ -190,44 +189,29 @@ const Header = ({ config }) => {
                 );
               })}
             </div>
-            {/* profile */}
-            <div className="flex items-center bg-skin-light rounded-full self-start">
-              <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-gray-200">
-                <Image
-                  src={user.img}
-                  alt="profile"
-                  height="50px"
-                  width="50px"
-                  className="w-full h-full"
-                />
-              </div>
-              {isMobile && (
-                <span className="ml-2 mr-4 text-sm font-medium">
-                  {user.name}
-                </span>
-              )}
-            </div>
           </MenuWrapper>
         </div>
       </div>
       {/*breadcrumb*/}
-      <div className="content-md flex mt-3">
-        {path.map((page, idx) => {
-          const last = idx === path.length - 1;
-          return (
-            <div key={`breadcrumb-page-${idx}`} className="text-xs">
-              <span
-                className={`capitalize ${
-                  last ? "text-skin-light" : "text-skin-highlight"
-                }`}
-              >
-                {decodeURIComponent(page).replace(/-/g, " ")}
-              </span>
-              {!last && <span className="text-skin-light mx-5">/</span>}
-            </div>
-          );
-        })}
-      </div>
+      {path.length > 1 && (
+        <div className="content-md flex mt-3">
+          {path.map((page, idx) => {
+            const last = idx === path.length - 1;
+            return (
+              <div key={`breadcrumb-page-${idx}`} className="text-xs">
+                <span
+                  className={`capitalize ${
+                    last ? "text-skin-light" : "text-skin-highlight"
+                  }`}
+                >
+                  {decodeURIComponent(page).replace(/-/g, " ")}
+                </span>
+                {!last && <span className="text-skin-light mx-5">/</span>}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </header>
   );
 };

@@ -1,22 +1,34 @@
-import EventCard from "components/EventCard/EventCard";
+import EventCard from "components/EventCard";
 import Layout from "components/Layouts";
+import Loader from "components/Loader";
 import { Button, Selector } from "components/ui";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { searchActions } from "store/searchSlice";
 
 const Events = (props) => {
-  const [activeEventGroup, setActiveEventGroup] = useState(
-    props.eventGroups[0]
-  );
+  const dispatch = useDispatch();
+
+  const [loading, setLoading] = useState(true);
+  const activeTab = useSelector((state) => state.search.tab);
+  useEffect(() => {
+    dispatch(searchActions.setTab({ tab: props.eventGroups[0].name }));
+  }, [dispatch, props.eventGroups]);
+
+  const [activeEventGroup, setActiveEventGroup] = useState(null);
   const [events, setEvents] = useState([]);
   const [moreEvents, setMoreEvents] = useState(false);
+
   useEffect(() => {
-    setEvents(
-      props.eventGroups
-        .find((eventGroup) => eventGroup.name === activeEventGroup.name)
-        .events.slice(0, 6)
-    );
-    setMoreEvents(true);
-  }, [activeEventGroup, props.eventGroups]);
+    if (activeTab) {
+      const activeEventGroup = props.eventGroups.find(
+        (eventGroup) => eventGroup.name === activeTab
+      );
+      setActiveEventGroup(activeEventGroup);
+      setEvents(activeEventGroup.events.slice(0, 6));
+      setMoreEvents(true);
+    }
+  }, [activeTab, props.eventGroups]);
 
   const loadMore = () => {
     setEvents(
@@ -26,6 +38,16 @@ const Events = (props) => {
     );
     setMoreEvents(false);
   };
+
+  useEffect(() => {
+    if (activeEventGroup) {
+      setLoading(false);
+    }
+  }, [activeEventGroup]);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <div className="mt-10 md:mt-16 flex flex-col items-center">
       {/* head */}
@@ -37,14 +59,6 @@ const Events = (props) => {
       <div className="mb-6 content-md flex md:justify-center">
         <Selector
           options={props.eventGroups.map((eventGroup) => eventGroup.name)}
-          active={activeEventGroup.name}
-          onSelect={(eventGroupName) =>
-            setActiveEventGroup(
-              props.eventGroups.find(
-                (eventGroup) => eventGroup.name === eventGroupName
-              )
-            )
-          }
         />
       </div>
 

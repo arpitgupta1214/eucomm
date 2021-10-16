@@ -21,7 +21,7 @@ const Policy = (props) => {
   return (
     <div className="mt-7 w-full flex flex-col items-center">
       {/* head */}
-      <div className="mb-6 content-md text-3xl md:text-5xl font-bold md:text-center">
+      <div className="mb-6 content-sm text-3xl md:text-5xl font-bold md:text-center">
         {props.pageHead}
       </div>
 
@@ -29,7 +29,7 @@ const Policy = (props) => {
       <HeadImage src={props.headImage.src} />
 
       {/* content */}
-      <div className={`mb-10 md:mb-36 content-sm flex flex-col`}>
+      <div className={`mb-10 md:mb-36 content-xs flex flex-col`}>
         <div className="md:mr-6 md:flex-shrink overflow-hidden">
           {/* subhead */}
           <div className="mb-6 md:mb-7 text-sm md:text-lg text-skin-light">

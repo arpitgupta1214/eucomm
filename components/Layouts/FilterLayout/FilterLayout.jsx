@@ -3,10 +3,10 @@ import {
   Filters,
   InlineFilters,
   Sort,
-  Tabs,
   Search,
   MobilePopup,
   Calendar,
+  Selector,
 } from "components/ui";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -67,6 +67,12 @@ const FilterLayout = ({ children, config, ...props }) => {
           <div className="text-skin-light text-sm md:text-base mt-3 max-w-md">
             {props.subHeading}
           </div>
+
+          {props.tabs && (
+            <div className="w-min mx-auto">
+              <Selector options={props.tabs} />
+            </div>
+          )}
           {/* main */}
           <div className="w-full mt-5 md:mt-16 flex">
             {/* filter */}
@@ -120,12 +126,6 @@ const FilterLayout = ({ children, config, ...props }) => {
             )}
             {/* cards */}
             <div className="w-full flex-grow flex flex-col">
-              {props.tabs && (
-                <div className="w-full">
-                  <Tabs tabs={props.tabs} />
-                </div>
-              )}
-
               <div className="flex flex-wrap md:flex-nowrap items-start mb-6 md:mb-3">
                 <div className="w-full flex-grow">
                   <InlineFilters openFilters={openFilters} />

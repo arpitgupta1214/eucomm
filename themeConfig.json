@@ -14,7 +14,8 @@
   "fontFamilyBold": "'Helvetica Neue LT W1G 75 Bold'",
   "borderColorBase": "#eaebee",
   "borderColorDark": "#142938",
-  "maxContentWidth": "1170px",
-  "maxSmallContentWidth": "990px",
+  "contentWidthMd": "1170px",
+  "contentWidthSm": "990px",
+  "contentWidthXs": "880px",
   "shadowSmall": "0px 8px 14px 0px rgba(13, 25, 48, 0.05)"
 }

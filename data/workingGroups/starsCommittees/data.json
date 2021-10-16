@@ -1,7 +1,11 @@
 {
   "slug": "stars-committees",
   "pageHead": "S.T.A.R.S Committees",
-  "headImage": "/images/workingGroups/starsCommittees/head.webp",
+  "headImage": {
+    "src": "/images/workingGroups/group-4.webp",
+    "width": 2161,
+    "height": 420
+  },
   "pageSubhead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
   "descriptionHead": "Description",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa erat consectetur massa lorem amet tempor cursus sed dignissim. Ultrices ultricies scelerisque magna cras.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, duis etiam sed dictum massa at diam interdum eleifend. Maecenas ullamcorper nisl ipsum lacus enim amet, proin. Mus sodales dolor maecenas lorem nisi, rhoncus. Nibh sodales ipsum lectus orci at pretium quisque malesuada.",
@@ -26,61 +30,61 @@
   "relatedHead": "Related News",
   "relatedItems": [
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-1.webp",
+      "image": "/images/workingGroups/starsCommittees/news-1.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-2.webp",
+      "image": "/images/workingGroups/starsCommittees/news-2.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-3.webp",
+      "image": "/images/workingGroups/starsCommittees/news-3.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-4.webp",
+      "image": "/images/workingGroups/starsCommittees/news-4.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-1.webp",
+      "image": "/images/workingGroups/starsCommittees/news-1.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-2.webp",
+      "image": "/images/workingGroups/starsCommittees/news-2.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-3.webp",
+      "image": "/images/workingGroups/starsCommittees/news-3.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-4.webp",
+      "image": "/images/workingGroups/starsCommittees/news-4.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-1.webp",
+      "image": "/images/workingGroups/starsCommittees/news-1.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"
     },
     {
-      "image": "/images/workingGroups/starsCommittees/news/news-2.webp",
+      "image": "/images/workingGroups/starsCommittees/news-2.webp",
       "category": { "name": "Studies", "id": 2 },
       "head": "EUROCHAMBRES signs a collaboration agreement with the EUIPO",
       "date": "12 May 2021"

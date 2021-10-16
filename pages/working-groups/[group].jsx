@@ -2,8 +2,8 @@ import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import RelatedItemsCarousel from "components/RelatedItemsCarousel";
 import { ArrowButton, HeadImage, Button } from "components/ui";
+import WorkingGroupCard from "components/WorkingGroupCard";
 import Image from "next/image";
-import router from "next/router";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -93,7 +93,10 @@ const Group = (props) => {
         {/* chair members */}
         <div className="flex-grow flex flex-col">
           {props.chairGroups.map((group, idx) => (
-            <div key={`group-${idx}`} className="mb-5 bg-skin-light py-4 px-5">
+            <div
+              key={`group-${idx}`}
+              className="mb-5 bg-skin-light py-4 pl-5 pr-8"
+            >
               {/* head  */}
               <div className="mb-2 text-xs text-skin-light">{group.name}</div>
               {/* members */}
@@ -131,30 +134,7 @@ const Group = (props) => {
         <div className={`mb-6 ${isMobile ? "w-full" : "content-md"}`}>
           <div className="w-full grid md:grid-cols-2 gap-6">
             {otherGroups.map((group, idx) => (
-              <div
-                key={`group-${idx}`}
-                className="bg-skin-base p-3 md:p-6 flex md:items-center"
-              >
-                <div className="w-20 md:w-40 h-20 md:h-40 flex-shrink-0 mr-5 relative">
-                  <Image src={group.image.src} alt="" layout="fill" />
-                </div>
-                <div className="flex-grow">
-                  <div className="mb-1.5 md:mb-2 text-sm md:text-xl font-bold">
-                    {group.name}
-                  </div>
-                  <div className="mb-1.5 md:mb-2 text-xs md:text-sm text-skin-light">
-                    {group.description}
-                  </div>
-                  <div className="w-9 md:w-12 h-9 md:h-12">
-                    <ArrowButton
-                      direction="forward"
-                      onClick={() =>
-                        router.push(`${router.asPath}/${group.slug}`)
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
+              <WorkingGroupCard key={`group-${idx}`} workingGroup={group} />
             ))}
           </div>
         </div>
@@ -170,13 +150,19 @@ Group.layout = Layout;
 export default Group;
 
 export const getStaticPaths = async () => {
-  const config = await import("data/config.json").then((data) => data.default);
-  const workingGroups = config.pages
-    .find((page) => page.slug === "working-groups")
-    .subpages.map((subpage) => subpage.slug);
+  const workingGroups = [];
+  const context = require.context(
+    "data/workingGroups",
+    true,
+    /^\.\/.+\/.+\.json$/
+  );
+  context.keys().forEach((key) => {
+    const resource = require(`data/workingGroups/${key.slice(2)}`);
+    workingGroups.push(JSON.parse(JSON.stringify(resource)));
+  });
   return {
-    paths: workingGroups.map((group) => ({
-      params: { group },
+    paths: workingGroups.map((workingGroup) => ({
+      params: { group: workingGroup.slug },
     })),
     fallback: false,
   };

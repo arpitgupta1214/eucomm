@@ -1,5 +1,6 @@
 import Layout from "components/Layouts";
 import SocialLinks from "components/SocialLinks/SocialLinks";
+import Image from "next/image";
 import { useSelector } from "react-redux";
 
 const Contact = ({ config, ...props }) => {
@@ -13,7 +14,17 @@ const Contact = ({ config, ...props }) => {
 
       <div className="mb-10 md:mb-28 content-md flex flex-col md:flex-row-reverse">
         {/* map */}
-        <div className="mb-6 md:mb-0 h-44 md:h-auto flex-grow bg-red-200 overflow-hidden"></div>
+        <div className="mb-6 md:mb-0 h-44 md:h-auto flex-grow relative">
+          <Image
+            src="/images/contact/map.webp"
+            alt=""
+            width={897}
+            height={621}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
 
         {/* content */}
         <div className="md:mr-28 flex-shrink-0 md:py-24 grid md:grid-cols-2 gap-y-5 md:gap-y-20 text-sm">

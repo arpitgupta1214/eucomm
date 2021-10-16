@@ -3,8 +3,14 @@ import SocialLinks from "components/SocialLinks/SocialLinks";
 import React from "react";
 import { useSelector } from "react-redux";
 
-const Subpage = ({ subpage }) => (
-  <div className="mt-5 text-sm font-medium opacity-60">{subpage.name}</div>
+const Subpage = ({ subpage, color }) => (
+  <div
+    className={`mt-5 text-sm font-medium opacity-60 ${
+      color ? "text-skin-highlight underline" : "text-white"
+    }`}
+  >
+    {subpage.name}
+  </div>
 );
 
 const Subpages = ({ subpages }) => {
@@ -22,7 +28,7 @@ const Subpages = ({ subpages }) => {
         {subpages.slice(0, 4).map((subpage) => (
           <Subpage key={`footer-subpage-${subpage.slug}`} subpage={subpage} />
         ))}
-        <Subpage subpage={{ name: `+${subpages.length - 4}` }} />
+        <Subpage subpage={{ name: `+${subpages.length - 4}` }} color />
       </>
     );
   }

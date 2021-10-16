@@ -18,32 +18,56 @@
         {
           "name": "Amanda Cooper",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-10.webp"
+          "image": {
+            "src": "/images/team/img-10.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Jenny Wilson",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-1.webp"
+          "image": {
+            "src": "/images/team/img-1.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Cameron Smith",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-2.webp"
+          "image": {
+            "src": "/images/team/img-2.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Jacob Jones",
           "jobTitle": "Job Title",
-          "image": "/images/team/img-3.webp"
+          "image": {
+            "src": "/images/team/img-3.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Kathryn Murphy",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-4.webp"
+          "image": {
+            "src": "/images/team/img-4.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Bessie Cooper",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-5.webp"
+          "image": {
+            "src": "/images/team/img-5.webp",
+            "width": 301,
+            "height": 301
+          }
         }
       ]
     },
@@ -54,17 +78,29 @@
         {
           "name": "Kathryn Murphy",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-8.webp"
+          "image": {
+            "src": "/images/team/img-8.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Ted Cooper",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-9.webp"
+          "image": {
+            "src": "/images/team/img-9.webp",
+            "width": 301,
+            "height": 301
+          }
         },
         {
           "name": "Wade Warren",
           "jobTitle": "JOB TITLE",
-          "image": "/images/team/img-6.webp"
+          "image": {
+            "src": "/images/team/img-6.webp",
+            "width": 301,
+            "height": 301
+          }
         }
       ]
     }

@@ -22,7 +22,7 @@ const Structure = (props) => {
         </div>
 
         {/* groups */}
-        <div className="mb-16">
+        <div className="mb-16 md:mb-36">
           {props.groups.map((group) => (
             <div key={`group-${group.name}`} className="mb-6 md:mb-12">
               <div className="mb-4 md:mb-5 text-lg md:text-2xl font-bold">
@@ -44,10 +44,10 @@ const Structure = (props) => {
                     {/* img */}
                     <div className="mb-3">
                       <Image
-                        src={member.image}
+                        src={member.image.src}
                         alt=""
-                        width={1}
-                        height={1}
+                        width={member.image.width}
+                        height={member.image.height}
                         layout="responsive"
                       />
                     </div>

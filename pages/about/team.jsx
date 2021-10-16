@@ -25,16 +25,16 @@ const Team = (props) => {
                   {/* img */}
                   <div className="mb-3 w-full">
                     <Image
-                      src={member.image}
+                      src={member.image.src}
                       alt=""
-                      width={1}
-                      height={1}
+                      width={member.image.width}
+                      height={member.image.height}
                       layout="responsive"
                       priority={true}
                     />
                   </div>
                   <div className="mb-1 font-bold text-xl">{member.name}</div>
-                  <div className="text-xs text-skin-light">
+                  <div className="text-xs font-medium text-skin-light">
                     {member.jobTitle}
                   </div>
                 </div>

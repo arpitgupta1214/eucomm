@@ -27,9 +27,9 @@ const RelatedItemsCarousel = ({ head, items }) => {
               {itemGroup.map((item, idx) => (
                 <div
                   key={`position-paper-${idx}`}
-                  className="mr-5 mb-5 max-w-xs flex"
+                  className="mr-5 md:mr-10 mb-5 max-w-sm flex"
                 >
-                  <div className="w-24 h-24 flex-shrink-0 mr-4 relative">
+                  <div className="w-28 h-28 flex-shrink-0 mr-4 relative">
                     <Image
                       src={item.image}
                       alt=""

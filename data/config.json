@@ -57,21 +57,7 @@
     },
     {
       "name": "Working Groups",
-      "slug": "working-groups",
-      "subpages": [
-        {
-          "name": "Advocacy Committee",
-          "slug": "advocacy-committee"
-        },
-        {
-          "name": "Safety Committee",
-          "slug": "safety-committee"
-        },
-        {
-          "name": "S.T.A.R.S Committees",
-          "slug": "stars-committees"
-        }
-      ]
+      "slug": "working-groups"
     },
     { "name": "Data", "slug": "data" },
     {
@@ -130,6 +116,10 @@
           "slug": "timelines"
         }
       ]
+    },
+    {
+      "name": "News&Blog",
+      "slug": "news-n-blog"
     }
   ],
   "socialLinks": [

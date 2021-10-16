@@ -44,8 +44,9 @@ module.exports = {
         bold: theme.fontFamilyBold,
       },
       maxWidth: {
-        content: theme.maxContentWidth,
-        "content-small": theme.maxSmallContentWidth,
+        "content-md": theme.contentWidthMd,
+        "content-sm": theme.contentWidthSm,
+        "content-xs": theme.contentWidthXs,
       },
       boxShadow: {
         sm: theme.shadowSmall,

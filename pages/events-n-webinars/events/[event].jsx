@@ -72,7 +72,7 @@ const Event = (props) => {
             {props.agendaHead}
           </div>
           <div className="mb-10 md:mb-0 w-full px-5 py-7 md:p-7 md:pl-0 bg-skin-light flex flex-col md:flex-row">
-            <div className="mb-6 md:mb-0 pb-6 md:px-16 md:py-10 border-b md:border-r border-skin-base">
+            <div className="mb-6 md:mb-0 pb-6 md:px-16 md:py-10 border-b md:border-b-0 md:border-r border-skin-base">
               <div className="font-bold text-5xl text-skin-highlight">
                 {date}
               </div>
