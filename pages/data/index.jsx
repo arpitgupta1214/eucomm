@@ -1,4 +1,4 @@
-import DataCard from "components/DataCard";
+import DataCard from "components/Cards/DataCard";
 import Layout from "components/Layouts";
 import { Button } from "components/ui";
 import { useState } from "react";

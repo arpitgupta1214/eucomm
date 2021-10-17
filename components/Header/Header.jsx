@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 import CustomIcon from "components/CustomIcon";
+import SocialLinks from "components/SocialLinks";
 
 const MenuWrapper = ({ isMobile, openMenu, headerRef, children }) => {
   const headerHeight = headerRef.current?.offsetHeight;
@@ -56,10 +57,22 @@ const Header = ({ config }) => {
   return (
     <header className="w-full z-20 flex flex-col items-center">
       <div className="w-full relative flex flex-col items-center">
+        <div className="hidden md:flex flex-col items-center w-full bg-skin-dark py-2">
+          <div className="content-md flex items-center justify-end text-white">
+            <SocialLinks links={config.socialLinks} />
+            <span className="mx-5 text-xs opacity-10">|</span>
+            <button
+              className="text-xs font-base leading-tight"
+              onClick={() => router.push("/projects/members-area")}
+            >
+              Members Area
+            </button>
+          </div>
+        </div>
         <div
           ref={headerRef}
           className={`content-md flex items-center md:items-start pt-4 md:pt-6 justify-between bg-skin-base${
-            isMobile && openMenu ? "fixed top-0 left-0 w-full p-4" : ""
+            isMobile && openMenu ? "fixed top-0 left-0 w-full mb-4" : ""
           }`}
         >
           {/* logo */}
@@ -198,7 +211,10 @@ const Header = ({ config }) => {
           {path.map((page, idx) => {
             const last = idx === path.length - 1;
             return (
-              <div key={`breadcrumb-page-${idx}`} className="text-xs">
+              <div
+                key={`breadcrumb-page-${idx}`}
+                className="text-xs whitespace-nowrap"
+              >
                 <span
                   className={`capitalize ${
                     last ? "text-skin-light" : "text-skin-highlight"
@@ -206,7 +222,9 @@ const Header = ({ config }) => {
                 >
                   {decodeURIComponent(page).replace(/-/g, " ")}
                 </span>
-                {!last && <span className="text-skin-light mx-5">/</span>}
+                {!last && (
+                  <span className="text-skin-light mx-2 md:mx-5">/</span>
+                )}
               </div>
             );
           })}

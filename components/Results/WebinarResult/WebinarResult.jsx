@@ -1,5 +1,6 @@
 import CustomIcon from "components/CustomIcon";
 import Badge from "components/ui/Badge/Badge";
+import router from "next/router";
 import s from "../result.module.scss";
 import wS from "./webinarResult.module.scss";
 const WebinarResult = ({ result }) => {
@@ -20,7 +21,12 @@ const WebinarResult = ({ result }) => {
         <h1 className="max-line-2">{result.head}</h1>
         <h2 className="max-line-2">{result.subhead}</h2>
         <h3>{result.date}</h3>
-        <button className={s.cta}>
+        <button
+          className={s.cta}
+          onClick={() =>
+            router.push(`/events-n-webinars/events/${result.slug}`)
+          }
+        >
           <span>Register Now</span>
         </button>
       </div>

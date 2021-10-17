@@ -1,7 +1,7 @@
 import Layout from "components/Layouts";
 import { useState } from "react";
 import Image from "next/image";
-import DataCard from "components/DataCard";
+import DataCard from "components/Cards/DataCard";
 import { useSelector } from "react-redux";
 import { Button } from "components/ui";
 

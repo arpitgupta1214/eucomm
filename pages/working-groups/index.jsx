@@ -1,7 +1,7 @@
 import Layout from "components/Layouts";
 import { Button } from "components/ui";
 import { useState } from "react";
-import WorkingGroupCard from "components/WorkingGroupCard";
+import WorkingGroupCard from "components/Cards/WorkingGroupCard";
 const WorkingGroups = (props) => {
   const [workingGroups, setWorkingGroups] = useState(props.groups.slice(0, 6));
   const [moreWorkingGroups, setMoreWorkingGroups] = useState(true);

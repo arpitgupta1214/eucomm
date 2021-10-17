@@ -1,5 +1,5 @@
 import Layout from "components/Layouts";
-import TimelineCard from "components/TimelineCard";
+import TimelineCard from "components/Cards/TimelineCard";
 import { Button } from "components/ui";
 import { useState } from "react";
 

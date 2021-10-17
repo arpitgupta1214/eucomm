@@ -1,6 +1,6 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
-import PolicyCard from "components/PolicyCard";
+import PolicyCard from "components/Cards/PolicyCard";
 import RelatedItemsCarousel from "components/RelatedItemsCarousel";
 import { HeadImage, Button } from "components/ui";
 import { useState } from "react";

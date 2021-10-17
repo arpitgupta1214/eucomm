@@ -1,4 +1,4 @@
-import EventCard from "components/EventCard";
+import EventCard from "components/Cards/EventCard";
 import Layout from "components/Layouts";
 import Loader from "components/Loader";
 import { Button, Selector } from "components/ui";

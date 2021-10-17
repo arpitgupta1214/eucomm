@@ -4,4 +4,11 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  redirects: async () => [
+    {
+      source: "/events-n-webinars/webinars",
+      destination: "/resources/webinars",
+      permanent: true,
+    },
+  ],
 });

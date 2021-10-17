@@ -2,7 +2,7 @@ import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import RelatedItemsCarousel from "components/RelatedItemsCarousel";
 import { ArrowButton, HeadImage, Button } from "components/ui";
-import WorkingGroupCard from "components/WorkingGroupCard";
+import WorkingGroupCard from "components/Cards/WorkingGroupCard";
 import Image from "next/image";
 import { useState } from "react";
 import { useSelector } from "react-redux";

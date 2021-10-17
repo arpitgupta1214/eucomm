@@ -1,7 +1,7 @@
 import Layout from "components/Layouts";
 import { useState } from "react";
 import { Button } from "components/ui";
-import PolicyCard from "components/PolicyCard";
+import PolicyCard from "components/Cards/PolicyCard";
 
 const PolicyAreas = (props) => {
   const [policies, setPolicies] = useState(props.policies.slice(0, 6));

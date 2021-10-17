@@ -1,5 +1,5 @@
 import CustomIcon from "components/CustomIcon";
-import EventCard from "components/EventCard";
+import EventCard from "components/Cards/EventCard";
 import Layout from "components/Layouts";
 import { Button, HeadImage } from "components/ui";
 import Image from "next/image";

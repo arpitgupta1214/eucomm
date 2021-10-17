@@ -60,16 +60,16 @@ const FilterLayout = ({ children, config, ...props }) => {
       <div className="w-full flex flex-col items-center">
         <div className="content-md">
           {/* head */}
-          <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16">
+          <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16 md:text-center">
             {props.heading}
           </div>
           {/* subhead  */}
-          <div className="text-skin-light text-sm md:text-base mt-3 max-w-md">
+          <div className="mb-2 md:mx-auto text-skin-light text-sm md:text-base mt-3 max-w-md md:text-center">
             {props.subHeading}
           </div>
 
           {props.tabs && (
-            <div className="w-min mx-auto">
+            <div className="md:mx-auto w-min">
               <Selector options={props.tabs} />
             </div>
           )}
