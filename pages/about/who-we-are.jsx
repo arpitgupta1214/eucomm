@@ -3,6 +3,7 @@ import Newsletter from "components/Newsletter";
 import { Carousel } from "components/ui";
 import Image from "next/image";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const WhoWeAre = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -36,6 +37,8 @@ const WhoWeAre = (props) => {
                   height={height}
                   layout={isMobile ? "responsive" : "fixed"}
                   priority={true}
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
               </div>
             );
@@ -62,6 +65,8 @@ const WhoWeAre = (props) => {
             layout="fill"
             objectFit="cover"
             objectPosition="right"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
       </div>
@@ -80,6 +85,8 @@ const WhoWeAre = (props) => {
             width={props.missionImage.width}
             height={props.missionImage.height}
             layout="responsive"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
       </div>

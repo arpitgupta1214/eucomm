@@ -1,11 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowButton } from "components/ui";
 
 const Carousel = ({ children }) => {
-  const [items, setItems] = useState(
-    children.map((child, idx) => ({ component: child, id: idx }))
-  );
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems(children.map((child, idx) => ({ component: child, id: idx })));
+  }, [children]);
   const onPrev = () => {
     let last;
     setItems((items) => {
