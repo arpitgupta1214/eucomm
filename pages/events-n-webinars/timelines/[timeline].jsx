@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import Loader from "components/Loader/Loader";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Timeline = (props) => {
   const dispatch = useDispatch();
@@ -112,6 +113,8 @@ const Timeline = (props) => {
                   width={event.image.width}
                   height={event.image.height}
                   layout="responsive"
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
               </div>
             </div>

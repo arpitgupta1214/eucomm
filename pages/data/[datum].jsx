@@ -4,6 +4,7 @@ import Image from "next/image";
 import DataCard from "components/Cards/DataCard";
 import { useSelector } from "react-redux";
 import { Button } from "components/ui";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Data = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -33,6 +34,8 @@ const Data = (props) => {
           width={props.headGraph.width}
           height={props.headGraph.height}
           layout="responsive"
+          placeholder="blur"
+          blurDataURL={getPlaceholderImage()}
         />
       </div>
 
@@ -64,6 +67,8 @@ const Data = (props) => {
                       width={graph.width}
                       height={graph.height}
                       layout="responsive"
+                      placeholder="blur"
+                      blurDataURL={getPlaceholderImage()}
                     />
                   </div>
                 </div>

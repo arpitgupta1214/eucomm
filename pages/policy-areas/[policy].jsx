@@ -6,6 +6,7 @@ import { HeadImage, Button } from "components/ui";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Image from "next/image";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Policy = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -93,6 +94,8 @@ const Policy = (props) => {
                   width={contact.image.width}
                   height={contact.image.height}
                   layout="responsive"
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
               </div>
               <div className="mb-1 font-bold md:text-xl">{contact.name}</div>

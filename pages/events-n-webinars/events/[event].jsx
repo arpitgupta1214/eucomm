@@ -4,6 +4,7 @@ import Layout from "components/Layouts";
 import { Button, HeadImage } from "components/ui";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Event = (props) => {
   const [otherEvents, setOtherEvents] = useState([]);
@@ -59,6 +60,8 @@ const Event = (props) => {
                     width={speaker.image.width}
                     height={speaker.image.height}
                     layout="responsive"
+                    placeholder="blur"
+                    blurDataURL={getPlaceholderImage()}
                   />
                 </div>
                 <div className="mb-1 font-bold md:text-xl">{speaker.name}</div>

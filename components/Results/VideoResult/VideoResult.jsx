@@ -1,5 +1,6 @@
 import CustomIcon from "components/CustomIcon";
 import Image from "next/image";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const VideoResult = ({ result }) => {
   return (
@@ -16,6 +17,8 @@ const VideoResult = ({ result }) => {
           height={2133}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
+          blurDataURL={getPlaceholderImage()}
         />
       </div>
       {/* heading  */}
@@ -27,6 +30,8 @@ const VideoResult = ({ result }) => {
             height={10}
             width={10}
             layout="responsive"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import router from "next/router";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const PolicyCard = ({ policy }) => (
   <div
@@ -19,6 +20,8 @@ const PolicyCard = ({ policy }) => (
         objectFit="cover"
         objectPosition="center"
         priority={true}
+        placeholder="blur"
+        blurDataURL={getPlaceholderImage()}
       />
     </div>
   </div>

@@ -2,6 +2,7 @@ import Badge from "components/ui/Badge/Badge";
 import s from "../result.module.scss";
 import Image from "next/image";
 import CustomIcon from "components/CustomIcon";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const WhitepaperResult = ({ result }) => {
   return (
@@ -13,6 +14,8 @@ const WhitepaperResult = ({ result }) => {
           layout="responsive"
           width={226}
           height={296}
+          placeholder="blur"
+          blurDataURL={getPlaceholderImage()}
         />
       </div>
 

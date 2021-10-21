@@ -4,6 +4,7 @@ import Image from "next/image";
 import CustomIcon from "components/CustomIcon/CustomIcon";
 import { useState } from "react";
 import { Button } from "components/ui";
+import getPlaceholderImage from "util/getPlaceholderImg";
 const Projects = (props) => {
   const [projects, setProjects] = useState(props.projects.slice(0, 6));
   const [moreProjects, setMoreProjects] = useState(true);
@@ -32,6 +33,8 @@ const Projects = (props) => {
                   height={project.image.height}
                   layout="responsive"
                   priority={true}
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
               </div>
               <div className="md:py-5 p-6">

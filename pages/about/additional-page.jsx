@@ -3,6 +3,7 @@ import Newsletter from "components/Newsletter";
 import Image from "next/image";
 import { BsCheckCircle } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const AdditionalPage = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -30,6 +31,8 @@ const AdditionalPage = (props) => {
             alt=""
             layout="responsive"
             priority={true}
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
       </div>
@@ -60,6 +63,8 @@ const AdditionalPage = (props) => {
             width={props.challengesImage.width}
             alt=""
             layout="responsive"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
       </div>

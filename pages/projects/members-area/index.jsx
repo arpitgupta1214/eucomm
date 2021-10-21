@@ -3,6 +3,7 @@ import { Button } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const MembersArea = (props) => {
   const [members, setMembers] = useState(props.members.slice(0, 14));
@@ -47,6 +48,8 @@ const MembersArea = (props) => {
                   height={member.image.height}
                   layout="responsive"
                   priority={true}
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
               </div>
             </div>

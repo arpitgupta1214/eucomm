@@ -3,6 +3,7 @@ import Newsletter from "components/Newsletter";
 import { HeadImage } from "components/ui";
 import Image from "next/image";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 const Structure = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   return (
@@ -49,6 +50,8 @@ const Structure = (props) => {
                         width={member.image.width}
                         height={member.image.height}
                         layout="responsive"
+                        placeholder="blur"
+                        blurDataURL={getPlaceholderImage()}
                       />
                     </div>
                     <div className="mb-1 font-bold md:text-xl">

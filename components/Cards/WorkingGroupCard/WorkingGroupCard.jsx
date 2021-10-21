@@ -1,6 +1,7 @@
 import { ArrowButton } from "components/ui";
 import Image from "next/image";
 import router from "next/router";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const WorkingGroupCard = ({ workingGroup, light }) => (
   <div
@@ -15,6 +16,8 @@ const WorkingGroupCard = ({ workingGroup, light }) => (
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        placeholder="blur"
+        blurDataURL={getPlaceholderImage()}
       />
     </div>
     <div className="flex-grow">

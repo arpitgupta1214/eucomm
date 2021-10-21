@@ -1,6 +1,7 @@
 import { Carousel, Badge } from "components/ui";
 import { useSelector } from "react-redux";
 import Image from "next/image";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const RelatedItemsCarousel = ({ head, items }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -35,6 +36,8 @@ const RelatedItemsCarousel = ({ head, items }) => {
                       alt=""
                       layout="fill"
                       objectFit="cover"
+                      placeholder="blur"
+                      blurDataURL={getPlaceholderImage()}
                     />
                   </div>
                   <div className="flex-grow flex-col">

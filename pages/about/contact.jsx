@@ -2,6 +2,7 @@ import Layout from "components/Layouts";
 import SocialLinks from "components/SocialLinks/SocialLinks";
 import Image from "next/image";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Contact = ({ config, ...props }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -23,6 +24,8 @@ const Contact = ({ config, ...props }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
           />
         </div>
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 import router from "next/router";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Project = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -103,6 +104,8 @@ const Project = (props) => {
                   width={project.image.width}
                   height={project.image.height}
                   layout="responsive"
+                  placeholder="blur"
+                  blurDataURL={getPlaceholderImage()}
                 />
 
                 <div className="px-6 py-4 flex flex-col">

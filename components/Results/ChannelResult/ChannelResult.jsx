@@ -1,5 +1,6 @@
 import CustomIcon from "components/CustomIcon";
 import Image from "next/image";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const ChannelResult = ({ result }) => {
   return (
@@ -10,7 +11,14 @@ const ChannelResult = ({ result }) => {
         style={{ borderColor: result.baseColor }}
       >
         <div className="w-10 md:w-12 h-10 md:h-12">
-          <Image src={result.img} alt="" height="50" width="50" />
+          <Image
+            src={result.img}
+            alt=""
+            height="50"
+            width="50"
+            placeholder="blur"
+            blurDataURL={getPlaceholderImage()}
+          />
         </div>
       </div>
 

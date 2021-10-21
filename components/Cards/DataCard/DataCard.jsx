@@ -1,6 +1,7 @@
 import CustomIcon from "components/CustomIcon";
 import Image from "next/image";
 import router from "next/router";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const DataCard = ({ datum, downloadAsText, interactiveText, light }) => (
   <div className="w-full">
@@ -11,6 +12,8 @@ const DataCard = ({ datum, downloadAsText, interactiveText, light }) => (
       height={datum.image.height}
       layout="responsive"
       priority={true}
+      placeholder="blur"
+      blurDataURL={getPlaceholderImage()}
     />
     {/* content */}
     <div

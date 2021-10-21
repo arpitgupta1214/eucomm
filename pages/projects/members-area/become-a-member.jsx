@@ -1,6 +1,7 @@
 import Layout from "components/Layouts";
 import { HeadImage } from "components/ui";
 import Image from "next/image";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const BecomeAMember = (props) => {
   return (
@@ -59,6 +60,8 @@ const BecomeAMember = (props) => {
                     width={contact.image.width}
                     height={contact.image.height}
                     layout="responsive"
+                    placeholder="blur"
+                    blurDataURL={getPlaceholderImage()}
                   />
                 </div>
                 <div className="flex flex-col">

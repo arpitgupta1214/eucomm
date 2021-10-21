@@ -6,6 +6,7 @@ import WorkingGroupCard from "components/Cards/WorkingGroupCard";
 import Image from "next/image";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Group = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -104,7 +105,13 @@ const Group = (props) => {
                 <div key={`member-${idx}`} className="mb-3 w-full flex">
                   {/* image */}
                   <div className="mr-3 w-10 h-10 flex-shrink-0 rounded-full overflow-hidden relative">
-                    <Image src={member.image.src} alt="" layout="fill" />
+                    <Image
+                      src={member.image.src}
+                      alt=""
+                      layout="fill"
+                      placeholder="blur"
+                      blurDataURL={getPlaceholderImage()}
+                    />
                   </div>
 
                   <div className="flex-grow flex flex-col">

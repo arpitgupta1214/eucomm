@@ -1,5 +1,6 @@
 import Image from "next/image";
 import router from "next/router";
+import getPlaceholderImage from "util/getPlaceholderImg";
 
 const TimelineCard = ({ timeline, light }) => (
   <div
@@ -15,6 +16,8 @@ const TimelineCard = ({ timeline, light }) => (
         width={timeline.image.width}
         height={timeline.image.height}
         layout="responsive"
+        placeholder="blur"
+        blurDataURL={getPlaceholderImage()}
       />
     </div>
 
