@@ -1,12 +1,17 @@
 const theme = require("./themeConfig.json");
 
 module.exports = {
-  purge: [
-    "./components/**/*.scss",
-    "./components/**/*.jsx",
-    "./pages/**/*.jsx",
-    "./styles/**/*.scss",
-  ],
+  purge: {
+    content: [
+      "./components/**/*.scss",
+      "./components/**/*.jsx",
+      "./pages/**/*.jsx",
+      "./styles/**/*.scss",
+    ],
+    options: {
+      safelist: [/^bg-skin-badge/, /^text-skin-badge/],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -17,8 +22,8 @@ module.exports = {
           "extra-light": theme.textColorExtraLight,
           gray: theme.textColorGray,
           highlight: theme.colorHighlight,
-          badge1: theme.badgeColor1,
-          badge2: theme.badgeColor2,
+          "badge-1": theme.badgeColor1,
+          "badge-2": theme.badgeColor2,
         },
       },
       backgroundColor: {
@@ -26,8 +31,8 @@ module.exports = {
           base: theme.bgColorBase,
           light: theme.bgColorLight,
           highlight: theme.colorHighlight,
-          badge1: theme.badgeColor1,
-          badge2: theme.badgeColor2,
+          "badge-1": theme.badgeColor1,
+          "badge-2": theme.badgeColor2,
           dark: theme.bgColorDark,
         },
       },
