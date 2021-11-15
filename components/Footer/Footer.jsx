@@ -1,37 +1,58 @@
 import CustomIcon from "components/CustomIcon";
 import SocialLinks from "components/SocialLinks/SocialLinks";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
-const Subpage = ({ subpage, color }) => (
-  <div
-    className={`mt-5 text-sm font-medium opacity-60 ${
-      color ? "text-skin-highlight underline" : "text-white"
-    }`}
+const Subpage = ({ page, subpage }) => (
+  <a
+    href={`/${page.slug}/${subpage.slug}`}
+    className="mt-5 text-sm font-medium opacity-60 text-white"
   >
     {subpage.name}
-  </div>
+  </a>
 );
 
-const Subpages = ({ subpages }) => {
-  if (subpages.length <= 5) {
+const OtherPages = ({ other, page }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  if (!showMore) {
     return (
-      <>
-        {subpages.map((subpage) => (
-          <Subpage key={`footer-subpage-${subpage.slug}`} subpage={subpage} />
-        ))}
-      </>
-    );
-  } else {
-    return (
-      <>
-        {subpages.slice(0, 4).map((subpage) => (
-          <Subpage key={`footer-subpage-${subpage.slug}`} subpage={subpage} />
-        ))}
-        <Subpage subpage={{ name: `+${subpages.length - 4}` }} color />
-      </>
+      <button
+        className="mt-5 text-sm font-medium opacity-60 text-skin-highlight text-left underline"
+        onClick={() => setShowMore(true)}
+      >
+        {`+${other.length}`}
+      </button>
     );
   }
+  return other.map((subpage) => (
+    <Subpage
+      key={`footer-subpage-${subpage.slug}`}
+      page={page}
+      subpage={subpage}
+    />
+  ));
+};
+
+const Subpages = ({ page, subpages }) => {
+  const showLength = 4;
+  const length = subpages.length;
+  return (
+    <>
+      {subpages
+        .slice(0, showLength < length ? showLength - 1 : showLength)
+        .map((subpage) => (
+          <Subpage
+            key={`footer-subpage-${subpage.slug}`}
+            page={page}
+            subpage={subpage}
+          />
+        ))}
+      {showLength < length && (
+        <OtherPages page={page} other={subpages.slice(showLength - 1)} />
+      )}
+    </>
+  );
 };
 
 const Footer = ({ config }) => {
@@ -53,7 +74,9 @@ const Footer = ({ config }) => {
                   <span className="text-xl font-medium">{page.name}</span>
                   <CustomIcon name="BsArrowRight" />
                 </div>
-                {page.subpages && <Subpages subpages={page.subpages} />}
+                {page.subpages && (
+                  <Subpages page={page} subpages={page.subpages} />
+                )}
               </div>
             ))}
           </div>
