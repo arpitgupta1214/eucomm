@@ -1,7 +1,8 @@
 import EventCard from "components/Cards/EventCard";
 import Layout from "components/Layouts";
+import ListLoad from "components/ListLoad";
 import Loader from "components/Loader";
-import { Button, Selector } from "components/ui";
+import { Selector } from "components/ui";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
@@ -24,6 +25,9 @@ const Events = (props) => {
       const activeEventGroup = props.eventGroups.find(
         (eventGroup) => eventGroup.name === activeTab
       );
+      if (!activeEventGroup) {
+        return;
+      }
       setActiveEventGroup(activeEventGroup);
       setEvents(activeEventGroup.events.slice(0, 6));
       setMoreEvents(true);
@@ -62,14 +66,14 @@ const Events = (props) => {
         />
       </div>
 
-      <div className="mb-10 md:mb-32 content-md flex flex-col items-center">
-        {/* envents */}
-        <div className="mb-6 w-full grid md:grid-cols-3 gap-5 md:gap-6">
-          {events.map((event, idx) => {
+      <div className="mb-10 md:mb-32 content-md">
+        <ListLoad
+          data={events}
+          cols={3}
+          Component={({ item: event }) => {
             const [date, month, year] = event.date.split(" ");
             return (
               <EventCard
-                key={`event-${idx}`}
                 event={event}
                 date={date}
                 month={month}
@@ -77,11 +81,11 @@ const Events = (props) => {
                 light
               />
             );
-          })}
-        </div>
-
-        {/* load more */}
-        {moreEvents && <Button text={props.loadMoreText} onClick={loadMore} />}
+          }}
+          more={moreEvents}
+          moreText={props.loadMoreText}
+          loadMore={loadMore}
+        />
       </div>
     </div>
   );

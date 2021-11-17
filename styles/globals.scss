@@ -12,7 +12,7 @@ html {
   @apply overflow-x-hidden;
 }
 body {
-  @apply min-h-screen font-base text-skin-base sm:mx-auto cursor-default overflow-x-hidden;
+  @apply min-h-screen bg-skin-base font-base text-skin-base sm:mx-auto cursor-default overflow-x-hidden;
 }
 #__next {
   @apply min-h-screen flex flex-col;

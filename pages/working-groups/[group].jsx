@@ -1,12 +1,13 @@
 import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import RelatedItemsCarousel from "components/RelatedItemsCarousel";
-import { ArrowButton, HeadImage, Button } from "components/ui";
+import { ArrowButton, HeadImage } from "components/ui";
 import WorkingGroupCard from "components/Cards/WorkingGroupCard";
 import Image from "next/image";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import getPlaceholderImage from "util/getPlaceholderImg";
+import ListLoad from "components/ListLoad";
 
 const Group = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -134,21 +135,16 @@ const Group = (props) => {
       </div>
 
       {/* other groups */}
-      <div className="w-full bg-skin-light py-10 px-4 md:py-32 flex flex-col items-center">
-        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl self-start md:self-center">
-          {props.otherGroupsHead}
-        </div>
-        <div className={`mb-6 ${isMobile ? "w-full" : "content-md"}`}>
-          <div className="w-full grid md:grid-cols-2 gap-6">
-            {otherGroups.map((group, idx) => (
-              <WorkingGroupCard key={`group-${idx}`} workingGroup={group} />
-            ))}
-          </div>
-        </div>
-        {moreGroups && (
-          <Button text={props.otherGroupsMoreText} onClick={loadOtherGroups} />
-        )}
-      </div>
+      <ListLoad
+        head={props.otherGroupsHead}
+        data={otherGroups}
+        cols={2}
+        Component={({ item }) => <WorkingGroupCard workingGroup={item} />}
+        more={moreGroups}
+        moreText={props.otherGroupsMoreText}
+        loadMore={loadOtherGroups}
+        secondary
+      />
     </div>
   );
 };

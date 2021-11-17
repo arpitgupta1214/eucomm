@@ -1,12 +1,12 @@
 import Layout from "components/Layouts";
 import TimelineCard from "components/Cards/TimelineCard";
-import { Button, HeadImage, Selector } from "components/ui";
+import { HeadImage, Selector } from "components/ui";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import Loader from "components/Loader/Loader";
-import getPlaceholderImage from "util/getPlaceholderImg";
+import ListLoad from "components/ListLoad";
+import TimelineEventCard from "components/Cards/TimelineEventCard";
 
 const Timeline = (props) => {
   const dispatch = useDispatch();
@@ -25,6 +25,9 @@ const Timeline = (props) => {
       const activePeriod = props.periods.find(
         (period) => period.name === activeTab
       );
+      if (!activePeriod) {
+        return;
+      }
       setActivePeriod(activePeriod);
       setEvents(activePeriod.events.slice(0, 2));
       setMoreEvents(true);
@@ -85,69 +88,27 @@ const Timeline = (props) => {
           {activePeriod.events.length} events
         </div>
 
-        <div className="mb-6 w-screen md:w-full grid gap-6">
-          {events.map((event, idx) => (
-            <div
-              key={`event-${idx}`}
-              className="py-10 px-5 md:p-8 flex flex-col md:flex-row bg-skin-light"
-            >
-              <div className="flex-grow mr-4">
-                {/* event head */}
-                <div className="mb-4 font-bold text-2xl leading-normal">
-                  {event.head}
-                </div>
-
-                {/* event date */}
-                <div className="mb-4 text-skin-light text-sm leading-normal">
-                  {event.date}
-                </div>
-
-                <div className="mb-4 text-skin-light text-sm md:text-lg leading-relaxed">
-                  {event.content}
-                </div>
-              </div>
-              <div className="flex-shrink-0 w-full md:max-w-xs">
-                <Image
-                  src={event.image.src}
-                  alt=""
-                  width={event.image.width}
-                  height={event.image.height}
-                  layout="responsive"
-                  placeholder="blur"
-                  blurDataURL={getPlaceholderImage()}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* load more events*/}
-        {moreEvents && (
-          <Button text={props.loadMoreText} onClick={loadMoreEvents} />
-        )}
-      </div>
-
-      {/* other timelines */}
-      <div className="w-full py-10 md:py-32 bg-skin-light flex flex-col items-center">
-        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl content-md md:text-center">
-          {props.otherHead}
-        </div>
-        <div className="content-md flex flex-col items-center">
-          <div className="mb-6 w-full grid md:grid-cols-3 gap-6">
-            {otherTimelines.map((timeline, idx) => {
-              return (
-                <TimelineCard
-                  key={`other-timeline-${idx}`}
-                  timeline={timeline}
-                />
-              );
-            })}
-          </div>
-          {/* load more */}
-          {moreTimelines && (
-            <Button text={props.loadMoreText} onClick={loadMore} />
-          )}
+        <div className="mb-6 w-screen md:w-full">
+          <ListLoad
+            data={events}
+            Component={({ item }) => <TimelineEventCard event={item} />}
+            more={moreEvents}
+            moreText={props.loadMoreText}
+            loadMore={loadMoreEvents}
+          />
         </div>
       </div>
+
+      <ListLoad
+        head={props.otherHead}
+        data={otherTimelines}
+        cols={3}
+        Component={({ item }) => <TimelineCard timeline={item} />}
+        more={moreTimelines}
+        moreText={props.loadMoreText}
+        loadMore={loadMore}
+        secondary
+      />
     </div>
   );
 };

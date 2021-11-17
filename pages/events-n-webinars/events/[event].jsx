@@ -1,10 +1,11 @@
 import CustomIcon from "components/CustomIcon";
 import EventCard from "components/Cards/EventCard";
 import Layout from "components/Layouts";
-import { Button, HeadImage } from "components/ui";
+import { HeadImage } from "components/ui";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import getPlaceholderImage from "util/getPlaceholderImg";
+import ListLoad from "components/ListLoad";
 
 const Event = (props) => {
   const [otherEvents, setOtherEvents] = useState([]);
@@ -134,31 +135,21 @@ const Event = (props) => {
       </div>
 
       {/* other events */}
-      <div className="w-full py-10 md:py-32 bg-skin-light flex flex-col items-center">
-        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl content-md md:text-center">
-          {props.otherEventsHead}
-        </div>
-        <div className="content-md flex flex-col items-center">
-          <div className="mb-6 w-full grid md:grid-cols-3 gap-6">
-            {otherEvents.map((otherEvent, idx) => {
-              const [date, month, year] = otherEvent.date.split(" ");
-              return (
-                <EventCard
-                  key={`other-event-${idx}`}
-                  event={otherEvent}
-                  date={date}
-                  month={month}
-                  year={year}
-                />
-              );
-            })}
-          </div>
-          {/* load more */}
-          {moreEvents && (
-            <Button text={props.loadMoreText} onClick={loadMore} />
-          )}
-        </div>
-      </div>
+      <ListLoad
+        head={props.otherEventsHead}
+        data={otherEvents}
+        cols={3}
+        Component={({ item: event }) => {
+          const [date, month, year] = event.date.split(" ");
+          return (
+            <EventCard event={event} date={date} month={month} year={year} />
+          );
+        }}
+        more={moreEvents}
+        moreText={props.loadMoreText}
+        loadMore={loadMore}
+        secondary
+      />
     </div>
   );
 };

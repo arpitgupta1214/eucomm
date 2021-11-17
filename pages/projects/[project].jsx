@@ -1,12 +1,11 @@
+import ProjectCard from "components/Cards/ProjectCard";
 import CustomIcon from "components/CustomIcon/CustomIcon";
 import Layout from "components/Layouts";
+import ListLoad from "components/ListLoad";
 import Newsletter from "components/Newsletter";
-import { Button, HeadImage } from "components/ui";
-import Image from "next/image";
-import router from "next/router";
+import { HeadImage } from "components/ui";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import getPlaceholderImage from "util/getPlaceholderImg";
 
 const Project = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -90,53 +89,16 @@ const Project = (props) => {
       </div>
 
       {/* other projects  */}
-      <div className="w-full bg-skin-light py-10 md:py-32 flex flex-col items-center">
-        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl content-md md:text-center">
-          {props.otherProjectsHead}
-        </div>
-        <div className="mb-6 content-md">
-          <div className="w-full grid md:grid-cols-3 gap-6">
-            {otherProjects.map((project, idx) => (
-              <div key={`project-${idx}`} className="w-full bg-skin-base">
-                <Image
-                  src={project.image.src}
-                  alt=""
-                  width={project.image.width}
-                  height={project.image.height}
-                  layout="responsive"
-                  placeholder="blur"
-                  blurDataURL={getPlaceholderImage()}
-                />
-
-                <div className="px-6 py-4 flex flex-col">
-                  <div className="text-lg md:text-xl font-bold mb-2">
-                    {project.name}
-                  </div>
-                  <button
-                    className="flex items-center text-skin-highlight text-sm"
-                    onClick={() =>
-                      router.push(
-                        `${router.asPath.split("/").slice(0, -1).join("/")}/${
-                          project.slug
-                        }`
-                      )
-                    }
-                  >
-                    <span className="mr-2">View More</span>
-                    <CustomIcon name="BsArrowRight" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {moreProjects && (
-          <Button
-            text={props.otherProjectsMoreText}
-            onClick={loadOtherProjects}
-          />
-        )}
-      </div>
+      <ListLoad
+        head={props.otherProjectsHead}
+        data={otherProjects}
+        cols={3}
+        Component={({ item }) => <ProjectCard project={item} />}
+        more={moreProjects}
+        moreText={props.otherProjectsMoreText}
+        loadMore={loadOtherProjects}
+        secondary
+      />
     </div>
   );
 };

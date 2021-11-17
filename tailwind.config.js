@@ -9,7 +9,7 @@ module.exports = {
       "./styles/**/*.scss",
     ],
     options: {
-      safelist: [/^bg-skin-badge/, /^text-skin-badge/],
+      safelist: [/^bg-skin-badge/, /^text-skin-badge/, /grid-cols/],
     },
   },
   darkMode: false, // or 'media' or 'class'

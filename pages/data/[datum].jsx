@@ -3,8 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import DataCard from "components/Cards/DataCard";
 import { useSelector } from "react-redux";
-import { Button } from "components/ui";
 import getPlaceholderImage from "util/getPlaceholderImg";
+import ListLoad from "components/ListLoad";
 
 const Data = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -79,24 +79,23 @@ const Data = (props) => {
       </div>
 
       {/* other data */}
-      <div className="w-full py-10 md:py-32 flex flex-col items-center bg-skin-light">
-        <div className="mb-4 font-bold text-2xl md:text-4xl content-md md:text-center">
-          {props.otherDataHead}
-        </div>
-        <div className="content-md flex flex-col items-center">
-          <div className="mb-6 grid md:grid-cols-2 gap-6">
-            {otherData.map((datum, idx) => (
-              <DataCard
-                key={`datum-${idx}`}
-                datum={datum}
-                downloadAsText={props.downloadAsText}
-                interactiveText={props.interactiveText}
-              />
-            ))}
-          </div>
-          {moreData && <Button text={props.loadMoreText} onClick={loadMore} />}
-        </div>
-      </div>
+
+      <ListLoad
+        head={props.otherDataHead}
+        data={otherData}
+        cols={2}
+        Component={({ item }) => (
+          <DataCard
+            datum={item}
+            downloadAsText={props.downloadAsText}
+            interactiveText={props.interactiveText}
+          />
+        )}
+        more={moreData}
+        moreText={props.loadMoreText}
+        loadMore={loadMore}
+        secondary
+      />
     </div>
   );
 };

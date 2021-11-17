@@ -2,11 +2,12 @@ import Layout from "components/Layouts";
 import Newsletter from "components/Newsletter";
 import PolicyCard from "components/Cards/PolicyCard";
 import RelatedItemsCarousel from "components/RelatedItemsCarousel";
-import { HeadImage, Button } from "components/ui";
+import { HeadImage } from "components/ui";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import getPlaceholderImage from "util/getPlaceholderImg";
+import ListLoad from "components/ListLoad";
 
 const Policy = (props) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -110,21 +111,16 @@ const Policy = (props) => {
       </div>
 
       {/* other policies */}
-      <div className="w-full bg-skin-light py-10 px-4 md:py-32 flex flex-col items-center">
-        <div className="mb-4 md:mb-10 font-bold text-2xl md:text-4xl self-start md:self-center">
-          {props.otherPoliciesHead}
-        </div>
-        <div className={`mb-6 content-md`}>
-          <div className="w-full grid md:grid-cols-3 gap-6">
-            {otherPolicies.map((policy, idx) => (
-              <PolicyCard key={`policy-${idx}`} policy={policy} />
-            ))}
-          </div>
-        </div>
-        {morePolicies && (
-          <Button text={props.loadMoreText} onClick={loadMore} />
-        )}
-      </div>
+      <ListLoad
+        head={props.otherPoliciesHead}
+        data={otherPolicies}
+        Component={({ item }) => <PolicyCard policy={item} />}
+        cols={3}
+        more={morePolicies}
+        moreText={props.loadMoreText}
+        loadMore={loadMore}
+        secondary
+      />
     </div>
   );
 };
