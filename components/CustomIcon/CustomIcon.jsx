@@ -14,6 +14,7 @@ import {
   FaPlay,
   FaStepBackward,
   FaStepForward,
+  FaTree,
 } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { TiGroup } from "react-icons/ti";
@@ -26,13 +27,16 @@ import {
   AiOutlineDelete,
   AiOutlineRight,
   AiOutlineLeft,
+  AiFillSafetyCertificate,
 } from "react-icons/ai";
 import {
   HiDocumentText,
   HiOutlineDesktopComputer,
   HiPlay,
+  HiBriefcase,
 } from "react-icons/hi";
 import { VscLoading } from "react-icons/vsc";
+import { ImEarth } from "react-icons/im";
 import {
   BsArrowRight,
   BsArrowLeft,
@@ -50,6 +54,7 @@ import {
   BiUpload,
   BiCalendar,
   BiDownload,
+  BiArrowBack,
 } from "react-icons/bi";
 import { FiCheck, FiSearch, FiPlayCircle } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
@@ -112,6 +117,11 @@ const icons = {
   AiOutlineLeft,
   BsChevronDown,
   BsChevronUp,
+  ImEarth,
+  FaTree,
+  HiBriefcase,
+  AiFillSafetyCertificate,
+  BiArrowBack,
 };
 
 const CustomIcon = ({ name, className }) => {

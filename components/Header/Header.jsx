@@ -230,6 +230,15 @@ const Header = ({ config }) => {
           })}
         </div>
       )}
+      {path.length > 1 && (
+        <button
+          className="content-md flex mt-4 text-xs text-skin-highlight"
+          onClick={() => router.back()}
+        >
+          <CustomIcon name="BiArrowBack" className="mr-2" />
+          <span>Back</span>
+        </button>
+      )}
     </header>
   );
 };

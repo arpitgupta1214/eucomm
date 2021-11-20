@@ -7,6 +7,7 @@ import { searchActions } from "store/searchSlice";
 import Loader from "components/Loader/Loader";
 import ListLoad from "components/ListLoad";
 import TimelineEventCard from "components/Cards/TimelineEventCard";
+import SocialLinks from "components/SocialLinks";
 
 const Timeline = (props) => {
   const dispatch = useDispatch();
@@ -63,6 +64,10 @@ const Timeline = (props) => {
       {/* head */}
       <div className="mb-6 mx-4 max-w-2xl text-3xl md:text-5xl font-bold md:text-center md:leading-normal">
         {props.pageHead}
+      </div>
+
+      <div className="mb-10">
+        <SocialLinks color round w={10} links={props.config.socialLinks} />
       </div>
 
       {/* headimg */}

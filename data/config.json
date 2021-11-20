@@ -39,19 +39,23 @@
       "subpages": [
         {
           "name": "Greener planet",
-          "slug": "greener-planet"
+          "slug": "greener-planet",
+          "icon": "ImEarth"
         },
         {
           "name": "Healthier living",
-          "slug": "healthier-living"
+          "slug": "healthier-living",
+          "icon": "FaTree"
         },
         {
           "name": "Thriving economy",
-          "slug": "thriving-economy"
+          "slug": "thriving-economy",
+          "icon": "HiBriefcase"
         },
         {
           "name": "Food safety & science",
-          "slug": "food-safety-n-science"
+          "slug": "food-safety-n-science",
+          "icon": "AiFillSafetyCertificate"
         }
       ]
     },
@@ -66,11 +70,13 @@
       "subpages": [
         {
           "name": "Whitepapers",
-          "slug": "whitepapers"
+          "slug": "whitepapers",
+          "icon": "HiDocumentText"
         },
         {
           "name": "Videos",
-          "slug": "videos"
+          "slug": "videos",
+          "icon": "FaPlay"
         },
         {
           "name": "Webinars",
@@ -78,23 +84,28 @@
         },
         {
           "name": "Publications",
-          "slug": "publications"
+          "slug": "publications",
+          "icon": "TiGroup"
         },
         {
           "name": "Press releases",
-          "slug": "press-releases"
+          "slug": "press-releases",
+          "icon": "BiCalendar"
         },
         {
           "name": "Podcasts",
-          "slug": "podcasts"
+          "slug": "podcasts",
+          "icon": "RiVolumeDownFill"
         },
         {
           "name": "Channels",
-          "slug": "channels"
+          "slug": "channels",
+          "icon": "AiFillHeart"
         },
         {
           "name": "Document library",
-          "slug": "document-library"
+          "slug": "document-library",
+          "icon": "HiBriefcase"
         }
       ]
     },

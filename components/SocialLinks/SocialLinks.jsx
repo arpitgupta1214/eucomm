@@ -10,7 +10,7 @@ const socialIcons = {
   facebook: "FaFacebookF",
 };
 
-const SocialLinks = ({ links, color, w, full }) => {
+const SocialLinks = ({ links, color, round, w, full }) => {
   return (
     <div className={`flex ${full ? "w-full justify-between" : ""}`}>
       {links.map((socialLink, idx) => (
@@ -19,7 +19,11 @@ const SocialLinks = ({ links, color, w, full }) => {
           className={`${idx !== 0 ? "ml-5" : ""}`}
         >
           {color ? (
-            <div className={`w-${w || 8} h-${w || 8}`}>
+            <div
+              className={`w-${w || 8} h-${w || 8} ${
+                round ? "rounded-full overflow-hidden" : ""
+              }`}
+            >
               <Image
                 src={socialLink.image}
                 alt=""
