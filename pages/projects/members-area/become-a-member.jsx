@@ -1,4 +1,5 @@
 import Layout from "components/Layouts";
+import Stats from "components/Stats";
 import { HeadImage } from "components/ui";
 import Image from "next/image";
 import getPlaceholderImage from "util/getPlaceholderImg";
@@ -15,17 +16,8 @@ const BecomeAMember = (props) => {
       <HeadImage src={props.headImage.src} />
 
       {/* stats */}
-      <div className="mb-10 md:mb-16 content-sm grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-6">
-        {props.headStats.map((stat, idx) => (
-          <div key={`stat-${idx}`} className="flex flex-col md:items-center">
-            <div className="mb-2 font-bold text-4xl text-skin-highlight">
-              {stat.number}
-            </div>
-            <div className="text-skin-light whitespace-nowrap">
-              {stat.title}
-            </div>
-          </div>
-        ))}
+      <div className="mb-10 md:mb-16">
+        <Stats stats={props.headStats} />
       </div>
 
       {/* content */}

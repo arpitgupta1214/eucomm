@@ -44,7 +44,7 @@ const ListLoad = ({
           </div>
         </div>
         {/* load more */}
-        {more && <Button text={moreText} onClick={loadMore} />}
+        {more && <Button text={moreText || "Load More"} onClick={loadMore} />}
       </div>
     </div>
   );
