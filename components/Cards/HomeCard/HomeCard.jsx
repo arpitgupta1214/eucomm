@@ -3,7 +3,7 @@ import Image from "next/image";
 import getPlaceholderImage from "util/getPlaceholderImg";
 
 const HomeCard = ({ item }) => (
-  <div className="flex flex-col">
+  <div className="w-80 md:w-auto flex flex-col">
     <div className="w-full">
       <Image
         src={item.image.src}

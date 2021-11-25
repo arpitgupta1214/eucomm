@@ -10,6 +10,7 @@ const ListLoad = ({
   data,
   Component,
   cols,
+  rows,
   secondary,
 }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
@@ -36,8 +37,18 @@ const ListLoad = ({
       )}
 
       <div className="mb-10 w-full flex flex-col items-center">
-        <div className={`mb-6 ${isMobile ? "w-full" : "content-md"}`}>
-          <div className={`w-full grid md:grid-cols-${cols || 1} gap-6`}>
+        <div
+          className={`mb-6 ${
+            isMobile ? "w-full overflow-x-auto" : "content-md"
+          }`}
+        >
+          <div
+            className={`grid md:grid-cols-${
+              cols || 1
+            } md:grid-flow-row grid-rows-${rows || 1} ${
+              rows ? "grid-flow-col" : ""
+            } gap-6`}
+          >
             {data.map((item, idx) => (
               <Component key={`item-${idx}`} item={item} />
             ))}

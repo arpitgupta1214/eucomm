@@ -4,11 +4,11 @@ const Stats = ({ stats, light }) => (
       {stats.map((stat, idx) => (
         <div key={`stat-${idx}`} className="flex flex-col md:items-center">
           <div
-            className={`mb-2 flex items-center ${
+            className={`mb-1 md:mb-2 flex items-center ${
               light ? "text-white" : "text-skin-highlight"
             }`}
           >
-            <div className="font-bold text-5xl">{stat.number}</div>
+            <div className="font-bold text-3xl md:text-5xl">{stat.number}</div>
             <div className="text-2xl">{stat.numberSub}</div>
           </div>
 
