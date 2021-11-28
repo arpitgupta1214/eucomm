@@ -60,11 +60,11 @@ const FilterLayout = ({ children, config, ...props }) => {
       <div className="w-full flex flex-col items-center">
         <div className="content-md">
           {/* head */}
-          <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16 md:text-center">
+          <div className="font-bold text-3xl md:text-5xl mt-11 md:mt-16">
             {props.heading}
           </div>
           {/* subhead  */}
-          <div className="mb-2 md:mx-auto text-skin-light text-sm md:text-base mt-3 max-w-md md:text-center">
+          <div className="mb-2 text-skin-light text-sm md:text-base mt-3 max-w-md">
             {props.subHeading}
           </div>
 

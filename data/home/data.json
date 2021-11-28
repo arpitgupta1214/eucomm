@@ -100,10 +100,11 @@
   ],
   "event": {
     "head": "Future of Polyolefins 2022",
-    "subhead": "With the increased attention on plastic & waste from the public, the polyolefins industry is facing many changes, not only from a regulation perspective, but also in designing products meeting sustainability & circular economy targets. The entire value chain now needs to adapt to this new era for plastics in order to thrive and make a positive impact on the planet.",
+    "subtitle": "Subtitle",
+    "description": "With the increased attention on plastic & waste from the public, the polyolefins industry is facing many changes, not only from a regulation perspective, but also in designing products meeting sustainability & circular economy targets. The entire value chain now needs to adapt to this new era for plastics in order to thrive and make a positive impact on the planet.",
     "location": "🇩🇪 Germany, Dusseldorf",
     "image": {
-      "src": "/images/home/event-img.webp",
+      "src": "/images/home2/event-img.webp",
       "width": 1089,
       "height": 879
     }

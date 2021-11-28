@@ -12,6 +12,7 @@ const ListLoad = ({
   cols,
   rows,
   secondary,
+  mosaic,
 }) => {
   const isMobile = useSelector((state) => state.ui.isMobile);
   return (
@@ -43,14 +44,27 @@ const ListLoad = ({
           }`}
         >
           <div
-            className={`grid md:grid-cols-${
-              cols || 1
-            } md:grid-flow-row grid-rows-${rows || 1} ${
-              rows ? "grid-flow-col" : ""
-            } gap-6`}
+            className={`grid ${
+              isMobile
+                ? `grid-rows-${rows || 1} ${rows ? "grid-flow-col" : ""}`
+                : `grid-cols-${cols || 1} grid-flow-row`
+            } ${mosaic && !isMobile ? "gap-2.5" : "gap-6"}`}
           >
             {data.map((item, idx) => (
-              <Component key={`item-${idx}`} item={item} />
+              <div
+                key={`item-${idx}`}
+                className={`${
+                  !isMobile && mosaic
+                    ? idx % cols === 0
+                      ? "col-span-2"
+                      : idx % (cols * 2) === 2
+                      ? "row-span-2"
+                      : "aspect-ratio-1"
+                    : ""
+                } h-full`}
+              >
+                <Component item={item} />
+              </div>
             ))}
           </div>
         </div>

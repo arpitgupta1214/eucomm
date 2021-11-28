@@ -1,0 +1,151 @@
+{
+  "head": "Plastics Europe: accelerating sustainable solutions valued by society",
+  "headImg": { "src": "/images/home2/head.webp", "width": 772, "height": 551 },
+  "videoHead": "Plastics Europe: enabling a sustainable future",
+  "videoSubhead": "EPCA released its 3rd video on STEM education in cooperation with Petrochemicals Europe.",
+  "newsHead": "Latest News",
+  "newsItems": [
+    {
+      "image": {
+        "src": "/images/home2/news-1.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
+        "src": "/images/home2/news-2.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
+        "src": "/images/home2/news-1.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
+        "src": "/images/home2/news-2.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
+        "src": "/images/home2/news-3.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
+        "src": "/images/home2/news-1.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    }
+  ],
+  "showcaseHead": "Petrochemicals in action",
+  "showcaseSubhead": "Discover where petrochemicals are used and how their versatility and properties are invaluable.",
+  "showcaseItems": [
+    {
+      "name": "Packaging",
+      "image": {
+        "src": "/images/home2/showcase-0.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Electronics",
+      "image": {
+        "src": "/images/home2/showcase-1.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Consulting",
+      "image": {
+        "src": "/images/home2/showcase-2.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Textile",
+      "image": {
+        "src": "/images/home2/showcase-3.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Transport",
+      "image": {
+        "src": "/images/home2/showcase-4.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Household Product",
+      "image": {
+        "src": "/images/home2/showcase-5.webp",
+        "width": 552,
+        "height": 271
+      }
+    },
+    {
+      "name": "Packaging",
+      "image": {
+        "src": "/images/home2/showcase-0.webp",
+        "width": 552,
+        "height": 271
+      }
+    }
+  ],
+  "statsHead": "Petrochemical industry in Europe",
+  "stats": [
+    { "number": 300, "numberSub": "k", "title": "jobs" },
+    { "number": 145, "numberSub": "$ BN", "title": "total sales this year" },
+    { "number": 95, "numberSub": "%", "title": "manufactured products" },
+    { "number": 26, "numberSub": "%", "title": "total chemical sales" }
+  ],
+  "event": {
+    "head": "Future of Polyolefins 2022",
+    "subtitle": "Subtitle",
+    "description": "With the increased attention on plastic & waste from the public, the polyolefins industry is facing many changes, not only from a regulation perspective, but also in designing products meeting sustainability & circular economy targets. The entire value chain now needs to adapt to this new era for plastics in order to thrive and make a positive impact on the planet.",
+    "location": "🇩🇪 Germany, Dusseldorf",
+    "image": {
+      "src": "/images/home2/event-img.webp",
+      "width": 1089,
+      "height": 879
+    }
+  },
+  "joinHead": "Become a member of Plastics Europe",
+  "joinSubhead": "Plastics Europe is a catalyst for the plastics industry accelerating sustainable solutions valued by society.",
+  "joinButtonText": "Join Now",
+  "joinImg": { "src": "/images/home2/join.webp", "width": 896, "height": 545 }
+}

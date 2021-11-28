@@ -195,7 +195,9 @@ const Home = (props) => {
             <div className="mb-3.5 font-bold text-2xl md:text-4xl">
               {props.event.head}
             </div>
-            <div className="mb-3.5 text-skin-light">{props.event.subhead}</div>
+            <div className="mb-3.5 text-skin-light">
+              {props.event.description}
+            </div>
             <div className="mb-6 md:mb-7">{props.event.location}</div>
             <Button text="READ MORE" />
           </div>

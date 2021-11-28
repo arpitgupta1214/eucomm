@@ -1,0 +1,16 @@
+.main {
+  .image {
+    padding-top: 60%;
+  }
+  &:hover {
+    @apply shadow-sm transform -translate-y-1;
+    .image {
+      .overlay {
+        @apply opacity-100;
+      }
+    }
+    .content {
+      @apply bg-skin-base;
+    }
+  }
+}
