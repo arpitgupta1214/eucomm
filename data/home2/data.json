@@ -27,6 +27,16 @@
     },
     {
       "image": {
+        "src": "/images/home2/news-3.webp",
+        "width": 196,
+        "height": 196
+      },
+      "head": "Solvents Human Exposure Database",
+      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
+      "date": "12 Nov, 2021"
+    },
+    {
+      "image": {
         "src": "/images/home2/news-1.webp",
         "width": 196,
         "height": 196
@@ -48,16 +58,6 @@
     {
       "image": {
         "src": "/images/home2/news-3.webp",
-        "width": 196,
-        "height": 196
-      },
-      "head": "Solvents Human Exposure Database",
-      "description": "The European Solvents Industry Group's (ESIG) has finalised the update of the Solvents Human Exposure Database which Lorem he European Solvents Industry Group's (ESIG)",
-      "date": "12 Nov, 2021"
-    },
-    {
-      "image": {
-        "src": "/images/home2/news-1.webp",
         "width": 196,
         "height": 196
       },
