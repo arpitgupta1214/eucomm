@@ -59,7 +59,7 @@ const Home = (props) => {
               {props.newsItems.map((newsItem, idx) => (
                 <div
                   key={`news-${idx}`}
-                  className="mb-10 md:mb-6 mr-4 md:mr-0 flex flex-shrink-0 max-w-xs"
+                  className="mb-10 md:mb-6 mr-4 md:mr-0 flex flex-shrink-0 max-w-xs md:max-w-none"
                 >
                   <div className="mr-5 md:mr-7 flex flex-col items-start">
                     <div className="mb-3.5 font-bold text-sm md:text-xl text-white">
@@ -92,13 +92,13 @@ const Home = (props) => {
           </div>
           <div className="md:w-1/2 md:pr-7 flex flex-col">
             <div className="mb-6 pb-6 md:pb-7 font-bold text-2xl md:text-4xl text-white leading-tight border-b border-skin-base">
-              {props.newsHead}
+              {props.twitterHead}
             </div>
             <div className="w-full flex md:flex-col overflow-x-auto">
               {props.newsItems.map((newsItem, idx) => (
                 <div
                   key={`news-${idx}`}
-                  className="mb-10 md:mb-6 mr-4 md:mr-0 flex flex-shrink-0 max-w-xs"
+                  className="mb-10 md:mb-6 mr-4 md:mr-0 flex flex-shrink-0 max-w-xs md:max-w-none"
                 >
                   <div className="mr-5 md:mr-7 flex flex-col items-start">
                     <div className="mb-3.5 font-bold text-sm md:text-xl text-white">

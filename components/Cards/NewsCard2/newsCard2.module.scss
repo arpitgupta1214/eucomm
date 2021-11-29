@@ -1,0 +1,15 @@
+.main {
+  padding-top: 94%;
+  &:hover {
+    @apply shadow-sm transform -translate-y-1;
+    .overlay {
+      @apply bg-opacity-50;
+    }
+    .content {
+      @apply -translate-y-1;
+      button {
+        @apply opacity-100;
+      }
+    }
+  }
+}
