@@ -3,6 +3,7 @@ import { searchReducer } from "./searchSlice";
 import { podcastReducer } from "./podcastSlice";
 import { accountIntegrationReducer } from "./accountIntegrationSlice";
 import { uiReducer } from "./uiSlice";
+import { Provider as StoreProvider } from "react-redux";
 
 const store = configureStore({
   reducer: {
@@ -13,4 +14,8 @@ const store = configureStore({
   },
 });
 
-export default store;
+const Provider = ({ children }) => {
+  return <StoreProvider store={store}>{children}</StoreProvider>;
+};
+
+export default Provider;

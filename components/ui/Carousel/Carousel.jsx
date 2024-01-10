@@ -1,58 +1,53 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowButton } from "components/ui";
 
 const Carousel = ({ children }) => {
-  const [items, setItems] = useState([]);
+  const mappedItems = useMemo(
+    () => children.map((child, idx) => ({ component: child, id: idx })),
+    [children]
+  );
+
+  const [items, setItems] = useState(mappedItems);
 
   useEffect(() => {
-    setItems(children.map((child, idx) => ({ component: child, id: idx })));
-  }, [children]);
+    setItems(mappedItems);
+  }, [mappedItems]);
+
   const onPrev = () => {
-    let last;
-    setItems((items) => {
-      const newItems = [...items];
-      last = newItems.pop();
-      return newItems;
-    });
-    setTimeout(
-      () =>
-        setItems((items) => {
-          const newItems = [...items];
-          newItems.unshift(last);
-          return newItems;
-        }),
-      200
-    );
+    const newItems = [...items];
+    const last = newItems[newItems.length - 1];
+    newItems.unshift({ ...last, id: newItems[0].id - 1 });
+
+    setItems(newItems);
+
+    setTimeout(() => {
+      setItems(newItems.slice(0, newItems.length - 1));
+    }, 10);
   };
 
   const onNext = () => {
-    let first;
     setItems((items) => {
       const newItems = [...items];
-      first = newItems.shift();
+      const first = newItems.shift();
+      first.id = newItems[newItems.length - 1].id + 1;
+      newItems.push(first);
       return newItems;
     });
-    setTimeout(
-      () =>
-        setItems((items) => {
-          const newItems = [...items];
-          newItems.push(first);
-          return newItems;
-        }),
-      200
-    );
   };
+
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="mb-6 w-full flex">
-        <AnimatePresence>
+      <div className="mb-6 w-full flex overflow-hidden">
+        <AnimatePresence initial={false}>
           {items.map((item) => (
             <motion.div
-              initial={{ width: "auto", opacity: 1 }}
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "auto", opacity: 1 }}
               exit={{ width: 0, opacity: 0 }}
               key={`item-${item.id}`}
-              className={`flex-shrink-0 flex overflow-hidden relative`}
+              transition={{ type: "tween" }}
+              className={`flex-shrink-0 flex overflow-hidden relative ${item.id}`}
             >
               <div className="flex-shrink-0 object-cover object-left">
                 {item.component}

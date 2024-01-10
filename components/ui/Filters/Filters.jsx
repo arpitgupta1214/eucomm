@@ -4,6 +4,7 @@ import { Checkbox } from "components/ui";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "store/searchSlice";
 import CustomIcon from "components/CustomIcon";
+
 const Filters = ({ filters }) => {
   const activeFilters = useSelector((state) => state.search.activeFilters);
   const customDate = useSelector((state) => state.search.customDate);

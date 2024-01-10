@@ -1,7 +1,6 @@
 import "../styles/globals.scss";
-import config from "data/config.json";
-import store from "store";
-import { Provider as StoreProvider } from "react-redux";
+import config from "data/config";
+import StoreProvider from "store";
 import UiProvider from "components/UiProvider";
 import { useState } from "react";
 import router from "next/router";
@@ -13,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   router.events.on("routeChangeComplete", () => setRouteChanging(false));
 
   return (
-    <StoreProvider store={store}>
+    <StoreProvider>
       <UiProvider>
         {routeChanging ? (
           <Loader />
