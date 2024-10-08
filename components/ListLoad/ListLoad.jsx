@@ -58,8 +58,8 @@ const ListLoad = ({
                     ? idx % cols === 0
                       ? "col-span-2"
                       : idx % (cols * 2) === 2
-                      ? "row-span-2"
-                      : "aspect-ratio-1"
+                        ? "row-span-2"
+                        : "aspect-ratio-1"
                     : ""
                 } h-full`}
               >
