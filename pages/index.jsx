@@ -28,8 +28,8 @@ const Home = (props) => {
         >
           <Image
             src={props.headImg.src}
-            width={props.headImg.width}
-            height={props.headImg.height}
+            width={isMobile ? props.headImg.width : undefined}
+            height={isMobile ? props.headImg.height : undefined}
             alt=""
             layout={isMobile ? "responsive" : "fill"}
             objectFit="cover"
@@ -77,8 +77,6 @@ const Home = (props) => {
                     <Image
                       src={newsItem.image.src}
                       alt=""
-                      width={newsItem.image.width}
-                      height={newsItem.image.height}
                       layout="fill"
                       objectFit="cover"
                       priority={true}
@@ -116,8 +114,6 @@ const Home = (props) => {
                     <Image
                       src={newsItem.image.src}
                       alt=""
-                      width={newsItem.image.width}
-                      height={newsItem.image.height}
                       layout="fill"
                       objectFit="cover"
                       priority={true}
@@ -179,8 +175,8 @@ const Home = (props) => {
         <div className="mb-6 md:mb-0 md:absolute w-full md:w-1/2 md:h-full md:top-0 md:right-0">
           <Image
             src={props.event.image.src}
-            width={props.event.image.width}
-            height={props.event.image.height}
+            width={isMobile ? props.event.image.width : undefined}
+            height={isMobile ? props.event.image.height : undefined}
             alt=""
             layout={isMobile ? "responsive" : "fill"}
             objectFit="cover"

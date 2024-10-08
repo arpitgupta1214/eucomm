@@ -138,8 +138,8 @@ const Home = (props) => {
         <div className="w-screen md:w-1/2 relative">
           <Image
             src={props.event.image.src}
-            width={props.event.image.width}
-            height={props.event.image.height}
+            width={isMobile ? props.event.image.width : undefined}
+            height={isMobile ? props.event.image.height : undefined}
             alt=""
             layout={isMobile ? "responsive" : "fill"}
             objectFit="cover"

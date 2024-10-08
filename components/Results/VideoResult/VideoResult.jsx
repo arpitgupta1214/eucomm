@@ -13,8 +13,6 @@ const VideoResult = ({ result }) => {
         <Image
           src={result.img}
           alt=""
-          width={3200}
-          height={2133}
           layout="fill"
           objectFit="cover"
           placeholder="blur"

@@ -19,8 +19,6 @@ const Contact = ({ config, ...props }) => {
           <Image
             src="/images/contact/map.webp"
             alt=""
-            width={897}
-            height={621}
             layout="fill"
             objectFit="cover"
             objectPosition="center"
